@@ -1,0 +1,12 @@
+project_identifier_env: CROWDIN_DOCUSAURUS_PROJECT_ID
+api_key_env: CROWDIN_DOCUSAURUS_API_KEY
+base_path: "./"
+preserve_hierarchy: true
+
+files:
+  - source: "/selendra-wiki/i18n/en/**/*.json"
+    translation: "/selendra-wiki/i18n/%locale%/**/%original_file_name%"
+    content_segmentation: 0
+  - source: "/docs/*.md"
+    translation: "/selendra-wiki/i18n/%locale%/docusaurus-plugin-content-docs/current/%original_file_name%"
+    content_segmentation: 0
