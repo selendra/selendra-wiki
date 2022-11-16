@@ -173,97 +173,24 @@ should also keep up to date with the following links:
 
 ### Parachains
 
-- [Moonbeam](https://moonbeam.network/)
-- [Astar](https://astar.network/)
-- [Acala](https://acala.network/)
-- [Phala](https://phala.network)
+- [Indranet](https://indranet.selendra.org/)
 
-Many smart contract platforms are building to become a parachain in the ecosystem. A community
-created and maintained list of different smart contract platforms building on Polkadot can be found
-at [PolkaProjects](https://www.polkaproject.com/#/projects?cateID=1&tagID=6).
+#### Indranet
 
-#### Moonbeam
-
-[Moonbeam](https://moonbeam.network/) is another project that is planning to deploy to Polkadot as a
-parachain and will support Ethereum compatible smart contracts. Since Moonbeam uses
+[Indranet](https://indranet.selendra.org/) is another project that is focusing on Selendra as a
+parachain and will support Ethereum compatible smart contracts. Since Indranet uses
 [Frontier](https://github.com/paritytech/frontier), an interoperability layer with existing Ethereum
 tooling, it will support all applications that are written to target the EVM environment with little
 friction.
 
-[Moonriver](https://docs.moonbeam.network/networks/moonriver/), a companion network to Moonbeam,
-launched as a parachain on Kusama. Parachain functionality is live, and features are being
-incrementally released. The final phase of the launch will include EVM functionality and balance
-transfers.
-
-Try deploying a smart contract to Moonbeam by following their [documentation][moonbeam docs].
-
-#### Astar
-
-[Astar Network](https://astar.network/) supports the building of dApps with EVM and WASM smart
-contracts and offers developers true interoperability. True interoperability with cross-consensus
-messaging [XCM](https://wiki.polkadot.network/docs/learn-xcm) and cross-virtual machine
-[XVM](https://github.com/AstarNetwork/). We are made by developers and for developers. Astar’s
-unique Build2Earn model empowers developers to get paid through a dApp staking mechanism for the
-code they write and dApps they build.
-
-[Shiden Network](https://shiden.astar.network/) is the canary network of Astar Network, live as a
-parachain on Kusama, and supports the EVM and WASM environment for all developers who want to build
-out use-cases in a canary network with economic value. Shiden acts as a playground for developers.
-
-Try deploying an Ethereum or ink! smart contract by following their
-[documentation](https://docs.astar.network/).
-
-#### Acala
-
-[Acala](https://acala.network/) is a decentralized finance consortium and DeFi infrastructure chain
-delivering a set of protocols to serve as the DeFi hub on Polkadot.
-[Karura](https://acala.network/karura), Acala's canary network is live as a parachain on Kusama.
-Interested teams are now able to deploy DApps and smart contracts on Karura's platform. Acala is
-also implementing the [Acala EVM](https://wiki.acala.network/learn/acala-evm/why-acala-evm).
-
-Try deploying an Acala EVM smart contract by following their
-[documentation](https://wiki.acala.network/build/development-guide/smart-contracts).
-
-#### Phala
-
-[Phala](https://phala.network) is a privacy-preserving cloud compute platform and aims to provide
-strong guarantees of confidentiality as a cross-chain platform. As a smart contract platform, Phala
-will enable the use of confidential smart contracts on Polkadot.
-[Khala](https://phala.network/en/khala) is Phala's canary network and is live as a parachain on
-Kusama.
-
-Try deploying a confidential smart contract by following their
-[documentation](https://wiki.phala.network/en-us/docs/developer/your-first-confidential-contract/).
+Try deploying a smart contract to Indranet by following our [documentation][indranet docs].
 
 ## Keep In Touch
 
-Even though the tooling is still maturing, the advantage of being early will be the familiarity and
-head start on your project, allowing you to innovate and create something truly new.
-
-{{ polkadot: If you have interesting ideas for smart contracts on Polkadot, feel free to drop
-into the [Polkadot Watercooler](https://matrix.to/#/#polkadot-watercooler:matrix.org) to talk
-about them. Developers may be interested in joining the
-[Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
-[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their questions.
-As always, keep up to date with Polkadot and Kusama by following the
-[social channels](../general/community.md). :polkadot }}
-
-{{ kusama: If you have interesting ideas for smart contracts on Kusama, feel free to drop into the
-[Kusama Watercooler](https://matrix.to/#/#kusama-watercooler:matrix.org) to talk about them.
-Developers may be interested in joining the
-[Polkadot Beginners Lounge](https://matrix.to/#/#polkadotnoobs:matrix.org) or
-[Substrate Technical](https://area51.stackexchange.com/proposals/126136/substrate) to ask their questions.
-As always, keep up to date with Polkadot and Kusama by following the
-[social channels](../general/community.md). :kusama }}
-
-All the best.
 
 [frontier]: https://github.com/paritytech/frontier
 [contracts pallet]: https://github.com/paritytech/substrate/blob/master/frame/contracts/
-[edgeware]: https://edgewa.re
-[edgeware documentation]: https://docs.edgewa.re/
-[edgeware contracts documentation]: https://main.edgeware.wiki/development/develop/smart-contracts
 [plasm plasma]: https://github.com/staketechnologies/Plasm
-[moonbeam]: https://moonbeam.network
-[moonbeam docs]: https://docs.moonbeam.network/
+[indranet]: https://indranet.selendra.org
+[indranet docs]: https://indranet.selendra.org/docs/
 [frontier]: (https://github.com/paritytech/frontier)
