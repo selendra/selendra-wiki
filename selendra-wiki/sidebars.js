@@ -97,7 +97,6 @@ module.exports = {
             'learn/learn-proxies',
             'learn/learn-randomness',
             'learn/learn-simple-payouts',
-            'learn/learn-spree',
             "learn/learn-staking-advanced",
             'learn/learn-staking-miner',
             'learn/learn-wasm',
