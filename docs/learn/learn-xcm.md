@@ -34,8 +34,7 @@ more about XCM v3 and its new features in the [resources](#resources) section.
 
 What started as an approach to _cross-chain communication_, has evolved into a format for
 [**Cross-Consensus Communication**](https://polkadot.network/cross-chain-communication) that is not
-only conducted between chains, but also between smart contracts, pallets, bridges, and even sharded
-enclaves like [SPREE](learn-spree.md).
+only conducted between chains, but also between smart contracts, pallets, bridges.
 
 XCM cannot actually send messages between systems. It is a format for how message transfer should be
 performed, similar to how RESTful services use REST as an architectural style of development.

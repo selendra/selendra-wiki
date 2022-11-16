@@ -62,4 +62,3 @@ does not support teleportation yet.
 
 [selendra-portal ui]: https://portal.selendra.org/
 [xcm]: learn-xcm.md
-[spree modules]: learn-spree.md

@@ -13,13 +13,10 @@ import RPC from "./../../components/RPC-Connection";
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
-[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
-[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
+[Selendra's Home Page](https://selendra.org/staking/). Discover the new
+[Staking Dashboard](https://staking.selendra.org/#/overview) that makes staking much easier and
 check this
-[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. {{ polkadot: You can now [stake natively with just 1 SEL and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :polkadot }}
-{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
-
+help you get started.
 :::
 
 This page is meant to be an advanced guide to staking with
@@ -60,7 +57,7 @@ to staking, session and utility pallets.
 Usually, with the stash-controller setup, the stash still needs to sign for actions that are
 performed less often, i.e. bonding more funds and changing the controller (see figure above). The
 controller is used to sign for those staking actions that are performed more often such as
-nominating. Remember, staking on polkadot is not a set-and-forget action, as a nominator you will
+nominating. Remember, staking on selendra is not a set-and-forget action, as a nominator you will
 need to monitor the performance of your validators and make changes if needed. Also, each time you
 sign with an account, you expose the private key of that account to the internet with consequent
 risk of attack. Ideally, accounts with high economic power like the stash must be and remain as
@@ -102,7 +99,7 @@ two accounts.
 
 :::info
 
-On Polkadot and Kusama, the instance of the pallet
+On Selendra, the instance of the pallet
 [Bags-List](https://paritytech.github.io/substrate/master/pallet_bags_list/) is named as 'voterList'
 
 :::
@@ -153,18 +150,16 @@ This sorting functionality using bags is extremely important for the
 [long-term improvements](https://gist.github.com/kianenigma/aa835946455b9a3f167821b9d05ba376) of the
 staking/election system. The bags-list is capable of including an unlimited number of nodes, subject
 to the chain's runtime storage. In the current staking system configuration, the bags list keeps
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :selendra }}
 nomination intents, of which, at most
-{{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :selendra }}
 come out as the electing nominators. See
 [Staking Election Stages](learn-nominator.md#staking-election-stages) section for more info.
 
 :::caution Minimum active nomination threshold to earn rewards is dynamic
 
 Once again, submitting a nomination intent does not guarantee staking rewards. The stake of the top
-{{ polkadot: <RPC network="polkadot" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={20000}/>  :kusama }}
-nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
+{{ selendra: <RPC network="selendra" path="query.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :selendra }} nominators is applied to the validators in the active set. To avail of staking rewards, ensure that
 the number of tokens bonded is higher than the minimum active nomination. For more information, see
 the [nominator guide](learn-nominator.md)
 
@@ -175,8 +170,7 @@ as edge weights, has to meet certain requirements, such as maximizing the amount
 nominate validators and distributing the stake backing validators as evenly as possible. The
 objectives of this election mechanism are to maximize the security of the network, and achieve fair
 representation of the nominators. If you want to know more about how NPoS works (e.g. election,
-running time complexity, etc.), please read
-[here](http://research.web3.foundation/en/latest/polkadot/NPoS.html).
+running time complexity, etc.).
 
 ## Rewards Distribution
 
@@ -263,11 +257,11 @@ There is an additional factor to consider in terms of rewards. While there is no
 of nominators a validator may have, a validator does have a limit to how many nominators to which it
 can pay rewards. In {{ selendra: Selendra :selendra }} this limit is
 currently
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }},
+{{ selendra: <RPC network="selendra" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :selendra }}
 although this can be modified via runtime upgrade. A validator with more than
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :selendra }}
 nominators is _oversubscribed_. When payouts occur, only the top
-{{ polkadot: <RPC network="polkadot" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
+{{ selendra: <RPC network="selendra" path="consts.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :selendra }}
 nominators as measured by the amount of stake allocated to that validator will receive rewards. All
 other nominators are essentially "wasting" their stake - they used their nomination to elect that
 validator to the active stake, but receive no rewards in exchange for doing so.
@@ -400,10 +394,10 @@ already maxed out.
 
 ## Inflation
 
-{{ polkadot: SEL is an inflationary token. In fact, there is no maximum number of SEL. Inflation is designed
+{{ selendra: SEL is an inflationary token. In fact, there is no maximum number of SEL. Inflation is designed
 to be approximately 10% annually, with validator rewards being a function of the amount staked
 and the remainder going to the treasury. SEL went through [redenomination](../general/redenomination.md)
-in 2020 that saw the SEL token supply increase by 100 times. The current token supply on Polkadot is <RPC network="polkadot" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion SEL). :polkadot }}
+in 2020 that saw the SEL token supply increase by 100 times. The current token supply on Selendra is <RPC network="selendra" path="query.balances.totalIssuance" defaultValue={12230666300429914781} filter="humanReadable"/> (Over 1.2 Billion SEL). :selendra }}
 
 {{ kusama: KSM is inflationary; there is no maximum number of KSM. Inflation is designed
 to be approximately slightly over 7.5% annually, with validator rewards being a function of the amount staked
@@ -414,34 +408,25 @@ There is an _ideal staking rate_ that the network tries to maintain. The goal is
 staking rate_ meet the _ideal staking rate_. The system staking rate would be the total amount
 staked over the total token supply, where the total amount staked is the stake of all validators and
 nominators on the network. The ideal staking rate accounts for having sufficient backing of
-{{ polkadot: SEL :polkadot }} {{ kusama: KSM :kusama }} to prevent the possible compromise of
+{{ selendra: SEL :selendra }} to prevent the possible compromise of
 security while keeping the native token liquid.
-{{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} is inflated according to the system staking
+{{ selendra: SEL :selendra }} is inflated according to the system staking
 rate of the entire network.
 
 :::info
 
 According to the inflation model, this would suggest that if you do not use your
-{{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} for staking, your tokens dilute over time.
+{{ selendra: SEL :selendra }} for staking, your tokens dilute over time.
 
 :::
 
-The ideal staking rate on Polkadot also varies with the number of parachains (50% is the current
+The ideal staking rate on Selendra also varies with the number of parachains (50% is the current
 estimation of all SEL that should be staked, per parachain slot).
 
 :::info The ideal staking rate varies based on the number of parachains
 
-The current staking rate on Polkadot still assumes the absence of parachains, with the suggested
-ideal staking rate of 75%. You can track the progress on the issue to adjust it
-[here](https://github.com/paritytech/polkadot/pull/5872). This has already been adjusted on Kusama,
-which has an ideal staking rate of approximately 50% with 50 parachains. When the number of slots
-reaches 60, the ideal staking rate is 45%.
-[Here](https://github.com/paritytech/polkadot/blob/master/runtime/kusama/src/lib.rs#L535) is the
-code for reference. This code assumes that the number of slots auctioned correspond to the number of
-parachains on the relaychain, which may not be true as new slots can be occupied by old parachains
-that are renewing their lease. You can also track the progress on resolving this specific issue
-[here](https://github.com/paritytech/polkadot/pull/5872).
-
+The current staking rate on Selendra still assumes the absence of parachains, with the suggested
+ideal staking rate of 75%. 
 :::
 
 If the amount of tokens staked goes below the ideal rate, then staking rewards for nominators go up,
@@ -451,9 +436,7 @@ go to the Treasury.
 
 ![staking](../assets/NPoS/staking-rate-with-parachains.png)
 
-<p style={{textAlign:"center"}}>Source: <a href="https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html">Research - Web3 Foundation</a></p>
-
-- **x-axis**: Proportion of {{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} staked
+- **x-axis**: Proportion of {{ selendra: SEL :selendra }} staked
 - **y-axis**: Inflation, annualized percentage
 - **Blue line**: Annual inflation rate of NPoS, i.e. total amount of tokens minted to pay validators
   and nominators.
@@ -470,7 +453,3 @@ dynamically to provide incentives to participate (or not participate) in staking
 For instance, assuming that the ideal staking rate is 50%, all of the inflation would go to the
 validators/nominators if 50% of all KSM / SEL are staked. Any deviation from the 50% - positive or
 negative - sends the proportional remainder to the treasury and effectively reduces staking rewards.
-
-For those who are interested in knowing more about the design of the inflation model for the
-network, please see
-[here](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html).

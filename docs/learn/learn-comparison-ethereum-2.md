@@ -140,9 +140,6 @@ Messages do not pass through the Relay Chain, only proofs of post and channel op
 close, etc.) go into the Relay Chain. This enhances scalability by keeping data on the edges of the
 system.
 
-Polkadot will add a protocol called [SPREE](learn-spree.md) that provides shared logic for
-cross-chain messages. Messages sent with SPREE carry additional guarantees about provenance and
-interpretation by the receiving chain.
 
 ## Governance
 

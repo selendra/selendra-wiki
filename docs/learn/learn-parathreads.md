@@ -33,7 +33,7 @@ pool. In other words, some parachain slots will have no parachain attached to th
 be used as a space for which the winner(s) of the block-by-block parathread fee auction can have
 their block candidate included.
 
-Collators will offer a bid designated in {{ polkadot: SEL :polkadot }} {{ kusama: KSM :kusama }} for
+Collators will offer a bid designated in {{ selendra: SEL :selendra }} for
 inclusion of a parathread block candidate. The Relay Chain block author is able to select from these
 bids to include a parathread block. The obvious incentive is for them to accept the block candidate
 with the highest bid, which would bring them the most profit. The tokens from the parathread bids
@@ -60,7 +60,7 @@ The difference between parachains and parathreads is economic. Parachains must b
 a normal means of {{ selendra: Selendra :selendra }}, i.e. governance
 proposal or parachain slot auction. Parathreads have a fixed fee for registration that would
 realistically be much lower than the cost of acquiring a parachain slot. Similar to how
-{{ polkadot: SEL :polkadot }} {{ kusama: KSM :kusama }} are locked for the duration of parachain
+{{ selendra: SEL :selendra }} are locked for the duration of parachain
 slots and then returned to the winner of the auction, the deposit for a parathread will be returned
 to the parathread after the conclusion of its term.
 

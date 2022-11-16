@@ -307,7 +307,7 @@ proposed parachains is available
 
 ### Obtaining TSEL
 
-TSEL are available in the [Selendra Testnet Faucet](https://faucet.selendra.org/) To receive ROC tokens, use the command:
+We provide a faucet site where you can obtain `Selendra Testnet Token` for testing purposes. [Click on this link](https://faucet.selendra.org).
 
 
 ### Build and Register a Selendra Testnet Parathread

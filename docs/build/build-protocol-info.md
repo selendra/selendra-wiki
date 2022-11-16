@@ -1,30 +1,29 @@
 ---
 id: build-protocol-info
-title: Polkadot Protocol Information
-sidebar_label: Polkadot Protocol
-description: Characteristics about the Polkadot protocol, and what you need to consider when building.
+title: Selendra Protocol Information
+sidebar_label: Selendra Protocol
+description: Characteristics about the Selendra protocol, and what you need to consider when building.
 keywords: [build, protocol, extrinsics, events, transaction]
 slug: ../build-protocol-info
 ---
 
-This page serves as a high-level introduction to the Polkadot protocol with terminology that may be
-specific to Polkadot, notable differences to other chains that you may have worked with, and
+This page serves as a high-level introduction to the Selendra protocol with terminology that may be
+specific to Selendra, notable differences to other chains that you may have worked with, and
 practical information for dealing with the chain.
 
 ## Tokens
 
 - **Token decimals:**
-  - Polkadot (DOT): 10
-  - Kusama (KSM): 12
+  - Selndra (SEL): 18
 - **Base unit:** "Planck"
 - **Balance type:** [`u128`](https://doc.rust-lang.org/std/u128/index.html)
 
 ## Addresses
 
-In Polkadot (and most Substrate chains), user accounts are identified by a 32-byte (256-bit)
+In Selendra (and most Substrate chains), user accounts are identified by a 32-byte (256-bit)
 `AccountId`. This is often, but not always, the public key of a cryptographic key pair.
 
-Polkadot (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
+Selendra (and Substrate) use the SS58 address format. This is a broad "meta-format" designed to
 handle many different cryptographic schemes and chains. It has much in common with Bitcoin's
 Base58Check format such as a version prefix, a hash-based checksum suffix, and base-58 encoding.
 
@@ -43,13 +42,11 @@ address.
 
 Relevant SS58 prefixes for this guide:
 
-- Polkadot: 0
-- Kusama: 2
-- Westend: 42
+- Selendra: 204 
 
 ### Cryptography
 
-Polkadot supports the following [cryptographic](../learn/learn-cryptography.md) key pairs and
+Selendra supports the following [cryptographic](../learn/learn-cryptography.md) key pairs and
 signing algorithms:
 
 - Ed25519
@@ -61,10 +58,9 @@ order to reduce the public key from 33 bytes to 32 bytes.
 
 ## Existential Deposit
 
-Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust
+Selendra, and most Substrate-based chains, use an _existential deposit_ (ED) to prevent dust
 accounts from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e.
-completely removed from storage and the nonce reset. Polkadot's ED is 1 SEL, while Kusama's is
-33.3333 microKSM (0.0000333333 KSM). You can always verify the existential deposit by checking the
+completely removed from storage and the nonce reset. Selendra's ED is 1 SEL. You can always verify the existential deposit by checking the
 [chain state](https://portal.selendra.org/#/chainstate) for the constant
 `balances.existentialDeposit`.
 
@@ -265,13 +261,10 @@ The Selendra Relay Chain does not support smart contracts.
 
 ## Other Networks
 
-Besides running a private network, Polkadot has two other networks where you could test
-infrastructure prior to deploying to the Polkadot mainnet.
+Besides running a private network, Selendra has other networks where you could test
+infrastructure prior to deploying to the Selendra mainnet.
 
-**Kusama Canary Network:** Kusama is Polkadot's cutting-edge cousin. Many risky features are
-deployed to Kusama prior to making their way into Polkadot.
-
-**Westend Testnet:** Westend is Polkadot's testnet and uses the Polkadot runtime.
+**Selendra Testnet:** Selendra Testnet uses the Selenrda runtime.
 
 ## Other F.A.Q.
 
@@ -284,23 +277,20 @@ i.e. free balance minus the maximum lock.
 
 **What chain depth is considered "safe"?**
 
-Polkadot uses a deterministic finality mechanism. Once a block is finalized, it cannot be reverted
-except by a hard fork. Kusama has had hard forks that had to revert four finalized blocks in order
-to cancel a runtime upgrade. Using a finalized depth of ten blocks should be safe.
-
-Note that block production and finality are isolated processes in Polkadot, and the chain can have a
+Selendra uses a deterministic finality mechanism. Once a block is finalized, it cannot be reverted
+except by a hard fork. Note that block production and finality are isolated processes in Selendra, and the chain can have a
 long unfinalized head.
 
 **Do users need to interact with any smart contracts?**
 
 No, users interact directly with the chain's logic.
 
-**Does Polkadot have state rent?**
+**Does Selendra have state rent?**
 
-No, Polkadot uses the existential deposit to prevent dust accounts and other economic mechanisms
+No, Selendra uses the existential deposit to prevent dust accounts and other economic mechanisms
 like locking or reserving tokens for operations that utilize state.
 
 **What is an external source to see the current chain height?**
 
-- [Polkadot-JS explorer](https://portal.selendra.org/#/explorer)
-- [Polkascan block explorer](https://polkascan.io/)
+- [Selendra-Portal](https://portal.selendra.org/#/explorer)
+- [Selendra block explorer](https://explorer.selendra.org/)
