@@ -16,7 +16,7 @@ The funds held in the Treasury can be spent by making a spending proposal that, 
 [Council](learn-governance.md#council), will enter a waiting period before distribution. This
 waiting period is known as the _spend period_, and its duration is subject to
 [governance](learn-governance.md), with the current default set to
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
+{{ selendra: <RPC network="selendra" path="consts.treasury.spendPeriod" defaultValue={345600} filter="blocksToDays"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.spendPeriod" defaultValue={86400} filter="blocksToDays"/> :kusama }}
 days. The Treasury attempts to spend as many proposals in the queue as it can without running out of
 funds.
@@ -78,10 +78,10 @@ The Treasury is funded from different sources:
 ## Creating a Treasury Proposal
 
 The proposer has to deposit a minimum of
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
+{{ selendra: <RPC network="selendra" path="consts.treasury.proposalBondMinimum" defaultValue={1e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMinimum" defaultValue={66000000000} filter="humanReadable"/> :kusama }}
 or 5% of the requested amount with a maximum cap of
-{{ polkadot: <RPC network="polkadot" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
+{{ selendra: <RPC network="selendra" path="consts.treasury.proposalBondMaximum" defaultValue={5e12} filter="humanReadable"/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.treasury.proposalBondMaximum" defaultValue={3333000000000} filter="humanReadable"/> :kusama }}
 as an anti-spam measure. This amount is burned if the proposal is rejected, or refunded otherwise.
 These values are subject to [governance](learn-governance.md) so they may change in the future.
@@ -167,10 +167,10 @@ There are two types of tips:
 
 - public: A small bond is required to place them. This bond depends on the tip message length, and a
   fixed bond constant defined on chain, currently
-  {{ polkadot: <RPC network="polkadot" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
+  {{ selendra: <RPC network="selendra" path="consts.tips.tipReportDepositBase" defaultValue={10000000000} filter="humanReadable"/>. :polkadot }}
   {{ kusama: <RPC network="kusama" path="consts.tips.tipReportDepositBase" defaultValue={166000000000} filter="humanReadable"/>. :kusama }}
   Public tips carry a finder's fee of
-  {{ polkadot: <RPC network="polkadot" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :polkadot }}
+  {{ selendra: <RPC network="selendra" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :polkadot }}
   {{ kusama: <RPC network="kusama" path="consts.tips.tipFindersFee" defaultValue={20}/>%, :kusama }}
   which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.

@@ -78,7 +78,7 @@ Random Function wins the slot auction.
 
 A parachain auction on {{ selendra: Selendra :selendra }} lasts exactly
 one week from the start: 1 day and 18 hours for the starting period,
-{{ polkadot: <RPC network="polkadot" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.auctions.endingPeriod" defaultValue={72000} filter="blocksToDays"/> :kusama }}
 days for the ending period (candle auction phase) and 6 hours for determining the auction winner.
 
 :::info
@@ -210,7 +210,7 @@ _Each period of the range 1 - 4 represents a
 Bidders will submit a configuration of bids specifying the token amount they are willing to bond and
 for which periods. The slot ranges may be any of the periods 1 - `n`, where `n` is the number of
 periods available for a slot.
-(`n`={{ polkadot: <RPC network="polkadot" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Polkadot :polkadot }}{{ kusama: <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Kusama :kusama }})
+(`n`={{ selendra: <RPC network="selendra" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Polkadot :polkadot }}{{ kusama: <RPC network="kusama" path="consts.auctions.leasePeriodsPerSlot" defaultValue={8}/> for Kusama :kusama }})
 
 :::note If you bond tokens with a parachain slot, you cannot stake with those tokens. In this way,
 you pay for the parachain slot by forfeiting the opportunity to earn staking rewards.

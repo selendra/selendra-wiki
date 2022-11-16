@@ -33,7 +33,7 @@ permissionlessly allow members to pool their funds together and act as a single 
 
 Due to the current runtime constraints,
 {{ selendra: Selendra :selendra }} can only handle
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
+{{ selendra: <RPC network="selendra" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
 nominators comfortably in the [electing set](learn-nominator.md#staking-election-stages). As one of
 the objectives of the [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the
@@ -124,7 +124,7 @@ unbonding duration has passed
 {{ polkadot: (<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
 {{ kusama: (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
 eras which correspond to
-{{ polkadot: <RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
+{{ selendra: <RPC network="selendra" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
 {{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
 days on {{ polkadot: Polkadot). :polkadot }} {{ kusama: Kusama). :kusama }} A member may withdraw
 their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship with their

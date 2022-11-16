@@ -18,9 +18,9 @@ councillors in the elections.
 ## Voting for Councillors
 
 Voting for councillors requires you to reserve
-{{ polkadot: <RPC network="polkadot" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter = "humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.votingBondBase" defaultValue={66879997200} filter = "humanReadable"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter = "humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.votingBondBase" defaultValue={66879997200} filter = "humanReadable"/> :kusama }}
 as a base amount and an amount of
-{{ polkadot: <RPC network="polkadot" path="consts.phragmenElection.votingBondFactor" defaultValue={320000000} filter = "humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.votingBondFactor" defaultValue={106665600} filter = "humanReadable"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.phragmenElection.votingBondFactor" defaultValue={320000000} filter = "humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.votingBondFactor" defaultValue={106665600} filter = "humanReadable"/> :kusama }}
 per vote. You can then bond whatever amount you wish to put behind your vote. See the
 [democracy guide](maintain-guides-democracy.md) for more information.
 
