@@ -2,8 +2,7 @@
 id: build-protocol-info
 title: Polkadot Protocol Information
 sidebar_label: Polkadot Protocol
-description:
-  Characteristics about the Polkadot protocol, and what you need to consider when building.
+description: Characteristics about the Polkadot protocol, and what you need to consider when building.
 keywords: [build, protocol, extrinsics, events, transaction]
 slug: ../build-protocol-info
 ---
@@ -66,7 +65,7 @@ Polkadot, and most Substrate-based chains, use an _existential deposit_ (ED) to 
 accounts from bloating chain state. If an account drops below the ED, it will be _reaped,_ i.e.
 completely removed from storage and the nonce reset. Polkadot's ED is 1 SEL, while Kusama's is
 33.3333 microKSM (0.0000333333 KSM). You can always verify the existential deposit by checking the
-[chain state](https://polkadot.js.org/apps/#/chainstate) for the constant
+[chain state](https://portal.selendra.org/#/chainstate) for the constant
 `balances.existentialDeposit`.
 
 Likewise, if you send a transfer with value below the ED to a new account, it will fail. Custodial
@@ -303,5 +302,5 @@ like locking or reserving tokens for operations that utilize state.
 
 **What is an external source to see the current chain height?**
 
-- [Polkadot-JS explorer](https://polkadot.js.org/apps/#/explorer)
+- [Polkadot-JS explorer](https://portal.selendra.org/#/explorer)
 - [Polkascan block explorer](https://polkascan.io/)

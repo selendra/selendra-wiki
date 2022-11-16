@@ -49,7 +49,7 @@ vote for councillors. It's best to keep _at least_ enough SEL/KSM to pay for tra
 
 :::
 
-Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab.
+Go to the [Polkadot-JS Apps Dashboard](https://portal.selendra.org) and click on the "Council" tab.
 On the right side of the window there are two blue buttons, click on the one that says "Vote."
 
 Since the council uses approval voting, when you vote you signal which of the candidates you approve
@@ -66,7 +66,7 @@ when you're done participating in elections and you no longer want your reserved
 the councillors that you approve.
 
 Go to the "Governance" > "Council" tab on the
-[Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps).
+[Polkadot-JS Apps Dashboard](https://portal.selendra.org).
 
 Under the "Council overview" tab, click on "Vote".
 

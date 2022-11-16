@@ -130,7 +130,6 @@ pools. The staking proxy is not enabled to make successful calls to the nominati
 
 :::
 
-
 ### Identity Judgement Proxy
 
 The **Identity Judgement** proxies are in charge of allowing registrars to make judgments on an
@@ -163,14 +162,14 @@ to learn how to remove proxies.
 
 ## How to view your Proxy
 
-To view your proxy, just go on the _Accounts_ menu in the Polkadot-JS UI, next to the proxied
+To view your proxy, just go on the _Accounts_ menu in the Selendra-Portal UI, next to the proxied
 account you will notice a blue icon. Hover on it, and you will see _Proxy overview_. Click on it and
 you will be presented with a list of all proxies for that account.
 
 ![view proxies](../assets/polkadot_view_proxies.png)
 
 Additionally, you can head over to the _Chain State_ tab (underneath the _Developer_ menu) on
-[Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If
+[Polkadot-JS Apps](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/chainstate). If
 you've created your proxy on a Kusama account, it is required to change your network accordingly
 using the top left navigation button. On this page, the proxy pallet should be selected, returning
 the announcements and proxies functions. The proxies function will allow you to see your created
@@ -212,11 +211,11 @@ the announcement. Within this time window, the intended action may be canceled b
 control the proxy. Now we can use proxies knowing that any malicious actions can be noticed and
 reverted within a delay period.
 
-:::caution The Polkadot-JS UI cannot handle complicated proxy setups
+:::caution The Selendra-Portal UI cannot handle complicated proxy setups
 
-The Polkadot-JS UI cannot handle complicated proxy setups (e.g. a proxy -> multisig -> an anonymous
+The Selendra-Portal UI cannot handle complicated proxy setups (e.g. a proxy -> multisig -> an anonymous
 proxy which is part of another multisig). These complex setups must be done using the
-[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) directly.
+[extrinsics tab](https://portal.selendra.org/#/extrinsics) directly.
 
 These complex proxy setups should only be performed if you are comfortable enough interacting
 directly with the chain, as you will be unable to sign extrinsics using the UI.
@@ -246,7 +245,7 @@ the staking proxy account. Also, Alice is the only one who can remove P-C as a s
 P-C can only perform staking-related tasks. For example, P-C cannot send funds out from Alice's
 account.
 
-Proxy calls can be done using the Extrinsic Tab in the Polkadot-JS UI. Nested proxy calls can be
+Proxy calls can be done using the Extrinsic Tab in the Selendra-Portal UI. Nested proxy calls can be
 done by calling each `proxy.proxy` extrinsic separately, or in some cases by just calling the last
 `proxy.proxy` extrinsic. In the diagram above, submitting the proxy call from P-C to Alice will
 automatically ask for Charly's signature. Thus one proxy call will trigger the second one because
@@ -287,8 +286,8 @@ change the name of _anonymous_ proxy. People suggested _keyless accounts_ since 
 private key and are proxied accounts. However, multisig accounts are also keyless (but
 deterministic). Moreover, even if _anonymous_ proxies are proxied accounts, they can still act as
 proxies and control other accounts via proxy calls (see multisig example below). Thus, the name that
-has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of 
-pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or 
+has been chosen is **pure proxy**. If you want to know more about the reasoning behind renaming of
+pure proxies, see the discussion in [this PR](https://github.com/paritytech/substrate/pull/12283) or
 the discussion on [Polkadot forum](https://forum.polkadot.network/t/parachain-technical-summit-next-steps/51/14).
 
 :::
@@ -327,7 +326,7 @@ The use of the _pure proxy_ is strictly bound to the relationship between the _p
 _any_ proxy. Note that the _any_ proxy does not necessarily be the one who created the _pure proxy_
 in the first place. Hence, _pure proxies_ are not really owned by somebody, but they can be
 controlled. Once that relationship between the _pure proxy_ and its _any_ proxy is broken, the _pure
-proxy_ will be inaccessible (even if visible on the Polkadot-JS UI). Also, _pure proxies_ are
+proxy_ will be inaccessible (even if visible on the Selendra-Portal UI). Also, _pure proxies_ are
 non-deterministic, meaning that if we lose one _pure proxy_, the next one we create from the same
 primary account will have a different address.
 
@@ -360,7 +359,7 @@ proxy is a multi-signature account.
 :::info Walk-through tutorial video
 
 You can see [this video tutorial](https://www.youtube.com/watch?v=YkYApbhU3i0) that goes through
-this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
+this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Selendra-Portal UI.
 
 :::
 
@@ -407,7 +406,7 @@ change.
 :::info Walk-through tutorial video
 
 You can see [this video tutorial](https://www.youtube.com/watch?v=iGRoGstB_pQ) that goes through
-this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
+this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Selendra-Portal UI.
 
 :::
 
@@ -442,7 +441,7 @@ private key.
 :::info Walk-through Tutorial Video
 
 You can see [this video tutorial](https://www.youtube.com/watch?v=F82C3zDNJyk) that goes through
-this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Polkadot-JS UI.
+this scenario. The tutorial requires some familiarity with the Extrinsic Tab of the Selendra-Portal UI.
 
 :::
 

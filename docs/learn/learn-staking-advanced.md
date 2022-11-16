@@ -42,7 +42,7 @@ as a reward payout to that nominator at the end of an era; this is an event insi
 
 :::info Walk-through video tutorial
 
-In this section, we go through a couple of scenarios that show how the permissions to sign for staking-related actions by stash account, controller account, and staking proxy change according to their relationship. [This video tutorial](https://www.youtube.com/watch?v=WarVBPBPh0A) goes through those scenarios using the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
+In this section, we go through a couple of scenarios that show how the permissions to sign for staking-related actions by stash account, controller account, and staking proxy change according to their relationship. [This video tutorial](https://www.youtube.com/watch?v=WarVBPBPh0A) goes through those scenarios using the [Selendra-Portal UI](https://portal.selendra.org/#/accounts).
 
 :::
 
@@ -461,7 +461,7 @@ go to the Treasury.
   returns on the staked tokens.
 
 You can determine the staking rewards by looking at the top bar of the staking overview on
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/staking).
+[Selendra-Portal UI](https://portal.selendra.org/#/staking).
 
 The above chart shows the inflation model of the network. Depending on the staking participation,
 the distribution of the inflation to validators/nominators versus the treasury will change

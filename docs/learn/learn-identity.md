@@ -20,22 +20,19 @@ website, Twitter handle, Riot handle, etc. along with some extra, custom fields 
 like attestations (see [Judgements](#judgements)).
 
 Users must reserve funds in a bond to store their information on chain:
-{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :selendra }}
 and
-{{ polkadot: <RPC network="polkadot" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.fieldDeposit" defaultValue={8333000000} filter="humanReadable"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.identity.fieldDeposit" defaultValue={660000000} filter="humanReadable"/> :selendra }}
 per each field beyond the legal name. These funds are _locked_, not spent - they are returned when
 the identity is cleared.
 
 These amounts can also be extracted by querying constants through the
-[Chain state constants](https://polkadot.js.org/apps/#/chainstate/constants) tab on Polkadot-JS
+[Chain state constants](https://portal.selendra.org/#/chainstate/constants) tab on Selendra-Portal
 Apps.
 
 :::info Instructions for setting and clearing Identities
 
-The procedure to set and clear identities is explained in detail in this support article -
-[How to set and clear an Identity](https://support.polkadot.network/support/solutions/articles/65000181981-how-to-set-and-clear-an-identity)
+> > Explain how to clear Indentities
 
 :::
 
@@ -51,7 +48,7 @@ primary identity with an on-chain account and then using that primary identity, 
 
 Please note the following caveat: because the fields support different formats, from raw bytes to
 various hashes, a UI has no way of telling how to encode a given field it encounters. The
-Polkadot-JS UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these
+Selendra-Portal UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these
 values readable on-screen. However, given that there are no restrictions on the values that can be
 placed into these fields, a different UI may interpret them as, for example, IPFS hashes or encoded
 bitmaps. This means any field stored as raw bytes will become unreadable by that specific UI. As
@@ -87,48 +84,25 @@ Registrars gain trust by performing proper due diligence and would presumably be
 issuing faulty judgements.
 
 To be judged after submitting your identity information, go to the
-[Extrinsics tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and select the
+[Extrinsics tab in the Selendra-Portal UI](https://portal.selendra.org/#/extrinsics) and select the
 `identity` pallet, then `requestJudgement`. For the `reg_index` put the index of the registrar you
 want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these
 confirmations.
 
 If you don't know which registrar to pick, first check the available registrars by going to
-[Chain State tab in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate) and selecting
+[Chain State tab in the Selendra-Portal UI](https://portal.selendra.org/#/chainstate) and selecting
 `identity.registrars()` to get the full list.
 
-:::info Instructions for requesting and cancelling Identity judegements
+:::info Instructions for requesting and cancelling Identity judgements
 
-The procedure to request and cancel identity judgements is explained in detail in this
-[support article](https://support.polkadot.network/support/solutions/articles/65000181990-how-to-request-and-cancel-identity-judgement)
-
-:::
-
-:::info Requesting judgement through Web3 Foundation Registrar If you requested judgement for your
-on-chain identity through the Web3 Foundation Registrar (i.e. Registrar #0) you will need to
-complete a few additional tasks. For more information visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000179747-how-to-use-the-w3f-registrar-page).
-
-:::
-
-:::caution
-
-The set identity calls go on-chain. Hence, the contact information is available publicly, for both
-legitimate entities, like registrars or validators, but also scammers who might impersonate them.
-The strings in the identity fields are good candidates for homograph attacks, as someone could list
-a fraudulent website (web3.f0undation instead of web3.foundation for example) and still get verified
-by the registrar (if the checks are automated)!
-
-In a decentralized network, one should be cautious making transactions with accounts solely based on
-their identity. If an account on-chain claims to be of Web3 Foundation, it is wise to verify its
-authenticity by checking directly with Web3 Foundation or examining the established history of that
-account on-chain.
+> > Info about requesting and canceling Identity judgements
 
 :::
 
 ## Registrars
 
 Registrars can set a fee for their services and limit their attestation to certain fields. For
-example, a registrar could charge {{ kusama: 0.1 KSM :kusama }}{{ polkadot: 1 SEL :polkadot }} to
+example, a registrar could charge {{ selendra: 1 SEL :selendra }} to
 verify one's legal name, email, and GPG key. When a user requests judgement, they will pay this fee
 to the registrar who provides the judgement on those claims. Users set a maximum fee they are
 willing to pay and only registrars below this amount would provide judgement.
@@ -153,10 +127,9 @@ a transaction.
 
 Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance`
 field needs to be at least
-{{ polkadot: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>. :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.basicDeposit" defaultValue={33333000000} filter="humanReadable"/>. :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/>. :selendra }}
 You can find out the minimum by querying the chain state under
-[Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy ->
+[Chain State](https://portal.selendra.org/#/chainstate) -> Constants -> democracy ->
 minimumDeposit.
 
 ![Submitting a proposal](../assets/identity/13.jpg)
@@ -167,35 +140,15 @@ this registrar.
 
 ### Current Registrars
 
-There are multiple registrars on {{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}.
+There are multiple registrars on {{ selendra: Selendra :selendra }}.
 Unless no additional information is available here, you must reach out to specific registrars
 individually if you want to be judged by those.
 
-Registrar 0: <br /> **URL**: https://registrar.web3.foundation/ <br /> **Account**:
-{{ kusama: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF,  <br /> :kusama }}{{ polkadot: 12j3Cz8qskCGJxmSJpVL2z2t3Fpmw3KoBaBaRGPnuibFc7o8,  <br /> :polkadot }}
-**Fee**: {{ kusama:  0.04 KSM  <br /> :kusama }}{{ polkadot: 0 SEL,  <br /> :polkadot }}
+Registrar 0: <br /> **URL**: https://registrar.selendra.org/ <br /> **Account**:
+{{ selendra: H4XieK3r3dq3VEvRtqZR7wN7a1UEkXxf14orRsEfdFjmgkF,  <br /> :selendra }}
+**Fee**: 0.04 SEL
 
-Registrar 1: <br /> **URL**: https://registrar.d11d.net/ <br /> **Account**:
-{{ kusama: Fom9M5W6Kck1hNAiE2mDcZ67auUCiNTzLBUdQy4QnxHSxdn,  <br /> :kusama }}{{ polkadot: 1Reg2TYv9rGfrQKpPREmrHRxrNsUDBQKzkYwP1UstD97wpJ,  <br /> :polkadot }}
-**Fee**: {{ kusama: 0.65 KSM,  <br /> :kusama }}{{ polkadot: 10 SEL,  <br /> :polkadot }}
-
-Registrar 2: <br /> **Account**:
-{{ kusama: EK8veMNH6sVtvhSRo4q1ZRh6huCDm69gxK4eN5MFoZzo3G7,  <br /> :kusama }}{{ polkadot: 1EpXirnoTimS1SWq52BeYx7sitsusXNGzMyGx8WPujPd1HB,  <br /> :polkadot }}
-**Fee**: {{ kusama: 1 KSM,  <br /> :kusama }}{{ polkadot: 0 SEL. :polkadot }}
-
-{{ kusama: Registrar 3:  <br />
-**Account**: GLiebiQp5f6G5vNcc7BgRE9T3hrZSYDwP6evERn3hEczdaM,  <br />
-**Fee**: 1 KSM,  <br /> :kusama }}
-
-{{ kusama: Registrar 4:  <br />
-**Account**: GhmpzxUyTVsFJhV7s2wNvD8v3Bgikb6WvYjj4QSuSScAUw6,  <br />
-**Fee**: 0.04 KSM.  <br /> :kusama }}
-
-To find out how to contact the registrar after the application for judgement or to learn who they
-are, we can check their identity by adding them to our Address Book. Their identity will be
-automatically loaded.
-
-![Chevdor is registrar #1](../assets/identity/16.jpg)
+> > WORK IN PROGRESS
 
 ## Sub Accounts
 
@@ -206,8 +159,7 @@ register multiple sub accounts that represent the [Stash accounts](learn-keys.md
 validators.
 
 An account can have a maximum of 100 sub-accounts. Note that a deposit of
-{{ polkadot: <RPC network="polkadot" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.identity.subAccountDeposit" defaultValue={6666000000} filter="humanReadable"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.identity.subAccountDeposit" defaultValue={200530000000} filter="humanReadable"/> :selendra }}
 is required for every sub-account.
 
 :::info Explainer article and video on setting sub-identities
@@ -215,7 +167,7 @@ is required for every sub-account.
 Here is the
 [how to set sub-identities](https://support.polkadot.network/support/solutions/articles/65000181991-how-to-set-identities-for-sub-accounts)
 article and a [video tutorial](https://www.youtube.com/watch?v=0Yh1JYg3ZKU) on setting
-sub-identities using Polkadot-JS UI
+sub-identities using Selendra-Portal UI
 
 :::
 

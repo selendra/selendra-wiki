@@ -8,7 +8,7 @@ Balance transfers are used to send one balance from one account to another accou
 
 ## Polkadot UI
 
-Let's begin by opening up the [Polkadot UI](https://polkadot.js.org/apps). There are two ways to make a transaction: by using the Transfer tab in the sidebar or through the Accounts tab. We will be starting off with the Accounts tab, so head there.
+Let's begin by opening up the [Polkadot UI](https://portal.selendra.org). There are two ways to make a transaction: by using the Transfer tab in the sidebar or through the Accounts tab. We will be starting off with the Accounts tab, so head there.
 
 Assuming that you've already [created a Polkadot or Kusama account](learn-account-generation), we will click on the 'send' button beside the account you'd like to send from.
 

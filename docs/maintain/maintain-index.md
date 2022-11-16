@@ -14,9 +14,9 @@ guides to set up a node and run the network.
 
 - [Networks Guide](maintain-networks.md) - A list of the available Selendra networks that you can
   connect to with a node.
-- [Set up a Full Node](maintain-sync.md) - Get up and started by syncing a full node for the Kusama
+- [Set up a Full Node](maintain-sync.md) - Get up and started by syncing a full node for the Selendra
   network. The steps in the guide will broadly apply also to any Substrate-based network (like
-  Polkadot).
+  Selendra, Indranet, Kumandra).
 - [Set up WSS using Nginx](maintain-wss.md) - Set up a Secure WebSockets server for your node's
   WebSockets connection.
 
@@ -30,9 +30,7 @@ guides to set up a node and run the network.
 - [Learn about Nominators](../learn/learn-nominator.md) - High level overview of nominators and
   related links.
 - [Nomination Guide (Selendra)](maintain-guides-how-to-nominate-selendra.md) - Walkthrough on how to
-  nominate on the Polkadot network.
-- [Nomination Guide (Kusama)](kusama/maintain-guides-how-to-nominate-kusama.md) - Walkthrough on how
-  to nominate on the Kusama canary network.
+  nominate on the Selendra network.
 - [How to stop being a Nominator](maintain-guides-how-to-unbond.md) - Guide on how to stop
   nominating.
 
@@ -43,13 +41,11 @@ guides to set up a node and run the network.
 - [Validator Payouts](maintain-guides-validator-payout.md) - Overview on how validator rewards are
   calculated and paid.
 - [Validation Guide (Selendra)](maintain-guides-how-to-validate-selendra.md) - Walkthrough on how to
-  validate on the Polkadot network.
-- [Validation Guide (Kusama)](kusama/maintain-guides-how-to-validate-kusama.md) - Walkthrough on how
-  to validate on the Kusama canary network.
+  validate on the Selendra network.
 - [Using systemmd for the Validator Node](maintain-guides-how-to-systemd.md) - Configuring systemmd
   with the Validator node.
 - [Secure Validator](maintain-guides-secure-validator.md) - Best tips and practices for validating.
-- [How to use Polkadot Validator Setup](maintain-guides-how-to-use-selendra-validator-setup.md) -
+- [How to use Selendra Validator Setup](maintain-guides-how-to-use-selendra-validator-setup.md) -
   Walkthrough on how to set up a validator securely.
 - [How to upgrade a Validator Node](maintain-guides-how-to-upgrade.md) - Guide on upgrading your
   validator node.

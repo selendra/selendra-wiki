@@ -34,7 +34,7 @@ Once the nomination period ends, the NPoS election mechanism takes the nominator
 
 To explain how rewards are paid to validators and nominators, we need to consider **validator pools**, where a validator pool consists of an elected validator together with the nominators backing it. (Note: if a nominator `n` with stake `s` backs several elected validators, say `k`, the NPoS election mechanism will split its stakes into pieces `s_1`, `s_2`, …, `s_k`, so that it backs validator `i` with stake `s_i`. In that case, nominator `n` will be rewarded essentially the same as if there were `k` nominators in different pools, each backing a single validator `i` with stake `s_i`). For each validator pool, we keep a list of nominators with the associated stakes.
 
-The general rule for rewards across validator pools is that two validator pools get paid essentially the **same amount of SEL** for equal work, i.e. they are NOT paid proportional to the stakes in each pool. There is a probabilistic component to staking rewards in the form of [era points](maintain-guides-validator-payout#era-points) and [tips](https://wiki.polkadot.network/docs/en/learn-transaction-fees#fee-calculation) but these should average out over time. Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's commission fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the nominators and validator. Notice in particular that the validator is rewarded twice: once in commission fees for validating (if their commission rate is above 0%), and once for nominating itself with stake.
+The general rule for rewards across validator pools is that two validator pools get paid essentially the **same amount of SEL** for equal work, i.e. they are NOT paid proportional to the stakes in each pool. There is a probabilistic component to staking rewards in the form of [era points](maintain-guides-validator-payout#era-points) and [tips](https://wiki.selendra.org/docs/en/learn-transaction-fees#fee-calculation) but these should average out over time. Within a validator pool, a (configurable) percentage of the reward goes to pay the validator's commission fees and the remainder is paid **pro-rata** (i.e. proportional to stake) to the nominators and validator. Notice in particular that the validator is rewarded twice: once in commission fees for validating (if their commission rate is above 0%), and once for nominating itself with stake.
 
 To estimate the inflation rate and how many SEL you can get each month as a nominator or validator, you can use this [tool](https://www.stakingrewards.com/earn/polkadot/calculate) as a reference and play around with it by changing some parameters (e.g. how many days you would like to stake with your SEL, provider fees, compound rewards, etc.) to have a better estimate. Even though it may not be entirely accurate since staking participation is changing dynamically, it works well as an indicator.
 
@@ -49,7 +49,7 @@ The following example should clarify the above. For simplicity, we have the foll
 - There are no tips for any transactions processed.
 - They do NOT charge any commission fees.
 - Total reward amount is 100 SEL tokens.
-- The current minimum amount of SEL to be a validator is 350 (note that this is _not_ the actual value, which fluctuates, but merely an assumption for purposes of this example; to understand how the actual minimal stake is calculated, see [here](https://wiki.polkadot.network/docs/en/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
+- The current minimum amount of SEL to be a validator is 350 (note that this is _not_ the actual value, which fluctuates, but merely an assumption for purposes of this example; to understand how the actual minimal stake is calculated, see [here](https://wiki.selendra.org/docs/en/faq#what-is-the-minimum-stake-necessary-to-be-elected-as-an-active-validator)).
 
 |               | **A - Validator Pool** |                             |         |
 | :-----------: | :--------------------: | :-------------------------: | :-----: |
@@ -117,7 +117,7 @@ As an example, assume BIG_COMPANY has 50 validators that all go offline at the s
 
 In rare instances, a nominator may be actively nominating several validators in a single era. In this case, the slash is proportionate to the amount staked to that specific validator. For instance, if another nominator had their stake split 50% to BC_1 and 50% to OV_1, they would receive a slash of 0.5% (50% of 1%). If a nominator were actively nominating BC_1 and BC_2, again with 50% of their stake allocated to each, they would still end up with a 1% slash, since a 1% slash is applied to both halves of their stake. Note that you cannot control the percentage of stake you have allocated to each validator or choose who your active validator will be (except in the trivial case of nominating a single validator). Staking allocations are controlled by the [Phragmén algorithm](learn-phragmen).
 
-Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this via [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes). The UI shows it per validator and then all the affected nominators along with the amounts. While unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28 days on Polkadot). After the grace period, the slashes are applied.
+Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this via [Polkadot-JS Apps](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/staking/slashes). The UI shows it per validator and then all the affected nominators along with the amounts. While unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28 days on Polkadot). After the grace period, the slashes are applied.
 
 The following levels of offence are [defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html) (for specific slash amounts, see the equations in the section below):
 
@@ -141,7 +141,7 @@ Here is the formula for calculation:
 Note that if less than 10% of all validators are offline, no penalty is enacted.
 
 Validators should have a well-architected network infrastructure to ensure the node is running to reduce the risk of being slashed. A high availability setup is desirable, preferably with backup nodes that kick in **only once the original node is verifiably offline** (to avoid double-signing and being slashed for equivocation - see below).
-A comprehensive guide on validator setup is available [here](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator).
+A comprehensive guide on validator setup is available [here](https://wiki.selendra.org/docs/en/maintain-guides-secure-validator).
 
 ### GRANDPA Equivocation
 
@@ -199,7 +199,7 @@ In order to be paid your staking rewards, someone must claim them for each valid
 
 ### Claiming Rewards
 
-If you go to the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/#/staking/payout), you will see a list of all validators that you have nominated in the past 84 eras and for which you have not yet received a payout. Each one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone who was nominating that validator during those eras, and anyone can call it. Therefore, you may not see anything in this tab, yet still received a payout if somebody (generally, but not necessarily, another nominator or the validator operator) has triggered the payout for that validator for that era.
+If you go to the Staking payouts page on [Polkadot-JS](https://portal.selendra.org/#/staking/payout), you will see a list of all validators that you have nominated in the past 84 eras and for which you have not yet received a payout. Each one has the option to trigger the payout for all unclaimed eras. Note that this will pay everyone who was nominating that validator during those eras, and anyone can call it. Therefore, you may not see anything in this tab, yet still received a payout if somebody (generally, but not necessarily, another nominator or the validator operator) has triggered the payout for that validator for that era.
 
 If you wish to check if you received a payout, you will have to check via a block explorer. See [the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-) for details.
 
@@ -234,7 +234,7 @@ DOT is inflationary; there is no maximum number of SEL as in Bitcoin. Inflation 
 - **Blue line**: Inflation rewards to stakers
 - **Green line**: Staker rate of return
 
-You can determine the inflation rewards by checking the current staking rate at [Polkadot-JS](https://polkadot.js.org/apps/#/staking/targets). The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators/nominators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators/nominators if 50% of all KSM / SEL are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces staking rewards.
+You can determine the inflation rewards by checking the current staking rate at [Polkadot-JS](https://portal.selendra.org/#/staking/targets). The above chart shows the inflation model of the network. Depending on the staking participation, the distribution of the inflation to validators/nominators versus the treasury will change dynamically to provide incentives to participate (or not participate) in staking. For instance, all of the inflation would go to the validators/nominators if 50% of all KSM / SEL are staked, but any deviation from the 50% - positive or negative - sends the proportional remainder to the treasury and effectively reduces staking rewards.
 
 For those who are interested in knowing more about the design of inflation model for the network, please see [here](https://research.web3.foundation/en/latest/polkadot/economics/1-token-economics.html#npos-payments-and-inflation).
 
@@ -257,4 +257,4 @@ Polkadot started with 20 open validator positions and has opened more gradually.
 ## Resources
 
 - [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) - Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
-- [Secure validator setup](https://wiki.polkadot.network/docs/en/maintain-guides-secure-validator)
+- [Secure validator setup](https://wiki.selendra.org/docs/en/maintain-guides-secure-validator)

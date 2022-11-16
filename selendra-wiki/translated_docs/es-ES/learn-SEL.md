@@ -79,18 +79,18 @@ Like [simple payouts](learn-simple-payouts), vesting is _lazy_, which means that
 
 These extrinsics are exposed from the Vesting pallet.
 
-If you are using Polkadot-JS, when there are SEL available to vest for an account, then you will have the ability to unlock SEL which have already vested from the [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+If you are using Polkadot-JS, when there are SEL available to vest for an account, then you will have the ability to unlock SEL which have already vested from the [Accounts](https://portal.selendra.org/#/accounts) page.
 
 ![unbond](assets/unlock-vesting.png)
 
 #### Calculating When Vesting SEL Will Be Available
 
-Generally, you should be able to see from the [Accounts](https://polkadot.js.org/apps/#/accounts) by looking at your accounts and seeing when the vesting will finish. However, some SEL vest with "cliffs" - a single block where all the SEL are released, instead of vesting over time. In this case, you will have to query the chain state directly to see when they will be available (since technically, the vesting has not yet started - all of the vesting will occur in a single block in the future).
+Generally, you should be able to see from the [Accounts](https://portal.selendra.org/#/accounts) by looking at your accounts and seeing when the vesting will finish. However, some SEL vest with "cliffs" - a single block where all the SEL are released, instead of vesting over time. In this case, you will have to query the chain state directly to see when they will be available (since technically, the vesting has not yet started - all of the vesting will occur in a single block in the future).
 
-1. Navigate to the [Chain State](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate) page on Polkadot-JS.
+1. Navigate to the [Chain State](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/chainstate) page on Polkadot-JS.
 2. Query chain state for `vesting.vesting(ACCOUNT_ID)`
 3. Note the `startingBlock` where the unlock starts, and how much SEL is unlocked per block (`perBlock`).
-4. You will have to calculate the result into “human time". To do this, remember that there are approximately 14’400 blocks per day, and you can see what the latest block is shown on the [Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/explorer) page.
+4. You will have to calculate the result into “human time". To do this, remember that there are approximately 14’400 blocks per day, and you can see what the latest block is shown on the [Explorer](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/explorer) page.
 
 ## Obtaining Testnet SEL
 

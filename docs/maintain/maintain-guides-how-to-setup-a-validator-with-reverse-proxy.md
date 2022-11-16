@@ -9,7 +9,7 @@ slug: ../maintain-guides-how-to-setup-a-validator-with-reverse-proxy
 
 This guide assumes that you have already configured your hardware with the appropriate specs. It has
 the same configuration as the
-[polkadot validator setup](https://github.com/w3f/polkadot-secure-validator).
+[selendra validator setup](https://github.com/selendra/selendra-secure-validator).
 
 :::info
 
@@ -78,7 +78,7 @@ SystemMaxFiles=100
 ```
 
 Check out the
-[example journald configuration file](https://github.com/w3f/polkadot-secure-validator/blob/master/ansible/roles/polkadot-validator/files/journald.conf)
+[example journald configuration file](https://github.com/selendra/selendra-secure-validator/blob/master/ansible/roles/selendra-validator/files/journald.conf)
 for more available options.
 
 Finally, run the following command to restart the journald service:
@@ -131,7 +131,7 @@ mkdir /etc/nginx/streams-enabled
 ```
 
 Now, inside the newly created directory `/etc/nginx/streams-enabled/`, create the proxy service file
-called `polkadot-proxy.conf` with the following content:
+called `selendra-proxy.conf` with the following content:
 
 :::info Use the previously defined ports: port `2435` for the proxy port & port number `30333` for
 the p2p port
@@ -147,10 +147,10 @@ server {
 }
 ```
 
-Change the permissions of the file `polkadot-proxy.conf` accordingly:
+Change the permissions of the file `selendra-proxy.conf` accordingly:
 
 ```bash
-chmod 0600 polkadot-proxy.conf
+chmod 0600 selendra-proxy.conf
 ```
 
 Finally, restart NGINX with the following command:
@@ -159,14 +159,14 @@ Finally, restart NGINX with the following command:
 service nginx restart
 ```
 
-### 4. Defining your proxy port and p2p port in the polkadot command
+### 4. Defining your proxy port and p2p port in the selendra command
 
 These are some of the flags you are going to use when executing the command.
 
 `--public-addr <VALIDATOR_IP>, <PROXY_PORT>` - This flag defines the validator's IP and the proxy
 port that all other nodes in the network will connect to.
 
-`--listen-addr <LOCALHOST>, <P2P_PORT>` - This flag defines the p2p port that the polkadot
+`--listen-addr <LOCALHOST>, <P2P_PORT>` - This flag defines the p2p port that the selendra
 application will use to connect to the NGINX reverse proxy.
 
 #### P2P Networking
@@ -189,11 +189,11 @@ pre-defined proxy port.
 
 ##### listen-addr
 
-`listen-addr` - the specification of what port the polkadot application will connect to the reverse
+`listen-addr` - the specification of what port the selendra application will connect to the reverse
 proxy. In our example, `/ip4/0.0.0.0/tcp/<P2P_PORT>` specifies that you want to listen to NGINX on
 the localhost address (`0.0.0.0`, or all interfaces), with TCP packets on the pre-defined p2p port.
 
-- `P2P_PORT` - the port that the polkadot application connects to NGINX.
+- `P2P_PORT` - the port that the selendra application connects to NGINX.
 
 #### Starting the validator with the NGINX proxy
 
@@ -204,13 +204,13 @@ Start your validator with the `--validator` flag:
 
 ```bash
 # Validator Node
-polkadot \
+Selendra \
   --name My_Validator_Name \
   --validator \
   --public-addr=/ip4/IP_ADDRESS/tcp/2435 \
   --listen-addr=/ip4/0.0.0.0/tcp/30333 \
   --rpc-methods=Unsafe \
-  --chain=polkadot
+  --chain=selendra
 
 ```
 

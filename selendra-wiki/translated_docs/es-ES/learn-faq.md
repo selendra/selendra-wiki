@@ -45,7 +45,7 @@ The minimum stake that is necessary to be elected as an active validator is dyna
 
 There are a few ways to estimate the minimum stake.
 
-One way can be to navigate to the [Polkadot Apps](https://polkadot.js.org/apps) and click on the Staking tab. Scroll all the way down to the bottom and look at the stake backing the validator at the end of the list. That's roughly the minimum stake required to enter the active set at that era.
+One way can be to navigate to the [Polkadot Apps](https://portal.selendra.org) and click on the Staking tab. Scroll all the way down to the bottom and look at the stake backing the validator at the end of the list. That's roughly the minimum stake required to enter the active set at that era.
 
 You can also use some tools some to perform estimations.
 

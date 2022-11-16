@@ -207,7 +207,7 @@ nominator [guide](learn-nominator.md) to understanding your responsibilities as 
 
 If you want to become a nominator, see
 [this](../maintain/maintain-guides-how-to-nominate-selendra.md) guide. If you are a beginner and
-would like to securely stake your tokens using the Polkadot-JS UI, refer to
+would like to securely stake your tokens using the Selendra-Portal UI, refer to
 [this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-)
 support article.
 {{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama. :kusama }}
@@ -279,7 +279,7 @@ validator can produce blocks for a parachain (i.e. para-validators) or the relay
 para-validators earning more era points per unit time (see
 [this](../maintain/maintain-guides-validator-payout.md#era-points) page for more information). The
 role can switch between sessions, and you can look at
-[the staking tab on the Polkadot-JS UI](https://polkadot.js.org/apps/#/staking) to know which
+[the staking tab on the Selendra-Portal UI](https://portal.selendra.org/#/staking) to know which
 validator is producing blocks for the relay chain or parachains.
 
 It is not recommended to change nominations because of the low era points of a validator in a single
@@ -360,7 +360,7 @@ so, see the page on [simple payouts](learn-simple-payouts.md).
 :::info Payouts
 
 Payouts are unclaimed rewards waiting to be paid out to both validators and nominators. If you go to
-the Staking payouts page on [Polkadot-JS](https://polkadot.js.org/apps/#/staking), you will see a
+the Staking payouts page on [Polkadot-JS](https://portal.selendra.org/#/staking), you will see a
 list of all validators that you have nominated in the past 84 eras and for which you have not yet
 received a payout. The payout page is visible only to stakers.
 
@@ -423,7 +423,7 @@ are controlled by the [Phragmén algorithm](learn-phragmen.md).
 
 Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
 via
-[Polkadot-JS UI](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/staking/slashes).
+[Selendra-Portal UI](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/staking/slashes).
 The UI shows it per validator and then all the affected nominators along with the amounts. While
 unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28
 days on Polkadot). After the grace period, the slashes are applied.

@@ -14,7 +14,7 @@ Submitting your candidacy for the council requires a small bond of SEL / KSM. Th
 
 Es una buena idea anunciar tu intención de presentarte al Consejo antes de enviar tu candidatura para que tus seguidores sepan cuándo pueden empezar a votar por ti. También puede votar por sí mismo en caso de que no alguien más lo haga.
 
-Ve a [Polkadot Apps Dashboard](https://polkadot.js.org/apps) y navega a la pestaña "Council". Haz clic en el botón de la derecha que dice "Submit Candidacy"
+Ve a [Polkadot Apps Dashboard](https://portal.selendra.org) y navega a la pestaña "Council". Haz clic en el botón de la derecha que dice "Submit Candidacy"
 
 ![submit candidancy button](assets/council/polkadotjs_submit_candidancy.png)
 

@@ -58,7 +58,7 @@ After installing the plugin, you should see the orange and white Polkadot{.js} l
 
 ### Open Accounts
 
-Navigate to [Polkadot Apps](https://polkadot.js.org/apps). Click on the "Accounts" tab.
+Navigate to [Polkadot Apps](https://portal.selendra.org). Click on the "Accounts" tab.
 
 ### Create Account
 
@@ -114,7 +114,7 @@ Using the Polkadot-JS user interface without the plugin is not recommended. It i
 
 ### Go to Polkadot-JS Apps
 
-Navigate to [Polkadot-JS Apps](https://polkadot.js.org/apps) and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar at the top of your screen.
+Navigate to [Polkadot-JS Apps](https://portal.selendra.org) and click on "Accounts" underneath the Accounts tab. It is located in the navigation bar at the top of your screen.
 
 ![pjs-01](assets/accounts/polkadot_js_01.png)
 
@@ -134,7 +134,7 @@ You can use this backup file to restore your account. This backup file is not re
 
 Multi-signature accounts are accounts created from several standard accounts (or even other multi-sig accounts). For a full explanation, please see the [Accounts Explainer section on multi-sigs](learn-accounts#multi-signature-accounts).
 
-On the [Accounts](https://polkadot.js.org/apps/#/accounts) tab, click the `Multisig` button. Enter the threshold and add signatories. The threshold must be less than or equal to the number of signatories. The threshold indicates how many members must be in agreement for an extrinsic submission to be successful. Click `Create` when done.
+On the [Accounts](https://portal.selendra.org/#/accounts) tab, click the `Multisig` button. Enter the threshold and add signatories. The threshold must be less than or equal to the number of signatories. The threshold indicates how many members must be in agreement for an extrinsic submission to be successful. Click `Create` when done.
 
 ![Multi-sig account creation](/img/accounts/create-multisig.png)
 
@@ -204,7 +204,7 @@ There is currently no way to copy your address from Parity signer in plain-text 
 
 ### Your Address
 
-The address will be shown as a QR code. You can import your address to the Polkadot-JS Apps by going to the [Accounts](https://polkadot.js.org/apps/#/accounts) page on an Internet-connected computer and click "Add via QR", and following the instructions to add the account. An account created this way will always require you to sign messages with your Parity Signer device. It will do this only by scanning and displaying QR codes, leaving even someone with total control of your internet-connected computer a very small and limited scope for interacting with the Parity Signer device, which can continue to keep your key safe.
+The address will be shown as a QR code. You can import your address to the Polkadot-JS Apps by going to the [Accounts](https://portal.selendra.org/#/accounts) page on an Internet-connected computer and click "Add via QR", and following the instructions to add the account. An account created this way will always require you to sign messages with your Parity Signer device. It will do this only by scanning and displaying QR codes, leaving even someone with total control of your internet-connected computer a very small and limited scope for interacting with the Parity Signer device, which can continue to keep your key safe.
 
 ![Parity Signer Create Account 6](assets/accounts/ps-create-6.jpg)
 
@@ -214,7 +214,7 @@ To use a Ledger hardware wallet to create your address and keep your tokens in c
 
 ## Vanity Generator
 
-The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity) that lets you generate addresses which contain a specific substring.
+The vanity generator is a tool on [Selendra-Portal UI](https://portal.selendra.org/#/accounts/vanity) that lets you generate addresses which contain a specific substring.
 
 ![Vanity Generator page](assets/polkadot_vanity_generator_page.png)
 

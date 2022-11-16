@@ -8,7 +8,7 @@ Here we provide a list of tools available for your development needs. They are s
 
 ## Block Explorers
 
-- [Polkadot-JS Apps Explorer](https://polkadot.js.org/apps/#/explorer) - Polkadot dashboard block explorer. Supports dozens of other networks, including Kusama, Westend, and other remote or local endpoints. [Access via IPFS](https://ipfs.io/ipns/dotapps.io)
+- [Polkadot-JS Apps Explorer](https://portal.selendra.org/#/explorer) - Polkadot dashboard block explorer. Supports dozens of other networks, including Kusama, Westend, and other remote or local endpoints. [Access via IPFS](https://ipfs.io/ipns/dotapps.io)
 - [Polkascan](https://polkascan.io/) - Blockchain explorer for Polkadot, Kusama, and other related chains. [Repo](https://github.com/polkascan/polkascan-os).
 - [Subscan](https://subscan.io) - Blockchain explorer for Substrate chains. [Repo](https://github.com/itering/subscan-essentials).
 
@@ -50,7 +50,7 @@ See the [Wallets](build-wallets.md) page.
 ## UI
 
 - [Polkadash](https://github.com/Swader/polkadash) - VueJS-based starter kit for custom user interfaces for Substrate chains. [Tutorials](https://dotleap.com/tag/tutorial/).
-- [Polkadot JS Apps UI](https://github.com/polkadot-js/apps) - Repository of the [polkadot.js.org/apps](https://polkadot.js.org/apps) UI.
+- [Polkadot JS Apps UI](https://github.com/polkadot-js/apps) - Repository of the [polkadot.js.org/apps](https://portal.selendra.org) UI.
 - [Substrate Front-end Template](https://github.com/substrate-developer-hub/substrate-front-end-template) - ReactJS-based starter UI for custom user interfaces for Substrate chains.
 - [Polkadot JS Browser Extension](https://github.com/polkadot-js/extension) - Key management in a Chrome extension.
 

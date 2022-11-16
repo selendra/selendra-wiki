@@ -33,7 +33,7 @@ for more information about key security.
 ## Ways to generate an account
 
 The **most user-friendly** way to create a Polkadot or Kusama address is through the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used
+[Selendra-Portal UI](https://portal.selendra.org/#/accounts). Remember to back up the seed phrase used
 to generate your account - the accounts are stored only in your browser, so purging the cache will
 wipe your accounts as well. You would then have to recreate them using the seed phrase given to you
 by the UI - this will also restore all your previously held balances.
@@ -71,7 +71,7 @@ See our Support Articles for more information about how to create an account usi
 
 - [Polkadot-JS Browser Extension](#polkadot-js-browser-extension) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
-- [Polkadot-JS UI](#polkadot-js-apps)
+- [Selendra-Portal UI](#polkadot-js-apps)
 - [Parity Signer](#parity-signer)
 - [Vanity Generator](#vanity-generator)
 - [Ledger Hardware Wallet](#ledger-hardware-wallet)
@@ -170,7 +170,7 @@ Subkey may also be useful for automated account generation using an air-gapped d
 recommended for general users. For the tutorial on how to create an account using Subkey, visit
 [this support article](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
 
-## Polkadot-JS UI
+## Selendra-Portal UI
 
 :::caution
 
@@ -187,7 +187,7 @@ feasible in your situation. For the tutorial on how to create an account using P
 visit
 [this support article](https://support.polkadot.network/support/solutions/articles/65000180529).
 
-### Reset password using the Polkadot-JS UI
+### Reset password using the Selendra-Portal UI
 
 To reset the password of an account created with Polkadot-JS Apps UI you just need to go in the
 "Accounts" tab, click the icon with three vertical SELs on your account and select "Change this
@@ -211,8 +211,7 @@ installing it. For the tutorial on how to create an account using Parity Signer,
 
 ## Vanity Generator
 
-The vanity generator is a tool on [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts/vanity)
+The vanity generator is a tool on [Selendra-Portal UI](https://portal.selendra.org/#/accounts/vanity)
 that lets you generate addresses that contain a specific substring. For the tutorial on how to
 create an account using Vanity Generator, visit
 [this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
-

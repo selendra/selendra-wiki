@@ -16,7 +16,7 @@ Free feel to join the [Polkadot's community](community#polkadot) to ask question
 
 > **Note**: The W3F Registrar currently **does not** support KYC or web verification. Make sure to leave it blank when you fill in your identity information.
 
-Go to [Accounts](<(https://polkadot.js.org/apps/#/accounts)>) page in Polkadot-JS Apps. The easiest way to add the built-in fields is to click the vertical three SELs next to one's account and select "Set on-chain identity".
+Go to [Accounts](<(https://portal.selendra.org/#/accounts)>) page in Polkadot-JS Apps. The easiest way to add the built-in fields is to click the vertical three SELs next to one's account and select "Set on-chain identity".
 
 ![registrar](assets/registrar/1.jpg)
 
@@ -41,7 +41,7 @@ Now you have set the identity information on-chain, but that is not verified yet
 
 ![registrar](assets/registrar/4.jpg)
 
-Go to [Developer->Extrinics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/extrinsics) and select your account to submit the `identity -> requestJudgement(reg_index, max_fee)` transaction. This will request the registrar to validate the information you set on-chain earlier.
+Go to [Developer->Extrinics](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/extrinsics) and select your account to submit the `identity -> requestJudgement(reg_index, max_fee)` transaction. This will request the registrar to validate the information you set on-chain earlier.
 
 The `reg_index` is the position of the registrar. For W3F, use 0.
 
@@ -61,7 +61,7 @@ Once you accept the invitation, you should see the following information.
 
 ![registrar](assets/registrar/6.jpg)
 
-Then go to [Sign and Verify](https://polkadot.js.org/apps/#/signing) under the Developer tab in the PolkadotJS and select your account, paste the "Challenge" data to the "sign the following data" field and click "Sign message".
+Then go to [Sign and Verify](https://portal.selendra.org/#/signing) under the Developer tab in the PolkadotJS and select your account, paste the "Challenge" data to the "sign the following data" field and click "Sign message".
 
 ![registrar](assets/registrar/7.jpg)
 
@@ -79,7 +79,7 @@ Next, you should receive an email called "W3F Registrar Verification Service". B
 
 ![registrar](assets/registrar/9.jpg)
 
-You would do what you did in the above again. Copy the "Challenge" data and go to [Sign and Verify](https://polkadot.js.org/apps/#/signing) under the Developer tab in the PolkadotJS and select your account, paste the "Challenge" data to the "sign the following data" field and click "Sign message"
+You would do what you did in the above again. Copy the "Challenge" data and go to [Sign and Verify](https://portal.selendra.org/#/signing) under the Developer tab in the PolkadotJS and select your account, paste the "Challenge" data to the "sign the following data" field and click "Sign message"
 
 ![registrar](assets/registrar/10.jpg)
 
@@ -103,13 +103,13 @@ After waiting a few mintues you should receive a challenge similar to the previo
 
 ![registrar](assets/registrar/13.jpg)
 
-Again, just like how you did in the above. By using your account to sign the "Challenge" data that you received on Twitter in the [Sign and Verify](https://polkadot.js.org/apps/#/signing) page.
+Again, just like how you did in the above. By using your account to sign the "Challenge" data that you received on Twitter in the [Sign and Verify](https://portal.selendra.org/#/signing) page.
 
 ![registrar](assets/registrar/14.jpg)
 
 Paste the signed data to the chat and you would receive the verification status after 1 to 2 minutes.
 
-If everything has been verified successfully, you would see your account verification status has been marked as "reasonable" with a green tick icon on the [Accounts](https://polkadot.js.org/apps/#/accounts) page.
+If everything has been verified successfully, you would see your account verification status has been marked as "reasonable" with a green tick icon on the [Accounts](https://portal.selendra.org/#/accounts) page.
 
 ![registrar](assets/registrar/15.jpg)
 

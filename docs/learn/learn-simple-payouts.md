@@ -9,7 +9,7 @@ slug: ../learn-simple-payouts
 
 import RPC from "./../../components/RPC-Connection";
 
-Polkadot and Kusama make stakers claim their rewards for past eras by submitting a transaction. This
+Selendra makes stakers claim their rewards for past eras by submitting a transaction. This
 naturally leads to spreading out reward distribution, as people make transactions at disparate
 times, rather than updating the accounts of all stakers in a single block.
 
@@ -19,14 +19,14 @@ and ensure that the network maintains a constant block time. If all rewards were
 block, this could cause serious issues with the stability of the network.
 
 Simple payouts require one transaction per validator, per [era](../general/glossary.md##era), to
-claim rewards. The reason Polkadot requires this is to avoid an attack where someone has several
+claim rewards. The reason Selendra requires this is to avoid an attack where someone has several
 thousand accounts nominating a single validator. The major cost in reward distribution is mutating
-the accounts in storage, and Polkadot cannot pay out several thousand accounts in a single
+the accounts in storage, and Selendra cannot pay out several thousand accounts in a single
 transaction.
 
 ## Claiming Rewards
 
-Polkadot stores the last 84 eras of reward information (e.g. maps of era number to validator points,
+Selendra stores the last 84 eras of reward information (e.g. maps of era number to validator points,
 staking rewards, nomination exposure, etc.). Rewards will not be claimable more than 84 eras after
 they were earned. This means that all rewards must be claimed within a maximum of 84 eras, although
 under certain circumstances (described below) this may be as low as 28 eras.
@@ -43,24 +43,22 @@ payout before 28 eras have passed.
 :::
 
 Anyone can trigger a payout for any validator, as long as they are willing to pay the transaction
-fee. Someone must submit a transaction with a validator ID and an era index. Polkadot will
+fee. Someone must submit a transaction with a validator ID and an era index. Selendra will
 automatically calculate that validator's reward, find the top
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :selendra }}
 nominators for that era, and distribute the rewards pro rata.
 
 :::note The Staking system only applies the highest
-{{ polkadot: <RPC network="polkadot" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :selendra }}
 nominations to each validator to reduce the complexity of the staking set.
 
 :::
 
 These details are handled for you automatically if you use the
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/staking/payout), which also allows you to submit
+[Selendra-Portal UI](https://portal.selendra.org/#/staking/payout), which also allows you to submit
 batches of eras at once.
 
-To claim rewards on Polkadot-JS UI, you will need to be in the "Payouts" tab underneath "Staking",
+To claim rewards on Selendra-Portal UI, you will need to be in the "Payouts" tab underneath "Staking",
 which will list all the pending payouts for your stashes.
 
 ![pending-payouts](../assets/polkadotjs_payout_page.png)

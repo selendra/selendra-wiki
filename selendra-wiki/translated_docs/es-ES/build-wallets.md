@@ -6,7 +6,7 @@ sidebar_label: Polkadot Wallets
 
 ## Polkadot Wallets
 
-The integration of a [wallet](https://wiki.polkadot.network/docs/en/glossary#wallet) with Polkadot allows for simple and easy access to private keys and signing transactions. Below are some wallets that support Polkadot along with their development statuses.
+The integration of a [wallet](https://wiki.selendra.org/docs/en/glossary#wallet) with Polkadot allows for simple and easy access to private keys and signing transactions. Below are some wallets that support Polkadot along with their development statuses.
 
 Note that inclusion does not necessarily imply endorsement of that wallet. Polkadot support can provide assistance with issues related to Polkadot-JS, the Polkadot{.js} extension, or Parity Signer. For other wallet software, you should contact the developers of that wallet.
 
@@ -21,7 +21,7 @@ Some recently generated `JSON` account files cannot be imported (restored) into 
 | [Parity Signer](https://www.parity.io/signer/) (see warning below)  | Live              | Parity    | iOS and Android   | Non-custodial | Staking  |
 | [Polkadot-js Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux   | Non-custodial | Staking  |
 | [Polkadot-js extension](https://github.com/polkadot-js/extension)   | Live              | Parity    | Browser extension | Non-custodial | Staking  |
-| [Polkadot-js apps](https://polkadot.js.org/apps/#/accounts)         | Live              | Parity    | Browser           | Non-Custodial | Staking  |
+| [Polkadot-js apps](https://portal.selendra.org/#/accounts)          | Live              | Parity    | Browser           | Non-Custodial | Staking  |
 
 > Warning: Parity Signer currently does not allow you to see the transaction you are signing. This means that you are at risk if connected to a compromised version of Polkadot-JS. A fix is being worked on; please see [this GitHub issue](https://github.com/paritytech/parity-signer/issues/724) for more details.
 

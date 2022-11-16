@@ -60,9 +60,9 @@ Anonymous proxies, in particular, can be used for permissionless management. In 
 
 ## How to set up a Proxy
 
-### Using the Polkadot-JS UI
+### Using the Selendra-Portal UI
 
-To set up a proxy, navigate to the [Polkadot-JS UI](https://polkadot.js.org/apps/#/extrinsics) and click on "Developer" > "Extrinsics". Here we will see a page that looks similar to this:
+To set up a proxy, navigate to the [Selendra-Portal UI](https://portal.selendra.org/#/extrinsics) and click on "Developer" > "Extrinsics". Here we will see a page that looks similar to this:
 
 ![proxy generation](assets/polkadot_generating_proxy.png)
 
@@ -70,7 +70,7 @@ To add a proxy, click on the pallet selection dropdown menu. The dropdown is lab
 
 > Note: If you see an "unused" option when adding in a proxy, this is not a proxy type. This is an empty enum, and if you try to add this in as a proxy, nothing will happen. No new proxy will be created.
 
-### Creating Anonymous Proxies on Polkadot-JS UI
+### Creating Anonymous Proxies on Selendra-Portal UI
 
 For anonymous proxies, a different function will need to be called, the `anonymous(proxy_type, index)`. This will let you select which kind of anonymous proxy you would like to set up if you choose, as well as the index.
 
@@ -78,7 +78,7 @@ For anonymous proxies, a different function will need to be called, the `anonymo
 
 ### Another way to create Proxies
 
-There is another way you can set up a proxy on Polkadot-JS UI. Go to "Accounts" in the navigation and then click the "Accounts" button. For each of the accounts you have on this page, the three SEL button will let you create a proxy by using "Add proxy". This will open up a pop up onto your screen where you will be able to select the type of proxy for that specific account.
+There is another way you can set up a proxy on Selendra-Portal UI. Go to "Accounts" in the navigation and then click the "Accounts" button. For each of the accounts you have on this page, the three SEL button will let you create a proxy by using "Add proxy". This will open up a pop up onto your screen where you will be able to select the type of proxy for that specific account.
 
 ![proxy generation part 2](assets/polkadot_add_another_proxy.png)
 
@@ -92,7 +92,7 @@ If you want to remove a proxy, there are a few functions on the extrinsic page t
 
 ## How to view your Proxies
 
-To view your proxy, head over to the Chain State (underneath "Developer") page on [Polkadot-JS Apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/chainstate). If you've created your proxy on a Kusama account, it is required to change your network accordingly using the top left navigation button. On this page, the proxy pallet should be selected, returning the announcements and proxies functions. The proxies function will allow you to see your created proxies for either one account or for all accounts (using the toggle will enable this). Proxy announcements are what time lock proxies do to announce they are going to conduct an action.
+To view your proxy, head over to the Chain State (underneath "Developer") page on [Polkadot-JS Apps](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/chainstate). If you've created your proxy on a Kusama account, it is required to change your network accordingly using the top left navigation button. On this page, the proxy pallet should be selected, returning the announcements and proxies functions. The proxies function will allow you to see your created proxies for either one account or for all accounts (using the toggle will enable this). Proxy announcements are what time lock proxies do to announce they are going to conduct an action.
 
 ![view proxies](assets/polkadot_view_proxies.png)
 

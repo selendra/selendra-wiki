@@ -16,20 +16,19 @@ discretion, as there is a risk of losing some funds.
 
 :::
 
-At the end of each era on Polkadot and Kusama, using [NPoS](learn-phragmen), a new set of validators 
-must be elected based on the nominator preferences. This is a computationally intensive process, hence 
-the usage of the term "mining" for computing the solution. The validators use 
-[off-chain workers](https://docs.substrate.io/reference/how-to-guides/offchain-workers/) to 
-compute the result and submit a transaction to propose the set of winners. This can also be delegated 
-to stand-alone programs, whose task is to mine the optimal solution. Staking miners compete with each other 
-to produce election solutions which consist of a validator set, stake distribution across that set, and a score 
-indicating how optimal the solution is. Staking miners run any given staking algorithms (as of now, 
-sequential Phragmén or PhragMMS, subject to change if improved algorithms are introduced) to produce results, 
-which are then sent as a transaction to the relay chain via a normal signed extrinsic. The transaction 
-requires a bond and a transaction fee. The best solution is rewarded, which the least covers the 
-transaction fee, and the bond is returned to the account. [The bond and the fee](learn-staking-miner#deposit-and-reward-mechanics)  are lost if the solution 
+At the end of each era on Selendra, using [NPoS](learn-phragmen), a new set of validators
+must be elected based on the nominator preferences. This is a computationally intensive process, hence
+the usage of the term "mining" for computing the solution. The validators use
+[off-chain workers](https://docs.substrate.io/reference/how-to-guides/offchain-workers/) to
+compute the result and submit a transaction to propose the set of winners. This can also be delegated
+to stand-alone programs, whose task is to mine the optimal solution. Staking miners compete with each other
+to produce election solutions which consist of a validator set, stake distribution across that set, and a score
+indicating how optimal the solution is. Staking miners run any given staking algorithms (as of now,
+sequential Phragmén or PhragMMS, subject to change if improved algorithms are introduced) to produce results,
+which are then sent as a transaction to the relay chain via a normal signed extrinsic. The transaction
+requires a bond and a transaction fee. The best solution is rewarded, which the least covers the
+transaction fee, and the bond is returned to the account. [The bond and the fee](learn-staking-miner#deposit-and-reward-mechanics) are lost if the solution
 is invalid.
-
 
 Staking miner uses a pallet called `pallet_election_provider_multi_phase` and can only produce
 solutions during the
@@ -82,12 +81,10 @@ pub struct RawSolution<S> {
 ```
 
 A maximum of `pallet::Config::MaxSignedSubmissions` will be stored on-chain and they will be sorted
-based on score. Higher the score the more optimal the election solution is. On both Polkadot and
-Kusama the
-['MaxSignedSubmissions'](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs#L446)
+based on score. Higher the score the more optimal the election solution is. On both Selendra the
+['MaxSignedSubmissions'](https://github.com/selendra/selendra/blob/master/runtime/selendra/src/lib.rs#L395)
 is set to
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={16}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.electionProviderMultiPhase.signedMaxSubmissions" defaultValue={10}/> :selendra }}
 submissions. This variable can be modified if needed through governance.
 
 Upon arrival of a new solution:
@@ -133,25 +130,11 @@ to receiving a `SignedRewardBase`.
 
 ### Deposit
 
-Current deposit(`SignedDepositBase`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={400000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedDepositBase" defaultValue={133333332000} filter="humanReadable"/> :kusama }}
-which is a fixed amount.
-
-Current deposit per byte(`SignedDepositByte`) is
-{{ polkadot: 0.0000097656 SEL :polkadot }}{{ kusama: 0.00000032551 KSM :kusama }} and the total is
-variable depending on the size of the solution data. For example a solution weighing 200KB would
-yield {{ polkadot: 200 x 0.0000097656 = **0.00195312 SEL**. :polkadot }}
-{{ kusama: 200 x 0.00000032551 = **0.000065102 KSM**. :kusama }}
-
-And the weight deposit(`SignedDepositWeight`) is currently set to `0` and has no effect.
+> > WORK IN PROGRESS
 
 ### Reward
 
-Current reward(`SignedRewardBase`) is
-{{ polkadot: <RPC network="polkadot" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.signedRewardBase" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
-which is a fixed amount.
+> > WORK IN PROGRESS
 
 ## Further Resources
 

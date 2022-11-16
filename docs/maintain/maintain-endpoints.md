@@ -8,7 +8,7 @@ slug: ../maintain-endpoints
 ---
 
 Ideally, one may run their own node when interacting with the
-[Polkadot network](https://polkadot.network/) via [Polkadot-JS Apps](https://polkadot.js.org/apps/)
+[Polkadot network](https://polkadot.network/) via [Polkadot-JS Apps](https://portal.selendra.org/)
 or other UIs and programmatic methods. Another option would be to connect to one of the several
 public endpoints provided by infrastructure and API service providers. For development convenience,
 [Parity Tech](https://www.parity.io/) maintains archive nodes for Polkadot, Kusama, and their test
@@ -22,15 +22,15 @@ tables below list these endpoints.
 
 | Network  | URL                          |
 | -------- | ---------------------------- |
-| Polkadot | wss://rpc.polkadot.io        |
-| Kusama   | wss://kusama-rpc.polkadot.io |
+| Polkadot | wss://rpc.selendra.org        |
+| Kusama   | wss://kusama-rpc.selendra.org |
 
 #### Test Networks
 
 | Network | URL                           |
 | ------- | ----------------------------- |
-| Westend | wss://westend-rpc.polkadot.io |
-| Rococo  | wss://rococo-rpc.polkadot.io  |
+| Westend | wss://westend-rpc.selendra.org |
+| Rococo  | wss://rococo-rpc.selendra.org  |
 
 #### Example usage with Polkadot-JS API
 
@@ -41,7 +41,7 @@ To connect to the Parity node, use the endpoint in your JavaScript apps like so:
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 async () => {
   // Construct a provider with the endpoint URL
-  const provider = new WsProvider('wss://rpc.polkadot.io/');
+  const provider = new WsProvider('wss://rpc.selendra.org/');
   // Create an API instance for Polkadot
   const api = await ApiPromise.create({ provider });
   // ...
@@ -76,6 +76,6 @@ service, and additional metrics.
 :::note
 
 The list of third party RPC endpoints above for Polkadot and Kusama is directly fetched from
-[Polkdot-JS UI](https://polkadot.js.org/apps/#/explorer)
+[Polkdot-JS UI](https://portal.selendra.org/#/explorer)
 
 :::

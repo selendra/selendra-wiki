@@ -150,7 +150,7 @@ The `--pruning=archive` flag is implied by the `--validator` and `--sentry` flag
 
 Depending on the size of the chain when you do this, this step may take anywhere from a few minutes to a few hours.
 
-If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the [PolkadotJS Block Explorer](https://polkadot.js.org/apps/#/explorer).
+If you are interested in determining how much longer you have to go, your server logs (printed to STDOUT from the `polkadot` process) will tell you the latest block your node has processed and verified. You can then compare that to the current highest block via [Telemetry](https://telemetry.polkadot.io/#list/Polkadot%20CC1) or the [PolkadotJS Block Explorer](https://portal.selendra.org/#/explorer).
 
 ## Bond SEL
 
@@ -163,7 +163,7 @@ It is now time to set up our validator. We will do the following:
 - Bond the SEL of the Stash account. These SEL will be put at stake for the security of the network and can be slashed.
 - Select the Controller. This is the account that will decide when to start or stop validating.
 
-First, go to the [Staking](https://polkadot.js.org/apps/#/staking/actions) section. Click on "Account Actions", and then the "+ Stash" button.
+First, go to the [Staking](https://portal.selendra.org/#/staking/actions) section. Click on "Account Actions", and then the "+ Stash" button.
 
 ![dashboard bonding](assets/guides/how-to-validate/selendra-dashboard-bonding.jpg)
 
@@ -194,7 +194,7 @@ You need to tell the chain your Session keys by signing and submitting an extrin
 
 #### Option 1: PolkadotJS-APPS
 
-You can generate your [Session keys](https://wiki.polkadot.network/en/latest/polkadot/learn/keys/#session-key) in the client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your validator node. You can configure the apps dashboard to connect to the endpoint of your validator in the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you will not be able to use this method since making RPC requests to this node would effect the local keystore hosted on a _public node_ and you want to make sure you are interacting with the keystore for _your node_.
+You can generate your [Session keys](https://wiki.selendra.org/en/latest/polkadot/learn/keys/#session-key) in the client via the apps RPC. If you are doing this, make sure that you have the PolkadotJS-Apps explorer attached to your validator node. You can configure the apps dashboard to connect to the endpoint of your validator in the Settings tab. If you are connected to a default endpoint hosted by Parity of Web3 Foundation, you will not be able to use this method since making RPC requests to this node would effect the local keystore hosted on a _public node_ and you want to make sure you are interacting with the keystore for _your node_.
 
 Once ensuring that you have connected to your node, the easiest way to set session keys for your node is by calling the `author_rotateKeys` RPC request to create new keys in your validator's keystore. Navigate to Toolbox tab and select RPC Calls then select the author > rotateKeys() option and remember to save the output that you get back for a later step.
 
@@ -216,7 +216,7 @@ You can restart your node at this point.
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator with your Controller account.
 
-Go to [Staking > Account Actions](https://polkadot.js.org/apps/#/staking/actions), and click "Set Session Key" on the bonding account you generated earlier. Enter the output from `author_rotateKeys` in the field and click "Set Session Key".
+Go to [Staking > Account Actions](https://portal.selendra.org/#/staking/actions), and click "Set Session Key" on the bonding account you generated earlier. Enter the output from `author_rotateKeys` in the field and click "Set Session Key".
 
 ![staking-change-session](assets/guides/how-to-validate/set-session-key-1.jpg) ![staking-session-result](assets/guides/how-to-validate/set-session-key-2.jpg)
 

@@ -16,7 +16,7 @@ JSON file (and password) stored securely, you will be able to restore your accou
 
 :::info Check the relevant support articles to learn more about restoring your account using the
 [_Polkadot Extension_](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension),
-[_Polkadot-JS UI_](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui),
+[_Selendra-Portal UI_](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui),
 and
 [_Parity Signer_](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer).
 

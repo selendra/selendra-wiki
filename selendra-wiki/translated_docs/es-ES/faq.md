@@ -57,7 +57,7 @@ It is also worth mentioning that one thousand validators is more than the number
 
 Additionally, other projects sometimes have a different definition of _validator_ that approximates more closely to remote signing keys without the full operation of a validating node. On Polkadot, each validator is running their own validating node and performing full verification of the Relay Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state transitions. Other projects may consider validators and "validating nodes" as separate entities.
 
-Finally, individuals may participate in the block production process indirectly by [nominating](https://wiki.polkadot.network/docs/en/learn-nominator) validators. In this way, individuals who are not running a node can still share in staking rewards.
+Finally, individuals may participate in the block production process indirectly by [nominating](https://wiki.selendra.org/docs/en/learn-nominator) validators. In this way, individuals who are not running a node can still share in staking rewards.
 
 ## Relay Chain
 

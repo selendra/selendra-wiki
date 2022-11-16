@@ -6,11 +6,11 @@ sidebar_label: Polkadot UI
 
 ![Polkadot UI](assets/selendra_ui_1.png)
 
-Polkadot comes with an open source, publicly accessible interface that makes it easy for anyone to connect to the Alexander testnet. You can find it [here](https://polkadot.js.org/apps/#/explorer).
+Polkadot comes with an open source, publicly accessible interface that makes it easy for anyone to connect to the Alexander testnet. You can find it [here](https://portal.selendra.org/#/explorer).
 
 ## Getting started
 
-By default the Polkadot UI will connect to the Parity hosted node at `wss://poc3-rpc.polkadot.io/`. If you are running your own node locally or on a VPS you can configure it by going into the **Settings** tab and setting a custom node endpoint.
+By default the Polkadot UI will connect to the Parity hosted node at `wss://poc3-rpc.selendra.org/`. If you are running your own node locally or on a VPS you can configure it by going into the **Settings** tab and setting a custom node endpoint.
 
 As mentioned the Polkadot UI project is open source and if you're interested in how it works internally you can browse the GitHub repository [here](https://github.com/polkadot-js/apps).
 

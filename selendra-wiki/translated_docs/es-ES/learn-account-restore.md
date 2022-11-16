@@ -7,7 +7,7 @@ description: Step-by-step guides on backing up and restoring a Polkadot account.
 
 Depending on what software you are using to access your account, there are various ways to back up and restore your account. It is a good idea to back your information up and keep it in a secure place.. Note that in order to recover an account, you should create your account according to the instructions [here](learn-account-generation). In general, however, as long as you know how you created your account, and have the seed phrase (mnemonic phrase) or JSON file (and password) stored securely, you will be able to restore your account.
 
-This page covers backing up and restoring accounts in Polkadot{.js} Browser Plugin, Polkadot-JS UI, and Parity Signer. For other wallet applications, please see their specific documentation.
+This page covers backing up and restoring accounts in Polkadot{.js} Browser Plugin, Selendra-Portal UI, and Parity Signer. For other wallet applications, please see their specific documentation.
 
 ## Polkadot{.js} Browser Plugin
 
@@ -27,7 +27,7 @@ Once these are filled out, and the "Restore" button has been pressed, you'll be 
 
 ## Polkadot-JS
 
-If you're using the main Polkadot-JS UI, restoring an account will feel similar to restoring an account on Polkadot-JS browser plugin. Navigate to the [Accounts page](https://polkadot.js.org/apps/#/accounts) of Polkadot-JS.
+If you're using the main Selendra-Portal UI, restoring an account will feel similar to restoring an account on Polkadot-JS browser plugin. Navigate to the [Accounts page](https://portal.selendra.org/#/accounts) of Polkadot-JS.
 
 ![click-account-restore-polkadot](assets/accounts/polkadot_click_restore.png)
 
@@ -43,9 +43,9 @@ After you press the "Restore" button, you should see a green notification lettin
 
 You can also always restore an account by using the mnemonic phrase (seed words).
 
-To do this with Polkadot-JS, navigate to the [Polkadot-JS Accounts Page](https://polkadot.js.org/apps/#/accounts). Click on the "Add Account" button, and enter a name and password for the account. The name and the password of this added account can be set to whatever you'd like, it does not need to be the same name and password as when this account was initilly created.
+To do this with Polkadot-JS, navigate to the [Polkadot-JS Accounts Page](https://portal.selendra.org/#/accounts). Click on the "Add Account" button, and enter a name and password for the account. The name and the password of this added account can be set to whatever you'd like, it does not need to be the same name and password as when this account was initilly created.
 
-After this, delete the generated mnemonic phrase (seed words) and replace them with your _existing seed words_. When you replace the generated mnemonic seed with your existing one, you aren't actually creating a new account, rather adding that account onto the Polkadot-JS UI. Any account using the same seed words will have control over that account on-chain. This is why it is so important to keep your seed words secret and safe.
+After this, delete the generated mnemonic phrase (seed words) and replace them with your _existing seed words_. When you replace the generated mnemonic seed with your existing one, you aren't actually creating a new account, rather adding that account onto the Selendra-Portal UI. Any account using the same seed words will have control over that account on-chain. This is why it is so important to keep your seed words secret and safe.
 
 ![restore-using-json](assets/accounts/polkadot-js-existing-json.png)
 

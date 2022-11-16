@@ -16,7 +16,7 @@ Like the validator elections, you can approve up to 16 different councillors and
 
 > Warning: It is your responsibility not to put your entire balance into the reserved value when you make a vote for councillors. It's best to keep _at least_ enough SEL/KSM to pay for transaction fees.
 
-Go to the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps) and click on the "Council" tab. On the right side of the window there are two blue buttons, click on the one that says "Vote."
+Go to the [Polkadot-JS Apps Dashboard](https://portal.selendra.org) and click on the "Council" tab. On the right side of the window there are two blue buttons, click on the one that says "Vote."
 
 ![](assets/council/vote.png)
 
@@ -30,7 +30,7 @@ You should see your vote appear in the interface immediately after your transact
 
 In order to get your reserved tokens back, you will need to remove your vote. Only remove your vote when you're done participating in elections and you no longer want your reserved tokens to count for the councillors that you approve.
 
-Go to the "Governance" > "Council" tab on the [Polkadot-JS Apps Dashboard](https://polkadot.js.org/apps).
+Go to the "Governance" > "Council" tab on the [Polkadot-JS Apps Dashboard](https://portal.selendra.org).
 
 Under the "Council overview" tab, click on "Vote".
 

@@ -89,7 +89,7 @@ exposes instant accessible on-chain storage functions to users. Crustʼs technic
 capable of supporting data manipulating and computing.
 
 Crust provides a native cross-chain communication communication pallet based on
-[XCMP](https://wiki.polkadot.network/docs/learn-xcm), called
+[XCMP](https://wiki.selendra.org/docs/learn-xcm), called
 [xStorage](https://github.com/crustio/crust/tree/parachain/shadow/crust-collator/pallets/xstorage).
 
 The protocol also supports most smart contract platforms, including Ethereum, with its

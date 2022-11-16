@@ -8,7 +8,7 @@ The following describes how to stop nominating or validating and retrieve your t
 
 ### Step 1: Stop Nominating
 
-On the [Polkadot-JS Apps](https://polkadot.js.org/apps) navigate to the "Staking" tab.
+On the [Polkadot-JS Apps](https://portal.selendra.org) navigate to the "Staking" tab.
 
 On this tab click on the "Account Actions" tab at the top of the screen.
 
@@ -38,7 +38,7 @@ Once this process is complete, you will have to issue another, final transaction
 
 ![Unbonding withdraw](/img/NPoS/unbond5.png)
 
-You can also check how long you have to wait in order to withdraw your stake in the [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.polkadot.io#/accounts) page by expanding your account balance. There is a tiny icon beside the word "unbonding" that will eventually become an unlock icon once the remaning blocks get passed.
+You can also check how long you have to wait in order to withdraw your stake in the [Accounts](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/accounts) page by expanding your account balance. There is a tiny icon beside the word "unbonding" that will eventually become an unlock icon once the remaning blocks get passed.
 
 Then, you can click that icon directly to submit the withdraw transaction. Finally, your transferrable balance will increase by the amount of tokens you've just fully unbonded.
 
@@ -46,7 +46,7 @@ Then, you can click that icon directly to submit the withdraw transaction. Final
 
 If you want to rebond your tokens before the unbonding period is over you can do this by issuing a `rebond` extrinsic. This allows you to bond your tokens that are still locked without waiting until the end of the unbonding period.
 
-In order to do this you will need to issue an extrinsic manually from [Polkadot-JS Apps](https://polkadot.js.org/apps).
+In order to do this you will need to issue an extrinsic manually from [Polkadot-JS Apps](https://portal.selendra.org).
 
 Go to the "Extrinsics" option that's located in the "Developer" dropdown in the top menu.
 

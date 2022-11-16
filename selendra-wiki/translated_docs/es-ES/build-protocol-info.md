@@ -174,5 +174,5 @@ No, Polkadot uses the existential deposit to prevent dust accounts and other eco
 
 **What is an external source to see the current chain height?**
 
-- [Polkadot-JS explorer](https://polkadot.js.org/apps/#/explorer)
+- [Polkadot-JS explorer](https://portal.selendra.org/#/explorer)
 - [Polkascan block explorer](https://polkascan.io/)

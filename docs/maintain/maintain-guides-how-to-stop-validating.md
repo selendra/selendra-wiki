@@ -17,7 +17,7 @@ To ensure a smooth stop to validation, make sure you should do the following act
 - Purge validator session keys
 - Unbond your tokens
 
-These can all be done with [PolkadotJS Apps](https://polkadot.js.org/apps) interface or with
+These can all be done with [PolkadotJS Apps](https://portal.selendra.org) interface or with
 extrinsics.
 
 ## Chill Validator

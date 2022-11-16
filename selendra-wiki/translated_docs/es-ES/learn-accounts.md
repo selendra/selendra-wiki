@@ -85,7 +85,7 @@ Finally, let's look at Kusama addresses. Decoding `CpjsLDC1JFyrhm3ftC9Gs4QoyrkHK
 
 ## Obtaining and Managing an Address
 
-The **most user-friendly** way to create a Polkadot or Kusama address is through the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
+The **most user-friendly** way to create a Polkadot or Kusama address is through the [Selendra-Portal UI](https://portal.selendra.org/#/accounts). Remember to back up the seed phrase used to generate your account - the accounts are stored only in your browser, so purging the cache will wipe your accounts as well. You would then have to recreate them using the seed phrase given to you by the UI - this will also restore all your previously held balances.
 
 A **more convenient and recommended** method of keeping the accounts stored on your computer is using the [Polkadot{.js} extension](https://github.com/polkadot-js/extension). This extension remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget to back up your seed phrase - if you lose access to this computer, or the extension somehow crashes beyond repair, the phrase will come in handy.
 
@@ -240,7 +240,7 @@ Let's consider an example of a multi-sig on Polkadot with a threshold of 2 and 3
 
 ### Example with Polkadot.JS
 
-For this example, we will be using the [Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) testnet and [Polkadot.JS Apps](https://wiki.polkadot.network/docs/en/learn-balance-transfers#polkadot-js-apps) to create a 2-of-3 multisig address and send a transaction with it.
+For this example, we will be using the [Westend](https://wiki.selendra.org/docs/en/maintain-networks#westend-test-network) testnet and [Polkadot.JS Apps](https://wiki.selendra.org/docs/en/learn-balance-transfers#polkadot-js-apps) to create a 2-of-3 multisig address and send a transaction with it.
 
 > While Westend is meant to replicate the Polkadot mainnet as closely as possible, there are a few notable differences:
 >

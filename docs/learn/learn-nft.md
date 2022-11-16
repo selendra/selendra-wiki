@@ -201,7 +201,7 @@ to Statemine.
 ![](../assets/nft/nft-statemine.png)
 
 The can also be interacted with directly through the
-[extrinsics tab of Statemine](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
+[extrinsics tab of Statemine](https://portal.selendra.org/?rpc=wss%3A%2F%2Fkusama-statemine-rpc.paritytech.net#/extrinsics):
 
 ![](../assets/nft/uniques.png)
 

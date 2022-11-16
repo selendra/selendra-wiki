@@ -8,7 +8,7 @@ slug: ../maintain-wss
 ---
 
 You might want to host a node on one server and then connect to it from a UI hosted on another, e.g.
-[Polkadot-JS UI](https://polkadot.js.org/apps). This will not be possible unless you set up a secure
+[Selendra-Portal UI](https://portal.selendra.org). This will not be possible unless you set up a secure
 proxy for websocket connections. Let's see how we can set up WSS on a remote Substrate node.
 
 _Note: this should **only** be done for sync nodes used as back-end for some dapps or projects.
@@ -52,7 +52,7 @@ The first approach is getting a dedicated domain, redirecting its nameservers to
 setting up an Nginx server for that domain, and finally
 [following LetsEncrypt instructions](https://certbot.eff.org/instructions?ws=nginx&os=ubuntubionic)
 for Nginx setup. This will auto-generate an SSL certificate and include it in your Nginx
-configuration. This will let you connect Polkadot-JS UI to a URL like mynode.mydomain.com rather
+configuration. This will let you connect Selendra-Portal UI to a URL like mynode.mydomain.com rather
 than 82.196.8.192:9944, which is arguably more user friendly.
 
 This is simple to do on cloud hosting providers or if you have a static IP, but harder to pull off
@@ -142,11 +142,11 @@ produce a "Not private" warning which you can skip by going to "Advanced" and th
 
 ## Connecting to the node
 
-Open [Polkadot-JS UI](https://polkadot.js.org/apps) and click the logo in the top left to switch the
+Open [Selendra-Portal UI](https://portal.selendra.org) and click the logo in the top left to switch the
 node. Activate the "Development" toggle and input your node's address - either the domain or the IP
 address. Remember to prefix with `wss://` and if you're using the 443 port, append `:443`, like so:
 `wss://example.com:443`.
 
-![A sync-in-progress chain connected to Polkadot-JS UI](../assets/maintain-wss-image.png)
+![A sync-in-progress chain connected to Selendra-Portal UI](../assets/maintain-wss-image.png)
 
 Now you have a secure remote connect setup for your Substrate node.

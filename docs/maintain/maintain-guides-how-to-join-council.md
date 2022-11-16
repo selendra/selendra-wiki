@@ -31,7 +31,7 @@ It is a good idea to announce your council intention before submitting your cand
 supporters will know when they can start to vote for you. You can also vote for yourself in case no
 one else does.
 
-Go to [Polkadot Apps Dashboard](https://polkadot.js.org/apps) and navigate to the "Council" tab.
+Go to [Polkadot Apps Dashboard](https://portal.selendra.org) and navigate to the "Council" tab.
 Click the button on the right that says "Submit Candidacy."
 
 ![submit candidacy button](../assets/council/polkadotjs_submit_candidancy.png)

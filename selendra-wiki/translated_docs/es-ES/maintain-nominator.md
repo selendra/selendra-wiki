@@ -14,7 +14,7 @@ While your SEL are staked by nominating a validator, they are 'locked' (bonded).
 
 ### Active vs. Inactive Nomination
 
-When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking page, you should see your bonded accounts and nomination status. If not, you can follow [this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be effective in the next era, that means roughly 6 hours on Kusama and 24 hours on Polkadot.
+When you go to the [Account actions](https://portal.selendra.org/#/staking/actions) under staking page, you should see your bonded accounts and nomination status. If not, you can follow [this](maintain-guides-how-to-nominate-kusama) guide to configure it first. Your nominations will be effective in the next era, that means roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](/img/staking/polkadotjs-staking-account-actions.jpg)
 
@@ -28,13 +28,13 @@ As long as you have nominated more than one validator candidate and at least one
 
 ![Staking Returns](/img/staking/polkadotjs-staking-returns.jpg)
 
-As a nominator, if you only want to know the profit each validator made for each era, you can go to the [Returns](https://polkadot.js.org/apps/#/staking/returns) section under the staking page by inputting the number of tokens you would like to stake to check it. Then, nominate those who have a higher profit. However, that does not guarantee the right way to evaluate the validators' overall performance.
+As a nominator, if you only want to know the profit each validator made for each era, you can go to the [Returns](https://portal.selendra.org/#/staking/returns) section under the staking page by inputting the number of tokens you would like to stake to check it. Then, nominate those who have a higher profit. However, that does not guarantee the right way to evaluate the validators' overall performance.
 
 One example would be if a validator is regularly offline, their nominators most likely would get fewer rewards than others. More importantly, when many validators are [unreachable](learn-staking#unresponsiveness), those nominators who staked with them will be slashed.
 
 ![Validator Stats](/img/staking/polkadotjs-staking-validator-stats.jpg)
 
-Thus, to be a smart nominator, it would be better to look at their [histories](https://polkadot.js.org/apps/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8) such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
+Thus, to be a smart nominator, it would be better to look at their [histories](https://portal.selendra.org/#/staking/query/CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8) such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
 
 > These concepts have been further explained in the [Why Nominate on Polkadot & Kusama video](https://www.youtube.com/watch?v=weG_uzdSs1E&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=4) and [What to Consider when Nominating Validators on Polkadot and Kusama](https://www.youtube.com/watch?v=K-a4CgVchvU&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=9) and [Nominating/Staking on Polkadot and Kusama](https://www.youtube.com/watch?v=NYs9oWAbzbE&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=14)
 

@@ -84,7 +84,7 @@ Once successful you will see your second appear in the dropdown in the proposal 
 
 At the end of each launch period, the most seconded proposal will move to referendum. During this time you can cast a vote for or against the proposal. You may also lock up your tokens for a greater length of time to weigh your vote more strongly. During the time your tokens are locked, you are unable to transfer them, however they can still be used for further votes. Locks are layered on top of each other, so an eight week lock does not become a 15 week lock if you vote again a week later, rather another eight week lock is placed to extend the lock just one extra week.
 
-To vote on a referendum, navigate to the ["Democracy" tab of Polkadot Apps](https://polkadot.js.org/apps/#/democracy/). Any active referendum will show in the "referenda" column. Click the blue button "Vote" to cast a vote for the referendum.
+To vote on a referendum, navigate to the ["Democracy" tab of Polkadot Apps](https://portal.selendra.org/#/democracy/). Any active referendum will show in the "referenda" column. Click the blue button "Vote" to cast a vote for the referendum.
 
 If you would like to cast your vote for the proposal select the "Aye, I approve" option. If you would like to cast your vote against the proposal in referendum you will select "Nay, I do not approve" option.
 
@@ -96,9 +96,9 @@ When you are comfortable with the decision you have made, click the blue "Vote" 
 
 ## Unlocking Locked Tokens
 
-Like [vesting](https://wiki.polkadot.network/docs/en/learn-DOT#lazy-vesting), the tokens that are locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds available again after the lock expires. Unbonding is another term you hear a lot in Polkadot, it means withdrawing your SEL that was used in staking. To know more about it, please see [here](maintain-guides-how-to-unbond).
+Like [vesting](https://wiki.selendra.org/docs/en/learn-DOT#lazy-vesting), the tokens that are locked in democracy are unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make your funds available again after the lock expires. Unbonding is another term you hear a lot in Polkadot, it means withdrawing your SEL that was used in staking. To know more about it, please see [here](maintain-guides-how-to-unbond).
 
-You can do this from the "Accounts" page in [Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts). First check that your account has a "democracy" lock by opening the details on your balance. In the example below the account has 150 KSM locked in democracy.
+You can do this from the "Accounts" page in [Polkadot-JS Apps](https://portal.selendra.org/#/accounts). First check that your account has a "democracy" lock by opening the details on your balance. In the example below the account has 150 KSM locked in democracy.
 
 ![democracy balance details](assets/democracy_balance_details.png)
 
@@ -110,7 +110,7 @@ Now you can click the menu button on Apps and find the option that says "Clear e
 
 If you do not see an option to clear expired democracy votes, it may be that the lock is very old. You then must clear the lock by directly issuing the correct extrinsics.
 
-Navigate to the [Extrinsics page](https://polkadot.js.org/apps/#/extrinsics) and submit the following extrinsic: `democracy.removeVote(index)` using the account that you voted with. For the index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the image below).
+Navigate to the [Extrinsics page](https://portal.selendra.org/#/extrinsics) and submit the following extrinsic: `democracy.removeVote(index)` using the account that you voted with. For the index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the image below).
 
 You need to press the "Submit Transaction" button to submit the extrinsic.
 
@@ -120,9 +120,9 @@ Now submit the following extrinsic: `democracy.unlock(target)`, where target is 
 
 ![democracy clear_lock_extrinsic_2](assets/democracy_clear_lock_extrinsic_2.png)
 
-If you return to the [Accounts page](https://polkadot.js.org/apps/#/accounts), you should see that the democracy lock has been released.
+If you return to the [Accounts page](https://portal.selendra.org/#/accounts), you should see that the democracy lock has been released.
 
-Note that this applies only to locked SEL that were used for voting on referenda. In order to unlock SEL locked by voting for members of the Polkadot Council, you need to go to the [Council](https://polkadot.js.org/apps/#/council) page, click "Vote", and then click on "Unvote All".
+Note that this applies only to locked SEL that were used for voting on referenda. In order to unlock SEL locked by voting for members of the Polkadot Council, you need to go to the [Council](https://portal.selendra.org/#/council) page, click "Vote", and then click on "Unvote All".
 
 ## Delegate a Vote
 

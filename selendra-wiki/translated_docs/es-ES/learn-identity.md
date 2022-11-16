@@ -4,11 +4,11 @@ title: Identity
 sidebar_label: Identity
 ---
 
-Polkadot provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by [registrars](#registrars).
+Selendra provides a naming system that allows participants to add personal information to their on-chain account and subsequently ask for verification of this information by [registrars](#registrars).
 
 ## Setting an Identity
 
-Users can register some default fields like legal name, display name, website, Twitter handle, Riot handle, etc. along with extra, custom fields for which they would like attestations (see [Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain - 1.666 KSM per identity, and 0.416666 KSM per each field beyond the legal name. These funds are _locked_, not spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of information, so the data must be less than that. When inputting the data manually through the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics), a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
+Users can register some default fields like legal name, display name, website, Twitter handle, Riot handle, etc. along with extra, custom fields for which they would like attestations (see [Judgements](#judgements)). Users must reserve funds in a bond to store their information on chain - 1.666 KSM per identity, and 0.416666 KSM per each field beyond the legal name. These funds are _locked_, not spent - they are returned when the identity is cleared. Each field can store up to 32 bytes of information, so the data must be less than that. When inputting the data manually through the [Extrinsics UI](https://portal.selendra.org/#/extrinsics), a [UTF8 to bytes](https://onlineutf8tools.com/convert-utf8-to-bytes) converter can help.
 
 The easiest way to add the built-in fields is to click the gear icon next to one's account and select "Set on-chain identity".
 
@@ -26,17 +26,17 @@ Note that custom fields are not shown in the UI by default:
 
 ![Only built-in fields are shown](assets/identity/04.jpg)
 
-The rendering of such custom values is, ultimately, up to the UI/dapp makers. In the case of PolkadotJS, the team prefers to only show official fields for now. If you want to check that the values are still stored, use the [Chain State UI](https://polkadot.js.org/apps/#/chainstate) to query the active account's identity info:
+The rendering of such custom values is, ultimately, up to the UI/dapp makers. In the case of SelendraJS, the team prefers to only show official fields for now. If you want to check that the values are still stored, use the [Chain State UI](https://portal.selendra.org/#/chainstate) to query the active account's identity info:
 
 ![Raw values of custom fileds are available on-chain](assets/identity/05.jpg)
 
-It is up to your own UI or dapp to then do with this data as it pleases. The data will remain available for querying via the Polkadot API, so you don't have to rely on the PolkadotJS UI.
+It is up to your own UI or dapp to then do with this data as it pleases. The data will remain available for querying via the Selendra API, so you don't have to rely on the SelendraJS UI.
 
 You can have a maximum of 100 custom fields.
 
 ### Format Caveat
 
-Please note the following caveat: because the fields support different formats, from raw bytes to various hashes, a UI has no way of telling how to encode a given field it encounters. The PolkadotJS UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these values readable on screen. However, given that there are no restrictions on the values that can be placed into these fields, a different UI may interpret them as, for example, IPFS hashes or encoded bitmaps. This means any field stored as raw bytes will become unreadable by that specific UI. As field standards crystallize, things will become easier to use but for now, every custom implementation of displaying user information will likely have to make a conscious decision on the approach to take, or support multiple formats and then attempt multiple encodings until the output makes sense.
+Please note the following caveat: because the fields support different formats, from raw bytes to various hashes, a UI has no way of telling how to encode a given field it encounters. The SelendraJS UI currently encodes the raw bytes it encounters as UTF8 strings, which makes these values readable on screen. However, given that there are no restrictions on the values that can be placed into these fields, a different UI may interpret them as, for example, IPFS hashes or encoded bitmaps. This means any field stored as raw bytes will become unreadable by that specific UI. As field standards crystallize, things will become easier to use but for now, every custom implementation of displaying user information will likely have to make a conscious decision on the approach to take, or support multiple formats and then attempt multiple encodings until the output makes sense.
 
 ## Registrars
 
@@ -54,7 +54,7 @@ Go to the Democracy tab, select "Submit preimage", and input the information for
 
 Copy the preimage hash. In the above image, that's `0x90a1b2f648fc4eaff4f236b9af9ead77c89ecac953225c5fafb069d27b7131b7`. Submit the preimage by signing a transaction.
 
-Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance` field needs to be at least 10 KSM. You can find out the minimum by querying the chain state under [Chain State](https://polkadot.js.org/apps/#/chainstate) -> Constants -> democracy -> minimumDeposit.
+Next, select "Submit Proposal" and enter the previously copied preimage hash. The `locked balance` field needs to be at least 10 SEL. You can find out the minimum by querying the chain state under [Chain State](https://portal.selendra.org/#/chainstate) -> Constants -> democracy -> minimumDeposit.
 
 ![Submitting a proposal](assets/identity/13.jpg)
 
@@ -77,7 +77,7 @@ A seventh state, "fee paid", is for when a user has requested judgement and it i
 
 Registrars gain trust by performing proper due diligence and would presumably be replaced for issuing faulty judgements.
 
-To be judged after submitting your identity information, go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select the `identity` pallet, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations.
+To be judged after submitting your identity information, go to the ["Extrinsics UI"](https://portal.selendra.org/#/extrinsics) and select the `identity` pallet, then `requestJudgement`. For the `reg_index` put the index of the registrar you want to be judged by, and for the `max_fee` put the maximum you're willing to pay for these confirmations.
 
 If you don't know which registrar to pick, first check the available registrars by going to ["Chain State UI"]() and selecting `identity.registrars()` to get the full list.
 
@@ -87,7 +87,7 @@ You may decide that you actually do not want to be judged by a registrar (for in
 
 ![Cancel Registrar](assets/registrar_cancel_judgement.png)
 
-To do this, first go to the ["Extrinsics UI"](https://polkadot.js.org/apps/#/extrinsics) and select the `identity` pallet, then `cancelRequest`. Ensure that you are calling this from the correct account (the one for which you initially requested judgement). For the `reg_index`, put the index of the registrar from which you requested judgement.
+To do this, first go to the ["Extrinsics UI"](https://portal.selendra.org/#/extrinsics) and select the `identity` pallet, then `cancelRequest`. Ensure that you are calling this from the correct account (the one for which you initially requested judgement). For the `reg_index`, put the index of the registrar from which you requested judgement.
 
 Submit the transaction, and the requested judgement will be cancelled.
 
@@ -139,7 +139,7 @@ Users can also link accounts by setting "sub accounts", each with its own identi
 
 An account can have a maximum of 100 sub-accounts.
 
-To register a sub-account on an existing account, you must currently use the [Extrinsics UI](https://polkadot.js.org/apps/#/extrinsics). There, select the identity pallet, then `setSubs` as the function to use. Click "Add Item" for every child account you want to add to the parent sender account. The value to put into the Data field of each parent is the optional name of the sub-account. If omitted, the sub-account will inherit the parent's name and be displayed as `parent/parent` instead of `parent/child`.
+To register a sub-account on an existing account, you must currently use the [Extrinsics UI](https://portal.selendra.org/#/extrinsics). There, select the identity pallet, then `setSubs` as the function to use. Click "Add Item" for every child account you want to add to the parent sender account. The value to put into the Data field of each parent is the optional name of the sub-account. If omitted, the sub-account will inherit the parent's name and be displayed as `parent/parent` instead of `parent/child`.
 
 ![Sub account setup](assets/identity/06.jpg)
 
@@ -151,7 +151,7 @@ Note that a deposit of 2.5KSM is required for every sub-account.
 
 To clear an identity:
 
-1. Navigate to the [Accounts UI](https://polkadot.js.org/apps/#/accounts).
+1. Navigate to the [Accounts UI](https://portal.selendra.org/#/accounts).
 2. Click the three SELs corosponding to the account you want to clear and select 'Set on-chain identity'.
 3. Select 'Clear Identity', and sign and submit the transaction.
 

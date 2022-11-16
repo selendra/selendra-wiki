@@ -41,7 +41,7 @@ Polkadot before bonded funds can be transferred after issuing an unbond transact
 
 ### Active vs. Inactive Nomination
 
-When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking
+When you go to the [Account actions](https://portal.selendra.org/#/staking/actions) under staking
 page, you should see your bonded accounts and nomination status. If not, you can follow
 [this](../maintain/maintain-guides-how-to-nominate-selendra.md) guide to configure it first. Your
 nominations will be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on
@@ -84,7 +84,7 @@ nominators to set their intention to nominate, of which, the stake of the top
 {{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
 nominators is considered for [electing set](#staking-election-stages) that eventually determines the
 active validators. The bags-list can be previewed on
-[Polkadot JS Apps > Network > Staking > Bags > All Bags](https://polkadot.js.org/apps/#/staking/bags).
+[Polkadot JS Apps > Network > Staking > Bags > All Bags](https://portal.selendra.org/#/staking/bags).
 
 ![Bags list](../assets/staking/bags-list.png)
 
@@ -94,7 +94,7 @@ active validators. The bags-list can be previewed on
 
 Minimum SEL required to submit intent to nominate is 10 SEL, but the minimum active nomination
 required to earn staking rewards is dynamic and may be much higher, which can be viewed on
-[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
+[Polkadot JS Apps > Network > Staking > Targets page](https://portal.selendra.org/#/staking/targets).
 
 :::
 
@@ -179,7 +179,7 @@ to nominate with, in order to receive staking rewards, can change between the er
 
 - **min-intention-threshold:** minimum stake to declare the intention to nominate. This parameter
   can be updated via on-chain governance and the most recent and up to date version can be found on
-  [chain state](https://polkadot.js.org/apps/#/chainstate) (select **state query > staking >
+  [chain state](https://portal.selendra.org/#/chainstate) (select **state query > staking >
   minimumNominatorBond**)
 
 - **min-electing:** minimum stake among the electing nominators. Since this is almost always the
@@ -260,7 +260,7 @@ more information and instructions for claiming rewards.
 ### What to Take Into Consideration When Nominating
 
 There are many factors to consider when deciding which validator's to nominate. One useful tool for
-assisting in this process is the Staking [Targets](https://polkadot.js.org/apps/#/staking/targets)
+assisting in this process is the Staking [Targets](https://portal.selendra.org/#/staking/targets)
 table. This displays potential validators in a table that can be evaluated and sorted using various
 metrics. Outlined below are the relevant columns to consider, followed by a brief description of
 each.
@@ -317,7 +317,7 @@ puzzle that you should consider when picking validators to nominate.
 ![Staking Returns](../assets/staking/polkadotjs_nominators_target.png)
 
 As a nominator, if you only want to know the profit each validator made for each era, you can go to
-the [Targets](https://polkadot.js.org/apps/#/staking/targets) section under the staking page by
+the [Targets](https://portal.selendra.org/#/staking/targets) section under the staking page by
 inputting the number of tokens you would like to stake to check it. Then, nominate those who have a
 higher profit. However, that does not guarantee the right way to evaluate the validators' overall
 performance.
@@ -360,7 +360,7 @@ slashed.
 ![Validator Stats](../assets/staking/polkadotjs_validator_stats.png)
 
 Thus, to be a smart nominator, it would be better to query their
-[histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks
+[histories](https://portal.selendra.org/#/staking/query/) to see statistics such as blocks
 produced, rewards and slashes, and [identity](learn-identity.md) (if they have it set). Moreover, a
 nominator should do comprehensive research on their validator candidates - they should go over the
 validators' websites to see who they are, what kind of infrastructure setup they are using,

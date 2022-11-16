@@ -95,7 +95,7 @@ sidebar_label: Links
 
 ### UI and explorers
 
-- [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network; can be used for Alexander, Kusama, or your own private network.
+- [Polkadot Explorer](https://portal.selendra.org/#/explorer) - Browser for the Polkadot network; can be used for Alexander, Kusama, or your own private network.
 - [Telemetry](http://telemetry.polkadot.io/) - Information services website for nodes.
 - [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Selendra Relay Chain and Parity Substrate chains.
 - [Subscan.io](https://subscan.io) - Explorer for Substrate based chains.

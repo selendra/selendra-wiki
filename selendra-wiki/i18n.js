@@ -6,6 +6,9 @@ const localeConfigs = {
   en: {
     label: "English",
   },
+  kh: {
+    label: "ភាសាខ្មែរ",
+  }
 };
 
 module.exports = {

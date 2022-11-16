@@ -54,7 +54,7 @@ Spreading the word about the proposal's explanation is ultimately up to the prop
 
 ### Creating the Proposal
 
-One way to create the proposal is to use the Polkadot-JS Apps [website](https://polkadot.js.org/apps). From the website, use either the [extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and select the Treasury pallet, then `proposeSpend` and enter the desired amount and recipient, or use the [Treasury tab](https://polkadot.js.org/apps/#/treasury) and its dedicated Submit Proposal button:
+One way to create the proposal is to use the Polkadot-JS Apps [website](https://portal.selendra.org). From the website, use either the [extrinsics tab](https://portal.selendra.org/#/extrinsics) and select the Treasury pallet, then `proposeSpend` and enter the desired amount and recipient, or use the [Treasury tab](https://portal.selendra.org/#/treasury) and its dedicated Submit Proposal button:
 
 ![A proposal being created](assets/treasury/submit-new.png)
 
@@ -134,7 +134,7 @@ The bounty has a predetermined duration of 90 days with the possibility of being
 
 Anyone can create a Bounty proposal using Polkadot JS Apps: Users are able to submit a proposal on the dedicated Bounty section under Governance. The development of a robust user interface to view and manage bounties in the Polkadot Apps is still under development and it will serve Council members, Curators and Beneficiaries of the bounties, as well as all users observing the on-chain treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a motion to be voted.
 
-To submit a bounty, please visit [Polkadot JS Apps](https://polkadot.js.org/apps) and click on the governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
+To submit a bounty, please visit [Polkadot JS Apps](https://portal.selendra.org) and click on the governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the requested allocation (including curator's fee) and confirm the call.
 
 After this, a Council member will need to assist you to pass the bounty proposal for vote as a motion. You can contact the Council by joining the
 {{ polkadot: Polkadot Direction [channel](https://parity.link/polkadot-direction) :polkadot }}

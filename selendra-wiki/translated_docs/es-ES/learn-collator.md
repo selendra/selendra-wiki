@@ -17,5 +17,5 @@ Collators are a key element of [XCMP (Cross-Chain Message Passing)](learn-crossc
 ### Guides and Tools
 
 - [Workshop covering Cumulus and Collators](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling)
-- [Rococo tesnet guide](https://wiki.polkadot.network/docs/en/build-parachains-rococo)
+- [Rococo tesnet guide](https://wiki.selendra.org/docs/en/build-parachains-rococo)
 - [polkadot-launch](https://github.com/shawntabrizi/polkadot-launch) - a tool to quickly spin up a local Polkadot testnet based on some parameters like number of parachains, collator setup, etc.

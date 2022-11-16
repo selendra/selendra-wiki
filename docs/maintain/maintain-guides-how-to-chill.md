@@ -7,10 +7,10 @@ keywords: [chill, chilling, pause]
 slug: ../maintain-guides-how-to-chill
 ---
 
-Staking bonds can be in any of the three states: validating, nominating, or chilled (neither validating nor nominating).  When a staker wants to temporarily pause their active engagement in staking but does not want to unbond their funds, they can choose to "chill" their involvement and keep their funds bonded.
+Staking bonds can be in any of the three states: validating, nominating, or chilled (neither validating nor nominating). When a staker wants to temporarily pause their active engagement in staking but does not want to unbond their funds, they can choose to "chill" their involvement and keep their funds bonded.
 
 An account can step back from participating in active staking by clicking "Stop" under the Network >
-Staking > Account actions page in [PolkadotJS Apps](https://polkadot.js.org/apps) or by calling the
+Staking > Account actions page in [PolkadotJS Apps](https://portal.selendra.org) or by calling the
 `chill` extrinsic in the [staking pallet][chill extrinsic]. When an account chooses to chill, it
 becomes inactive in the next era. The call must be signed by the _controller_ account, not the
 _stash_.
@@ -23,9 +23,10 @@ staking, take a look at the [accounts][] section in the general staking guide.
 :::
 
 ![staking](../assets/NPoS/staking-keys_stash_controller.png)
+
 ## Consideration for Staking Election
 
-A bond that is actively participating in staking but chilled would continue to participate in staking for the rest of the current era.  If the bond was chilled in sessions 1 through 4 and continues to be chilled for the rest of the era, it would NOT be selected for election in the next era.  If a bond was chilled for the entire session 5, it would not be considered in the next election.  If the bond was chilled in session 6, its participation in the next era's election would depend on its state in session 5.
+A bond that is actively participating in staking but chilled would continue to participate in staking for the rest of the current era. If the bond was chilled in sessions 1 through 4 and continues to be chilled for the rest of the era, it would NOT be selected for election in the next era. If a bond was chilled for the entire session 5, it would not be considered in the next election. If the bond was chilled in session 6, its participation in the next era's election would depend on its state in session 5.
 
 ## Chilling as a Nominator
 
@@ -35,17 +36,17 @@ Your nominator will remain bonded when it is chilled. When you are ready to nomi
 
 ## Chilling as a Validator
 
-When you voluntarily chill after being a validator, your nominators will remain.  As long as your nominators make no action, you will still have the nominations when you choose to become an active validator once again.  You bond however would not be listed as a nominable validator thus any nominators issuing new or revisions to existing nominations would not be able to select your bond.
+When you voluntarily chill after being a validator, your nominators will remain. As long as your nominators make no action, you will still have the nominations when you choose to become an active validator once again. You bond however would not be listed as a nominable validator thus any nominators issuing new or revisions to existing nominations would not be able to select your bond.
 
 When you become an active validator, you will also need to reset your validator preferences (commission, etc.). These can be configured as the same values set previously or something different.
 
 ## Involuntary Chills
 
-If a validator was unresponsive for an entire session, the validator bond would be chilled in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it may restrict the validator from being selected in the next election depending on the session in which it was chilled (see considerations above).  A chilled validator may re-declare the intent to validate at any time. However, it is recommended that the validator attempts to determine the source of the chill before doing so.
+If a validator was unresponsive for an entire session, the validator bond would be chilled in a process known as _involuntary chilling._ When a validator has been involuntarily chilled, it may restrict the validator from being selected in the next election depending on the session in which it was chilled (see considerations above). A chilled validator may re-declare the intent to validate at any time. However, it is recommended that the validator attempts to determine the source of the chill before doing so.
 
-Slashing may also result in an involuntary chill. However, in that scenario, the validator would also lose their nominations.  By this action, even if the validator re-declares its intent to validate before session 5, there wouldn't be sufficient nominations to re-elect the node into the active set.
+Slashing may also result in an involuntary chill. However, in that scenario, the validator would also lose their nominations. By this action, even if the validator re-declares its intent to validate before session 5, there wouldn't be sufficient nominations to re-elect the node into the active set.
 
-Nominators have the option to renominate a slashed validator using a display row in Polkadot-JS UI. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Renomination required". 
+Nominators have the option to renominate a slashed validator using a display row in Selendra-Portal UI. This row is displayed in the "Account Actions" tab for the nominator under a heading that says "Renomination required".
 
 ## Chill Other
 
@@ -53,6 +54,5 @@ An unbounded and unlimited number of nominators and validators in Polkadot's NPo
 
 For instance, let us consider a scenario where the minimum staking requirement for nominators is changed from 80 SELs to 120 SELs. An account that was actively nominating with 80 SELs before this update would still keep receiving staking rewards. To handle this corner case, the `chill_other` extrinsic was incorporated which also helps to keep things backwards compatible and safe. The `chill_other` extrinsic is permissionless and any third party user can target it on an account where the minimum active bond is not satisfied, and chill that account. The list of addresses of all the active validators and their nominators can be viewed by running [validator stats](https://github.com/w3f/validator-stats) script.
 
-[chill extrinsic]:
-  https://paritytech.github.io/substrate/master/pallet_staking/pallet/enum.Call.html#variant.chill
+[chill extrinsic]: https://paritytech.github.io/substrate/master/pallet_staking/pallet/enum.Call.html#variant.chill
 [accounts]: ../learn/learn-staking.md#accounts

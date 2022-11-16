@@ -2,7 +2,7 @@
 id: faq
 title: Frequently Asked Questions (FAQs)
 sidebar_label: Frequently Asked Questions (FAQs)
-description: Some FAQs to help you conquer your experience with Polkadot.
+description: Some FAQs to help you conquer your experience with Selendra.
 keywords: [FAQ, questions]
 slug: ../faq
 ---
@@ -12,35 +12,28 @@ import RPC from "./../../components/RPC-Connection";
 :::info
 
 This FAQ focuses on technical questions for users interested in developing applications for
-Polkadot. If you have a more general question, you may wish to search for the answer on our support
-[Knowledge Base](https://support.polkadot.network/support/home) or the main
-[Polkadot network FAQ](https://polkadot.network/faq). If you have a question that is not answered,
-please feel free to ask on the Polkadot Watercooler
-[Element channel](https://app.element.io/#/room/#polkadot-watercooler:web3.foundation) or contact
-[Polkadot Support](https://support.polkadot.network).
+Selendra. If you have a more general question, you may wish to search for the answer on our support
+[Knowledge Base](https://support.selendra.org/support/home) or the main
+[Selendra network FAQ](https://selendra.org/faq). If you have a question that is not answered,
+please feel free to ask on the Selendra Watercooler
+[Selendra Support](https://support.selendra.org).
 
 :::
 
-## Polkadot Launch
+## Selendra Launch
 
-The Genesis block of the Polkadot network was launched on May 26, 2020 at 15:36:21 UTC, as a Proof
+The Genesis block of the Selendra network was launched on Month Date, 2020 at 00:00:00 UTC, as a Proof
 of Authority (PoA) network, with governance controlled by the single Sudo (super-user) account.
 During this time, validators started joining the network and signaling their intention to
 participate in consensus.
 
-The network evolved to become a Proof of Stake (PoS) network on June 18, 2020. With the chain
-secured by the decentralized community of validators, the Sudo module was removed on July 20, 2020,
-transitioning the governance of the chain into the hands of the token (DOT) holders. This is the
-point where Polkadot became decentralized.
+transitioning the governance of the chain into the hands of the token (SEL) holders. This is the
+point where Selendra became decentralized.
 
-The final step of the transition to full-functioning Polkadot was the enabling of transfer
-functionality, which occurred on Polkadot at block number 1_205_128 on August 18, 2020, at 16:39
-UTC.
+## Selendra Roadmap
 
-## Polkadot Roadmap
-
-For more information on the Polkadot roadmap please visit the
-[official Polkadot website](https://polkadot.network/technology/#roadmap).
+For more information on the Selendra roadmap please visit the
+[official Selendra website](https://selendra.org/technology/#roadmap).
 
 ## Validators
 
@@ -50,10 +43,8 @@ There is no central authority that decides on validators, so there is not per se
 that you can fill out. Registering as a validator is permissionless; in order to become one you must
 only set up a validator node and mark your intention to validate on chain. For detailed instruction
 on how to do this you can consult the
-[Kusama validator guide](../maintain/kusama/maintain-guides-how-to-validate-kusama.md) on validating
-for Kusama or the
-[Polkadot validator guide](../maintain/maintain-guides-how-to-validate-selendra.md) for validating
-on Polkadot.
+[Selendra validator guide](../maintain/maintain-guides-how-to-validate-selendra.md) for validating
+on Selendra.
 
 However, once you've set up a validator and have registered your intention it does not mean that you
 will be included in the _active set_ right away. The validators are elected to the active set based
@@ -81,40 +72,29 @@ size of the active set and how many validators are waiting in the pool.
 
 There are a few ways to estimate the minimum stake.
 
-One way can be to navigate to the
-[Polkadot Apps Targets tab](https://ipfs.io/ipns/polkadot.dotapps.io/#/staking/targets). The value
-at the top of the screen saying "Lowest" is the least staked validator. You need at least this
-much + 1 to enter the set.
-
-You can also use some tools some to perform estimations.
-
 - [Offline Election](https://github.com/paritytech/substrate-debug-kit/tree/master/offline-election)
   can provide exact results of running an election on the current set of validators using the same
-  Rust code that is ran in Polkadot.
+  Rust code that is ran in Selendra.
 
-- [Validator stats script](https://github.com/w3f/validator-stats) can give you an estimate that is
-  based on the currently elected set, as well as some statistics about Kusama validators.
+### Why will Selendra aim for the countries to running as validator?
 
-### Why will Polkadot have only 1000 validators while other projects have hundreds of thousands?
-
-Polkadot's goal to have 1000 validators is set to be something that is practically achievable in the
-short term with high confidence of good performance in a live environment. Furthermore, validators
-in Polkadot are not the only stakers, and if we consider the number of stakers that can be possible
-on Polkadot the number can scale up to hundreds of thousands. Since validators are performing
+Selendra's goal to have not 100 or 1000 validators but many countries, maintaining together with
+high confidence of good performance in a live environment. Furthermore, validators
+in Selendra are not the only stakers, and if we consider the number of stakers that can be possible
+on Selendra the number can scale up to hundreds of thousands. Since validators are performing
 critical consensus work to maintain the security of the chain including all of its shards, a more
 modest number of validators is estimated to start. Upon later improvements, such as implementing
 signature aggregation for finalization messages, the number of validators could reasonably scale up.
-However, increasing validators above one thousand remains a goal for later iterations of Polkadot.
+However, increasing validators above one thousand remains a goal for later iterations of Selendra.
 
 It is also worth mentioning that one thousand validators is more than the number of validators of
-similar PoS chains with comparable levels of economic security as Polkadot. The closest contenders
-are operating with around 150 validators, while Polkadot is already securely running with
-{{ polkadot: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
+similar PoS chains with comparable levels of economic security as Selendra. The closest contenders
+are operating with around 150 validators, while Selendra is already securely running with
+{{ selendra: <RPC network="selendra" path="query.staking.validatorCount" defaultValue={297}/> :selendra }}
 validators.
 
 Additionally, other projects sometimes have a different definition of _validator_ that approximates
-more closely to remote signing keys without the full operation of a validating node. On Polkadot,
+more closely to remote signing keys without the full operation of a validating node. On Selendra,
 each validator is running their own validating node and performing full verification of the Relay
 Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state
 transitions. Other projects may consider validators and "validating nodes" as separate entities.
@@ -127,36 +107,28 @@ node can still share in staking rewards.
 
 ### What is the block time of the Relay Chain?
 
-Both the Kusama and Polkadot networks are currently operating at a rate of one block every six
-seconds.
+Selendra networks are currently operating at a rate of one block every six seconds.
 
 This may be changed in the future. It may go as low as two to three seconds after optimizations, or
 potentially increase in order to handle the capacity of the parachain networking in a live
 environment.
 
-### Does Polkadot have smart contracts?
+### Does Selendra have smart contracts?
 
 No - and yes. The Selendra Relay Chain does not implement smart contracts natively. The reason for
-not having smart contracts on the Relay Chain is part of the design philosophy for Polkadot that
+not having smart contracts on the Relay Chain is part of the design philosophy for Selendra that
 dictates that the Relay Chain should be the minimal logic required to accomplish its job.
 
-However, Polkadot will be a platform for other chains that _do_ implement smart contracts. It's
+However, Selendra will be a platform for other chains that _do_ implement smart contracts. It's
 possible for parachains to enable smart contract functionality and then benefit from the security
-and interoperability features of Polkadot. Additionally, existing smart contract chains can connect
-to Polkadot as a parachain, or via a bridge.
+and interoperability features of Selendra. Additionally, existing smart contract chains can connect
+to Selendra as a parachain, or via a bridge.
 
 While the Selendra Relay Chain does not implement smart contracts directly, undoubtedly there will
-be parachains that do. So it's better to say that the Polkadot _ecosystem_ has smart contracts
-versus "Polkadot has smart contracts."
+be parachains that do. So it's better to say that the Selendra _ecosystem_ has smart contracts
+versus "Selendra has smart contracts."
 
-### How will the Selendra Relay Chain connect to external chains in the ecosystem?
-
-One of the cornerstone interoperability technologies being researched and developed for deployment
-on Polkadot is cross-chain bridges. Bridges come in a variety of flavors with varying levels of
-trust associated with them. Polkadot is predominantly researching the trust-minimized flavor that
-imposes economic costs on the operators of the bridge, and therefore makes it economically secure.
-Bridge efforts are being worked on in concert with other projects in the ecosystem. Eventually,
-there will be bridges between Polkadot and most of the other major chains.
+[Indranet](https://github.com/selendra/indranet) is a parachain that focus on smart contract for Selendra.
 
 ### What is the inflation rate of the SEL?
 
@@ -167,42 +139,22 @@ portion may go directly to the treasury. The exact percentage that goes into bot
 based on the amount of SEL that are staked. Please see the article on
 [inflation](../learn/learn-staking.md/#inflation) for more information.
 
-### Why can't crowdloaned SEL be staked?
-
-DOTs contributed to a sucessful crowdloan campaign by a parachain are bonded for the entire lease
-period, which is two years on Polkadot. The crowdloaned SEL cannot be used for any other SEL utility
-functionalities like staking and democracy. In exchange to the lost staking rewards or liquidity of
-DOTs, the parachain team may offer rewards to the contributor.
-
-The utility of crowdloaned SEL is to provide a lease for a parachain. The utility of staked SEL is
-to secure the network through a reward/slash mechanism. Allowing crowdloaned SEL to be staked
-results in complex consequences like applying a slash on crowdloaned SEL that was meant to be bonded
-for the entire lease period of a parachain. In a way, the inaccessibility of crowdloaned SELs and
-the lack of staking rewards for the entire lease duration encourages the contributors to back
-projects that are valuable to the ecosystem.
-
 ## Governance
 
-### What prevents Polkadot governance from failing?
-
-Polkadot's governance has already been shown to work. Examples can be found in the runtime upgrades
-that have successfully taken place through on the testnets as well as in a real economic environment
-on [Kusama](https://guide.kusama.network) and Polkadot itself.
-
 It is fair to say that the field of on-chain blockchain governance is still new, and no one can
-claim to know exactly what the optimal version of on-chain governance is yet. However, Polkadot
+claim to know exactly what the optimal version of on-chain governance is yet. However, Selendra
 takes a brave step forward in pioneering thought-through mechanisms for evolving a blockchain.
 
 Blockchains need a method to adapt and evolve. Therefore, an on-chain governance system was
-necessary for the long-term success of Polkadot. Ultimately, it is the token holders that are
-responsible for preventing Polkadot's governance from failing by using their economic value and
+necessary for the long-term success of Selendra. Ultimately, it is the token holders that are
+responsible for preventing Selendra's governance from failing by using their economic value and
 conviction to sway the progression of the protocol.
 
-### What prevents Polkadot governance from becoming plutocratic?
+### What prevents Selendra governance from becoming plutocratic?
 
 A savvy reader might have noticed that the answer to the previous question endowed the token holder
-with the ultimate responsibility to ensure that Polkadot's governance does not fail. By following
-the train of this assertion, one might assume that Polkadot's governance is susceptible to becoming
+with the ultimate responsibility to ensure that Selendra's governance does not fail. By following
+the train of this assertion, one might assume that Selendra's governance is susceptible to becoming
 ruled by a few large token holders (called _whales_ in trading parlance) and therefore become a mere
 plutocracy (rule of the rich).
 
@@ -213,7 +165,7 @@ time. Longer lock-ups display _conviction_ in a vote. Conviction voting could al
 determined minority to overrule the vote of an apathetic majority in certain situations. Another
 mechanism is known as Adaptive Quorum Biasing. This makes proposals have a varying threshold for
 approval or rejection based on what part of the governance protocol the proposal originated in. For
-details on the subtleties of Polkadot's governance system, please see the
+details on the subtleties of Selendra's governance system, please see the
 [governance page](../learn/learn-governance.md).
 
 ## Parachains
@@ -223,7 +175,7 @@ details on the subtleties of Polkadot's governance system, please see the
 Parachains have the flexibility to implement their own monetary system or incentive structure for
 collators. However, this is not strictly necessary. Since the collator's job is to continue to give
 recent state transitions to the validators on the Relay Chain who validate each transition, the
-security of the parachain and the Polkadot network is completely separate from parachain economics.
+security of the parachain and the Selendra network is completely separate from parachain economics.
 Parachains need collators to continue to progress, so it wouldn't be unreasonable to see them
 incentivize collator nodes in some way, but the specific mechanism is completely up to parachain
 implementers.
@@ -258,9 +210,9 @@ as well as community contributors. A [Nim](https://github.com/status-im/nim-libp
 library also exists. Libp2p as a whole is an open source project that is actively developed and
 expanded on various code repositories hosted on [their GitHub](https://github.com/libp2p).
 
-### Does Polkadot use libp2p?
+### Does Selendra use libp2p?
 
-Yes, since Polkadot is built with Substrate. Substrate uses a networking protocol that is based on
+Yes, since Selendra is built with Substrate. Substrate uses a networking protocol that is based on
 libp2p (specifically the Rust libp2p library). However, Substrate uses a mix of standard libp2p
 protocols and protocols that are homegrown and not official libp2p standards. Of the standards
 protocols, those which are shared with other implementations of libp2p such as IPFS, are
@@ -281,24 +233,3 @@ its content addressable URI. IPFS, like Substrate, is an application of libp2p a
 the technology stack. Although both IPFS and Substrate use libp2p, it cannot be said that Substrate
 "uses" IPFS since besides sharing the underlying library for networking there is no native
 integration between the two applications.
-
-## Kusama
-
-### What is the minimum amount of KSM / SEL I can have in my account?
-
-Please see information about [Existential Deposits](../build/build-protocol-info.md).
-
-### What are the transfer fees for Kusama?
-
-It is important to note that the cost of transferring KSM is dynamic. Currently, the minimum cost of
-transferring KSM is 0.01 KSM (the base fee), although this can be changed via governance. However,
-actual transaction fees will vary based on a variety of factors. Specifically, fee calculation
-follows the following formula:
-
-```
-base_fee + (tx_length * length_fee) + WeightToFee(weight)
-```
-
-Please see the
-[fee calculation](https://docs.substrate.io/reference/how-to-guides/weights/calculate-fees/) page in
-the Substrate documentation for more detailed information.

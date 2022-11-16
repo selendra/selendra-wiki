@@ -11,11 +11,11 @@ import RPC from "./../../components/RPC-Connection";
 
 Balance transfers are used to send a balance from one account to another account. To start
 transferring a balance, we will begin by using
-[Polkadot-JS UI](https://polkadot.js.org/apps/#/explorer). This guide assumes that you've already
+[Selendra-Portal UI](https://portal.selendra.org/#/explorer). This guide assumes that you've already
 [created an account](learn-account-generation.md) and have some funds that are ready to be
 transferred.
 
-:::info We support only the use of the [_Polkadot-JS UI_](https://polkadot.js.org/apps/#/explorer)
+:::info We support only the use of the [_Selendra-Portal UI_](https://portal.selendra.org/#/explorer)
 together with the [_browser extension_](https://polkadot.js.org/extension/),
 [_ledger_](https://www.ledger.com/ledger-live) and
 [_parity signer_](https://www.parity.io/technologies/signer/) for signing transactions. We do not
@@ -28,8 +28,8 @@ below.
 
 :::
 
-- [Using the transfer tab or the send button on your account in the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui)
-  - [Signing with the Polkadot-JS UI](https://support.polkadot.network/support/solutions/articles/65000181993)
+- [Using the transfer tab or the send button on your account in the Selendra-Portal UI](https://support.polkadot.network/support/solutions/articles/65000170304-how-to-send-transfer-funds-out-of-your-dot-account-on-the-polkadot-js-ui)
+  - [Signing with the Selendra-Portal UI](https://support.polkadot.network/support/solutions/articles/65000181993)
   - [Signing with the browser extension](https://support.polkadot.network/support/solutions/articles/65000181989)
   - [Signing with ledger](https://support.polkadot.network/support/solutions/articles/65000181994)
   - [Signing with parity signer](https://support.polkadot.network/support/solutions/articles/65000182000)
@@ -41,7 +41,7 @@ below.
 
 :::
 
-If you directly import your Parity Signer account to Polkadot-JS UI, you will see a pop-up window
+If you directly import your Parity Signer account to Selendra-Portal UI, you will see a pop-up window
 with a QR code and a camera window, as shown below. Open the QR scanner on Parity Signer and scan
 the QR code. You may be prompted to enter your PIN to sign the transaction. The signed extrinsic
 will then be available as a QR code that needs to be shown in front of your computer's camera (as
@@ -50,7 +50,7 @@ shown in the red square window shown to the right in the screenshot below).
 ![Companion transfer](../assets/accounts/signer-transaction.png)
 
 If your account was setup on [Parity Signer Companion](https://parity.link/signer-companion) instead
-of Polkadot-JS UI, you will see a pop-up window with a QR code, as shown below for this transaction.
+of Selendra-Portal UI, you will see a pop-up window with a QR code, as shown below for this transaction.
 
 ![Companion transfer](../assets/accounts/companion-transfer.png)
 
@@ -131,7 +131,7 @@ Check out
 to learn how to check for locks.
 
 You can also check for locks by querying `system.account(AccountId)` in
-[`Chain state` tab under the `Developer` drop-down menu in the Polkadot-JS UI](https://polkadot.js.org/apps/#/chainstate).
+[`Chain state` tab under the `Developer` drop-down menu in the Selendra-Portal UI](https://portal.selendra.org/#/chainstate).
 Select your account, then click the "+" button next to the dropdowns, and check the relative `data`
 JSON object. If you see a non-zero value for anything other than `free`, you have locks on your
 account that need to get resolved.

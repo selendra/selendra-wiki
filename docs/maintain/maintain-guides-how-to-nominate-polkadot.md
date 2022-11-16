@@ -59,11 +59,11 @@ address. If you'd like to redirect payments to an account that is neither the co
 stash account, set one up. Note that it is extremely unsafe to set an exchange address as the
 recipient of the staking rewards.
 
-## Using Polkadot-JS UI
+## Using Selendra-Portal UI
 
 ### Step 1: Bond your tokens
 
-On the [Polkadot-JS UI](https://polkadot.js.org/apps) navigate to the "Staking" tab (within the
+On the [Selendra-Portal UI](https://portal.selendra.org) navigate to the "Staking" tab (within the
 "Network" menu).
 
 The "Staking Overview" subsection will show you all the active validators and their information -
@@ -73,24 +73,24 @@ last block number that they produced. If you click on the chart button it will t
 "Validator Stats" page for that validator that shows you more detailed and historical information
 about the validator's stake, rewards and slashes.
 
-The "Account actions" subsection ([link](https://polkadot.js.org/apps/#/staking/actions)) allows you
+The "Account actions" subsection ([link](https://portal.selendra.org/#/staking/actions)) allows you
 to stake and nominate.
 
-The "Payouts" subsection ([link](https://polkadot.js.org/apps/#/staking/payouts)) allows you to
+The "Payouts" subsection ([link](https://portal.selendra.org/#/staking/payouts)) allows you to
 claim rewards from staking.
 
-The "Targets" subsection ([link](https://polkadot.js.org/apps/#/staking/targets)) will help you
+The "Targets" subsection ([link](https://portal.selendra.org/#/staking/targets)) will help you
 estimate your earnings and this is where it's good to start picking favorites. For additional
 information on content provided in this table checkout
 [What to take into consideration when nominating](learn-nominator#what-to-take-into-consideration-when-nominating).
 
-The "Waiting" subsection ([link](https://polkadot.js.org/apps/#/staking/waiting)) lists all pending
+The "Waiting" subsection ([link](https://portal.selendra.org/#/staking/waiting)) lists all pending
 validators that are awaiting more nominations to enter the active validator set. Validators will
 stay in the waiting queue until they have enough SEL backing them (as allocated through the
 [Phragmén election mechanism](../learn/learn-phragmen.md)). It is possible validator can remain in
 the queue for a very long time if they never get enough backing.
 
-The "Validator Stats" subsection ([link](https://polkadot.js.org/apps/#/staking/query)) allows you
+The "Validator Stats" subsection ([link](https://portal.selendra.org/#/staking/query)) allows you
 to query a validator's stash address and see historical charts on era points, elected stake,
 rewards, and slashes.
 
@@ -141,7 +141,7 @@ Select them, confirm the transaction, and you're done - you are now nominating. 
 will become active in the next era. Eras last twenty-four hours on Polkadot - depending on when you
 do this, your nominations may become active almost immediately, or you may have to wait almost the
 entire twenty-four hours before your nominations are active. You can check how far along Polkadot is
-in the current era on the [Staking page](https://polkadot.js.org/apps/#/staking).
+in the current era on the [Staking page](https://portal.selendra.org/#/staking).
 
 Assuming at least one of your nominations ends up in the active validator set, you will start to get
 rewards allocated to you. In order to claim them (i.e., add them to your account), you must manually
@@ -152,7 +152,7 @@ Staking wiki page for more details.
 
 This step is highly relevant if the staked SEL is close to the dynamic minimum active nomination
 threshold on the network, which can be viewed on
-[Polkadot JS Apps > Network > Staking > Targets page](https://polkadot.js.org/apps/#/staking/targets).
+[Polkadot JS Apps > Network > Staking > Targets page](https://portal.selendra.org/#/staking/targets).
 For instance, the minimum active nomination receiving staking rewards is 124.575 SEL in the snapshot
 below. See the [Bags List](../learn/learn-nominator.md#bags-list) section of the Nominator wiki page
 for more details.
@@ -162,7 +162,7 @@ for more details.
 The nominations within a bag are sorted based on the insertion order and not based on the stake. If
 your stake is close to this dynamic threshold, it is advised that you monitor your bag across the
 staking eras on
-[Polkadot JS Apps > Network > Staking > Bags ](https://polkadot.js.org/apps/#/staking/bags). If any
+[Polkadot JS Apps > Network > Staking > Bags ](https://portal.selendra.org/#/staking/bags). If any
 action is required, the respective buttons (Move up/rebag) will appear beside your stash account.
 
 ![PutInFrontOf Extrinsic](../assets/staking/put-infront-of.png)
@@ -202,7 +202,7 @@ npm install -g @polkadot/api-cli
 Executing the following command:
 
 ```bash
-polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
+selendra-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
 ```
 
 `CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. Stash and Controller
@@ -229,7 +229,7 @@ DOT has ten decimal places and is always represented as an integer with zeroes a
 Example:
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://rpc.polkadot.io
+selendra-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://rpc.selendra.org
 ```
 
 Result:
@@ -244,22 +244,22 @@ Result:
 
 You can check the transaction status by using the value of the `InBlock` in
 [Polkascan](https://polkascan.io/polkadot-cc1). Also, you can verify the bonding state under the
-[Staking](https://polkadot.js.org/apps/#/staking/actions) page on the Polkadot-JS Apps Dashboard.
+[Staking](https://portal.selendra.org/#/staking/actions) page on the Polkadot-JS Apps Dashboard.
 
 ### Step 3. Nominate a validator
 
 To nominate a validator, you can execute the following command:
 
 ```bash
-polkadot-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRESS"]' --ws WS_ENDPOINT
+selendra-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRESS"]' --ws WS_ENDPOINT
 ```
 
 ```bash
-polkadot-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.polkadot.io
+selendra-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.selendra.org
 ```
 
 After a few seconds, you should see the hash of the transaction and if you would like to verify the
-nomination status, you can check that on the Polkadot-JS UI as well.
+nomination status, you can check that on the Selendra-Portal UI as well.
 
 [validators]: maintain-guides-how-to-validate-selendra.md
 [keys]: ../learn/learn-keys.md###"controller"-and-"stash"-keys

@@ -8,7 +8,7 @@ The guide has been updated to work with the Alexander testnet.
 
 ## How to view parachains
 
-On the [Polkadot UI](https://polkadot.js.org/apps/#/explorer) navigate to the `Chain State` tab. Select the `parachains` module and the `parachains()` then hit the `+` button. It will return an array of the currently active parachains.
+On the [Polkadot UI](https://portal.selendra.org/#/explorer) navigate to the `Chain State` tab. Select the `parachains` module and the `parachains()` then hit the `+` button. It will return an array of the currently active parachains.
 
 ## How to deploy the Adder parachain
 
@@ -68,7 +68,7 @@ The important information is the hex string. This is your genesis state and you 
 
 ### Deploying the parachain
 
-Go to [Polkadot UI](https://polkadot.js.org/apps/#/extrinsics) on the `Extrinsics` tab. Select the account you wish to deploy the parachain from. You will need to create a referendum to deploy the parachain.
+Go to [Polkadot UI](https://portal.selendra.org/#/extrinsics) on the `Extrinsics` tab. Select the account you wish to deploy the parachain from. You will need to create a referendum to deploy the parachain.
 
 Click on `democracy` -> `propose(proposal,value)` -> `parachains` -> `registerParachain(id,code,initial_head_data)`.
 

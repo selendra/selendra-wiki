@@ -14,7 +14,7 @@ While your SEL are staked by nominating a validator, they are 'locked' (bonded).
 
 ### Active vs. Inactive Nomination
 
-When you go to the [Account actions](https://polkadot.js.org/apps/#/staking/actions) under staking page, you should see your bonded accounts and nomination status. If not, you can follow [this](maintain-guides-how-to-nominate-selendra) guide to configure it first. Your nominations will be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
+When you go to the [Account actions](https://portal.selendra.org/#/staking/actions) under staking page, you should see your bonded accounts and nomination status. If not, you can follow [this](maintain-guides-how-to-nominate-selendra) guide to configure it first. Your nominations will be effective in the next era; eras are roughly 6 hours on Kusama and 24 hours on Polkadot.
 
 ![Nominations](/img/staking/polkadotjs_nominator_account.png)
 
@@ -26,7 +26,7 @@ If you are committing a very large amount of stake, then you may have more than 
 
 Due to the way the [Phragmen algorithm](learn-phragmen) generates the solution set, and due to the fact that the solution set must fit in a single block, there is a minimum number of SEL you must nominate with in order to receive staking rewards.
 
-This number fluctuates every era, and the most recent and up to date version can be found out using [this community-developed tool](https://polkaview.network/dot) or through [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine. See the [Election Solution Set](https://wiki.polkadot.network/docs/en/learn-nominator#the-election-solution-set) section on the Nominator page for more details.
+This number fluctuates every era, and the most recent and up to date version can be found out using [this community-developed tool](https://polkaview.network/dot) or through [these scripts](https://github.com/w3f/validator-stats) which you can run on your machine. See the [Election Solution Set](https://wiki.selendra.org/docs/en/learn-nominator#the-election-solution-set) section on the Nominator page for more details.
 
 ### Oversubscribed Validators
 
@@ -52,7 +52,7 @@ One thing to keep in mind as a nominator is the validator's commission. The comm
 
 ![Staking Returns](/img/staking/polkadotjs_nominators_target.png)
 
-As a nominator, if you only want to know the profit each validator made for each era, you can go to the [Targets](https://polkadot.js.org/apps/#/staking/targets) section under the staking page by inputting the number of tokens you would like to stake to check it. Then, nominate those who have a higher profit. However, that does not guarantee the right way to evaluate the validators' overall performance.
+As a nominator, if you only want to know the profit each validator made for each era, you can go to the [Targets](https://portal.selendra.org/#/staking/targets) section under the staking page by inputting the number of tokens you would like to stake to check it. Then, nominate those who have a higher profit. However, that does not guarantee the right way to evaluate the validators' overall performance.
 
 ### Filter Out Validators With Undesirable Traits
 
@@ -71,7 +71,7 @@ How the validator acted in the past may be a good indicator of how they will act
 
 ![Validator Stats](/img/staking/polkadotjs_validator_stats.png)
 
-Thus, to be a smart nominator, it would be better to query their [histories](https://polkadot.js.org/apps/#/staking/query/) to see statistics such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
+Thus, to be a smart nominator, it would be better to query their [histories](https://portal.selendra.org/#/staking/query/) to see statistics such as blocks produced, rewards and slashes, and [identity](learn-identity) (if they have it set). Moreover, a nominator should do comprehensive research on their validator candidates - they should go over the validators' websites to see who they are, what kind of infrastructure setup they are using, reputation, the vision behind the validator, and more.
 
 ### Be Aware of The Risks of Single Operators with Multiple Validators
 

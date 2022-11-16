@@ -66,7 +66,7 @@ Cuando hagas clic en "Sign Message" obtendrás una salida JSON como la de abajo:
 
 ![claim-6](assets/new-claims/claim-6.png)
 
-Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Polkadot-JS UI and click "Confirm Claim."
+Copy and paste the JSON output of the signed message from MyCrypto into the input box on the Selendra-Portal UI and click "Confirm Claim."
 
 ![claim-7](assets/new-claims/claim-7.jpg) ![claim-8](assets/new-claims/claim-8.jpg)
 
@@ -169,7 +169,7 @@ Once decoded successfully, input the name for your address and click "Create".
 
 You will notice that the digit beside the "Claim Tokens" menu increased by 1. It means the number of addresses on the Accounts page that need to do attestations.
 
-Go to the [Claim Tokens](https://polkadot.js.org/apps/#/claims) page and and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
+Go to the [Claim Tokens](https://portal.selendra.org/#/claims) page and and you will see a large notification at the top of the page that tells you that you need to sign an attestation.
 
 Select the Polkadot account that you just have imported with a claim using the drop-down selection. If you don't see a notification or don't see the selector, please double check that the account has been loaded into Polkadot-JS and that it has already claimed during the pre-genesis period. As always, feel free to reach out for help in the [Claims Support]() channel.
 
@@ -197,6 +197,6 @@ https://riot.im/app/#/room/!kwIkVteRpPRjjTyvTe:web3.foundation?via=web3.foundati
 [mycrypto]: https://download.mycrypto.com/
 [mycrypto]: https://download.mycrypto.com/
 [account generation]: learn-account-generation
-[claims app]: https://polkadot.js.org/apps/#/claims
-[claims app]: https://polkadot.js.org/apps/#/claims
-[claims app]: https://polkadot.js.org/apps/#/claims
+[claims app]: https://portal.selendra.org/#/claims
+[claims app]: https://portal.selendra.org/#/claims
+[claims app]: https://portal.selendra.org/#/claims

@@ -50,16 +50,16 @@ same circulating supply of the asset, and failing to uphold this condition will 
 in the asset's total issuance (in the case of fungible tokens) or a complete loss/duplication of an
 NFT.
 
-## Teleporting Tokens using the Polkadot-JS UI
+## Teleporting Tokens using the Selendra-Portal UI
 
 - [Video tutorial on Teleporting](https://youtu.be/PGyDpH2kad8)
 - [Additional support article](https://support.polkadot.network/support/solutions/articles/65000181119-how-to-teleport-dot-or-ksm-between-Cardamom-or-statemine)
 
 ## Troubleshooting
 
-If you do not see "Accounts > Teleport" in [Polkadot-JS UI], the source chain that you have selected
+If you do not see "Accounts > Teleport" in [Selendra-Portal UI], the source chain that you have selected
 does not support teleportation yet.
 
-[polkadot-js ui]: https://polkadot.js.org/apps/
+[selendra-portal ui]: https://portal.selendra.org/
 [xcm]: learn-xcm.md
 [spree modules]: learn-spree.md

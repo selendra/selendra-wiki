@@ -8,7 +8,7 @@ sidebar_label: Building Parachains on Rococo
 
 ## Who is building Parachains?
 
-You can see the list of included parachains [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains). A list of proposed parachains is available [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/parachains/proposals).
+You can see the list of included parachains [here](https://portal.selendra.org/?rpc=wss%3A%2F%2Frococo-rpc.selendra.org#/parachains). A list of proposed parachains is available [here](https://portal.selendra.org/?rpc=wss%3A%2F%2Frococo-rpc.selendra.org#/parachains/proposals).
 
 ## Parachain Workshop
 
@@ -20,7 +20,7 @@ There currently isn't a faucet available for ROC and disbursements are only limi
 
 ## How to connect to a Parachains
 
-If you would like to connect to a parachain via [Polkadot-JS Apps](https://polkadot.js.org/apps/), you may do so by clicking on the network selection at the top left hand corner of the navigation and selecting any parachain of choice. For the purpose of these following examples, we will be using the Rococo testnet "Custom Node" underneath "Development", according to the [parachain workshop](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling).
+If you would like to connect to a parachain via [Polkadot-JS Apps](https://portal.selendra.org/), you may do so by clicking on the network selection at the top left hand corner of the navigation and selecting any parachain of choice. For the purpose of these following examples, we will be using the Rococo testnet "Custom Node" underneath "Development", according to the [parachain workshop](https://substrate.dev/cumulus-workshop/#/1-prep/1-compiling).
 
 ![parachains on polkadotjs](assets/polkadotjs_network_parachains.png)
 
@@ -68,9 +68,9 @@ Alice is now able to send from her account on parachain 200 to her account on pa
 
 # Rococo V1 Parachain Requirements
 
-The purpose of this document is to clearly describe the requirements for chain builders who wish to participate as [parachains](https://wiki.polkadot.network/docs/en/learn-parachains#docsNav) in the [Rococo V1 test network](https://medium.com/polkadot-network/rococo-v1-a-holiday-gift-to-the-polkadot-community-9d4da8049769). Furthermore, this document aims to provide helpful guidance in order to create a more successful outcome for all involved, for rather Parachain Host specific implementations it is recommended to look at the [Parachain Implementers Guide](https://w3f.github.io/parachain-implementers-guide/index.html)..
+The purpose of this document is to clearly describe the requirements for chain builders who wish to participate as [parachains](https://wiki.selendra.org/docs/en/learn-parachains#docsNav) in the [Rococo V1 test network](https://medium.com/polkadot-network/rococo-v1-a-holiday-gift-to-the-polkadot-community-9d4da8049769). Furthermore, this document aims to provide helpful guidance in order to create a more successful outcome for all involved, for rather Parachain Host specific implementations it is recommended to look at the [Parachain Implementers Guide](https://w3f.github.io/parachain-implementers-guide/index.html)..
 
-[Rococo](https://wiki.polkadot.network/docs/en/build-parachains-rococo#docsNav) is the environment for parachain and [XCMP](https://wiki.polkadot.network/docs/en/learn-crosschain#overview-of-xcmp) testing and will undergo rapid changes, updates and chain state resets as it develops. After the initial tests are successful on Rococo, we envision that in the long run it will be integrated into the [Westend](https://wiki.polkadot.network/docs/en/maintain-networks#westend-test-network) test network.
+[Rococo](https://wiki.selendra.org/docs/en/build-parachains-rococo#docsNav) is the environment for parachain and [XCMP](https://wiki.selendra.org/docs/en/learn-crosschain#overview-of-xcmp) testing and will undergo rapid changes, updates and chain state resets as it develops. After the initial tests are successful on Rococo, we envision that in the long run it will be integrated into the [Westend](https://wiki.selendra.org/docs/en/maintain-networks#westend-test-network) test network.
 
 ## General Strategy
 
@@ -97,8 +97,8 @@ The minimal requirements for any parachain candidate to be considered for the pa
 
 ### Requirements as an example walk-through
 
-1. Maintain **at least two** validator (full block authoring node) for [Rococo](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/explorer).
-   1. Treat this like a production grade Polkadot node - see [Run a Validator (Selendra)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-selendra#docsNav)
+1. Maintain **at least two** validator (full block authoring node) for [Rococo](https://portal.selendra.org/?rpc=wss%3A%2F%2Frococo-rpc.selendra.org#/explorer).
+   1. Treat this like a production grade Polkadot node - see [Run a Validator (Selendra)](https://wiki.selendra.org/docs/en/maintain-guides-how-to-validate-selendra#docsNav)
    1. Node Setup - use one of the options below
       1. Build from source:
          1. `git clone https://github.com/paritytech/polkadot`
@@ -121,7 +121,7 @@ The minimal requirements for any parachain candidate to be considered for the pa
    1. `./target/release/<parachain_collator_name> export-genesis-wasm > genesis-wasm`
    1. `./target/release/<parachain_collator_name> --collator --parachain-id <your_registered_parachain_id> --execution wasm --chain rococo`
 1. Sign up through the [Rococo V1 Parachain Registration](https://forms.gle/Eacp7RaRm3VNion16) form
-1. After receiving ROC’s to the ValidatorId Address initiate the [Submitting the setKeys Transaction](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-selendra#submitting-the-setkeys-transaction)in [Rococo Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frococo-rpc.polkadot.io#/extrinsics)
+1. After receiving ROC’s to the ValidatorId Address initiate the [Submitting the setKeys Transaction](https://wiki.selendra.org/docs/en/maintain-guides-how-to-validate-selendra#submitting-the-setkeys-transaction)in [Rococo Extrinsics](https://portal.selendra.org/?rpc=wss%3A%2F%2Frococo-rpc.selendra.org#/extrinsics)
 1. Follow the [registration process](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/en/6-register/1-register.md#request-parachain-registration)
 1. You are free to do runtime upgrades after the parachain is connected, so you can still iterate on features later on
 
@@ -149,8 +149,8 @@ It helps:
 
 ## How to include your parachain in Chachacha
 
-1. Maintain **at least two** validators (full block authoring node) for [Chachacha](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/explorer).
-   1. Treat this like a production grade Polkadot node - see [Run a Validator (Selendra)](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-selendra#docsNav)
+1. Maintain **at least two** validators (full block authoring node) for [Chachacha](https://portal.selendra.org/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/explorer).
+   1. Treat this like a production grade Polkadot node - see [Run a Validator (Selendra)](https://wiki.selendra.org/docs/en/maintain-guides-how-to-validate-selendra#docsNav)
    1. Chachacha Bootnodes
       1. `/ip4/34.89.248.129/tcp/30333/p2p/12D3KooWD8CAZBgpeZiSVVbaj8mijR6mfgUsHNAmCKwsRoRnFod4`
       1. `/ip4/35.242.217.240/tcp/30333/p2p/12D3KooWBthdCz4JshkMb4GxJXVwrHPv9GpWAgfh2hAdkyXQDKyN`
@@ -177,6 +177,6 @@ It helps:
    1. `wget -O rococo-chachacha.json https://storage.googleapis.com/centrifuge-artifact-releases/rococo-chachacha.json`
    1. `./target/release/<parachain_collator_name> --collator --parachain-id <your_registered_parachain_id> --execution wasm --chain rococo-chachacha.json`
 1. Sign up through the [Chachacha V1 Parachain Registration](https://forms.gle/1fZTAaA312pkYCtV7) form
-1. After receiving CHA’s to the ValidatorId Address initiate the [Submitting the setKeys Transaction](https://wiki.polkadot.network/docs/en/maintain-guides-how-to-validate-selendra#submitting-the-setkeys-transaction)in [Chachacha Extrinsics](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/extrinsics)
+1. After receiving CHA’s to the ValidatorId Address initiate the [Submitting the setKeys Transaction](https://wiki.selendra.org/docs/en/maintain-guides-how-to-validate-selendra#submitting-the-setkeys-transaction)in [Chachacha Extrinsics](https://portal.selendra.org/?rpc=wss%3A%2F%2Ffullnode-relay.chachacha.centrifuge.io#/extrinsics)
 1. Follow the [registration process](https://github.com/substrate-developer-hub/cumulus-workshop/blob/master/en/6-register/1-register.md#request-parachain-registration)
 1. You are free to do runtime upgrades after the parachain is connected, so you can still iterate on features later on

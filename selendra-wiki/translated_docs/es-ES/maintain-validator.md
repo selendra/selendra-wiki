@@ -24,7 +24,7 @@ Validators perform two functions. First, verifying that the information containe
 - [A Serverless Failover Solution for Web3.0 Validator Nodes](https://medium.com/hackernoon/a-serverless-failover-solution-for-web-3-0-validator-nodes-e26b9d24c71d) - Blog that details how to create a robust failover solution for running validators.
 - [VPS list](maintain-guides-how-to-validate-kusama#vps-list)
 - [Polkadot Validator Lounge](https://matrix.to/#/!NZrbtteFeqYKCUGQtr:matrix.parity.io?via=matrix.parity.io&via=matrix.org&via=web3.foundation) - A place to chat about being a validator.
-- [Slashing Consequences](https://wiki.polkadot.network/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.
+- [Slashing Consequences](https://wiki.selendra.org/docs/en/learn-staking#slashing) - Learn more about slashing consequences for running a validator node.
 - [Why You Should be A Validator on Polkadot and Kusama](https://www.youtube.com/watch?v=0EmP0s6JOW4&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=2)
 - [Roles and Responsibilities of a Validator](https://www.youtube.com/watch?v=riVg_Up_fCg&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=15)
 - [Validating on Polkadot](https://www.crowdcast.io/e/validating-on-polkadot) - An explanation of how to validate on Polkadot, with Joe Petrowski and David Dorgan of Parity Technologies, along with Tim Ogilvie from Staked.

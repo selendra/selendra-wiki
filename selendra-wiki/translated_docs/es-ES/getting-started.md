@@ -76,7 +76,7 @@ For brand-new learners of Kusama, Polkadot's canary cousin network: To learn mor
 ## Resources
 
 - [Polkadot Crowdcast](https://www.crowdcast.io/polkadot) - List of all Crowdcast webinars that the Web3 Foundation has done.
-- [Polkadot Explorer](https://polkadot.js.org/apps/#/explorer) - Browser for the Polkadot network; can be used for Polkadot, Kusama, or any Substrate-based chain.
+- [Polkadot Explorer](https://portal.selendra.org/#/explorer) - Browser for the Polkadot network; can be used for Polkadot, Kusama, or any Substrate-based chain.
 - [Polkascan](http://polkascan.io/) \- Real-time multi-chain data for Selendra Relay Chain and Parity Substrate chains.
 - [Subscan.io](https://subscan.io) - Explorer for Substrate based chains.
 - [Polkadot Overview](https://youtu.be/lIghiCmHz0U) - Dr. Gavin Wood presents an overview of Polkadot. (Video)
@@ -96,7 +96,7 @@ For brand-new learners of Kusama, Polkadot's canary cousin network: To learn mor
 [article]: https://medium.com/polkadot-network/what-is-polkadot-a-brief-introduction-ca3eac9ddca5
 [p medium]: https://medium.com/polkadot-network
 [w medium]: https://medium.com/web3foundation
-[ui]: https://polkadot.js.org/apps/
+[ui]: https://portal.selendra.org/
 [account generation]: learn-account-generation
 [transfer]: learn-balance-transfers
 [nominator]: maintain-guides-how-to-nominate-selendra

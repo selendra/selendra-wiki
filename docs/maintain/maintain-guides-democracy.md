@@ -174,7 +174,7 @@ rather another eight-week lock is placed to extend the lock just one extra week.
 :::
 
 To vote on a referendum, navigate to the
-["Democracy" tab of Polkadot Apps](https://polkadot.js.org/apps/#/democracy/). Any active referendum
+["Democracy" tab of Polkadot Apps](https://portal.selendra.org/#/democracy/). Any active referendum
 will show in the "referenda" column. Click the blue button "Vote" to cast a vote for the referendum.
 
 If you would like to cast your vote for the proposal select the "Aye, I approve" option. If you
@@ -203,7 +203,7 @@ Polkadot, it means withdrawing your SEL that was used in staking. To know more a
 [here](maintain-guides-how-to-unbond.md).
 
 You can do this from the "Accounts" page in
-[Polkadot-JS Apps](https://polkadot.js.org/apps/#/accounts), unless you use Ledger (see below).
+[Polkadot-JS Apps](https://portal.selendra.org/#/accounts), unless you use Ledger (see below).
 First, check that your account has a "democracy" lock by opening the details on your balance. In the
 example below the account has 150 KSM locked in democracy.
 
@@ -223,7 +223,7 @@ action from the UI.
 
 Instead, you must clear the lock by directly issuing the correct extrinsics.
 
-Navigate to the [Extrinsics page](https://polkadot.js.org/apps/#/extrinsics) and submit the
+Navigate to the [Extrinsics page](https://portal.selendra.org/#/extrinsics) and submit the
 following extrinsic: `democracy.removeVote(index)` using the account that you voted with. For the
 index number (ReferendumIndex), enter the number of the referendum for which you voted ("12" in the
 image below).
@@ -239,12 +239,12 @@ address.
 
 ![democracy clear_lock_extrinsic_2](../assets/democracy_clear_lock_extrinsic_2.png)
 
-If you return to the [Accounts page](https://polkadot.js.org/apps/#/accounts), you should see that
+If you return to the [Accounts page](https://portal.selendra.org/#/accounts), you should see that
 the democracy lock has been released.
 
 Note that this applies only to locked SEL that were used for voting on referenda. In order to unlock
 DOT locked by voting for members of the Polkadot Council, you need to go to the
-[Council](https://polkadot.js.org/apps/#/council) page, click "Vote", and then click on "Unvote
+[Council](https://portal.selendra.org/#/council) page, click "Vote", and then click on "Unvote
 All".
 
 ## Delegate a Vote
@@ -261,7 +261,7 @@ Democracy system tallies votes, the delegated tokens now are added to whatever v
 has made.
 
 You can delegate your vote to another account and even attach a "Conviction" to the delegation.
-Navigate to the ["Accounts" tab on Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) and
+Navigate to the ["Accounts" tab on Selendra-Portal UI](https://portal.selendra.org/#/accounts) and
 click on the three vertical SELs and select "Delegate democracy votes" option for the account of
 your choice. Then you would be presented with a pop-up window which lets you enter the account
 details of the delegated account, delegated amount and conviction. You can enter the relevant
@@ -319,7 +319,7 @@ For example, if Alice has delegated her tokens to Bob, Alice would need to be th
 `undelegate` transaction to clear her delegation.
 
 The easiest way to do this is from the
-["Accounts" tab on Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) where you can manage the
+["Accounts" tab on Selendra-Portal UI](https://portal.selendra.org/#/accounts) where you can manage the
 delegation of your account.
 
 ![manage delegation](../assets/democracy/manage-delegation.png)

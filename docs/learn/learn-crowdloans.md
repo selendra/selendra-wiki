@@ -139,7 +139,7 @@ returned before the crowdloan is entirely deleted from the system.
 
 Many projects will have dashboards available that allow users to participate in their crowdloans.
 PolkadotJS apps also offers a breakdown of ongoing crowdloans on the
-[Apps page](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkusama-rpc.polkadot.io#/parachains/crowdloan).
+[Apps page](https://portal.selendra.org/?rpc=wss%3A%2F%2Fkusama-rpc.selendra.org#/parachains/crowdloan).
 
 Here is an example of the crowdloans in play during the very first Kusama auction.
 

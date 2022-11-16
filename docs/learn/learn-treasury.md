@@ -115,10 +115,10 @@ recommended way is using official Element channels like {{ polkadot: the
 ### Creating the Proposal
 
 One way to create the proposal is to use the Polkadot-JS Apps
-[website](https://polkadot.js.org/apps). From the website, use either the
-[extrinsics tab](https://polkadot.js.org/apps/#/extrinsics) and select the Treasury pallet, then
+[website](https://portal.selendra.org). From the website, use either the
+[extrinsics tab](https://portal.selendra.org/#/extrinsics) and select the Treasury pallet, then
 `proposeSpend` and enter the desired amount and recipient, or use the
-[Treasury tab](https://polkadot.js.org/apps/#/treasury) and its dedicated Submit Proposal button:
+[Treasury tab](https://portal.selendra.org/#/treasury) and its dedicated Submit Proposal button:
 
 ![A proposal being created](../assets/treasury/submit-new.png)
 
@@ -175,10 +175,10 @@ There are two types of tips:
   which is paid out from the total amount.
 - tipper-initiated: Tips that a Council member published, do not have a finder's fee or a bond.
 
-:::info 
+:::info
 
 For information about how to submit a tip from the Treasury you can read
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181971). 
+[this support article](https://support.polkadot.network/support/solutions/articles/65000181971).
 
 :::
 
@@ -277,7 +277,7 @@ members, Curators and Beneficiaries of the bounties, as well as all users observ
 treasury governance. For now, the help of a Councillor is needed to open a bounty proposal as a
 motion to be voted.
 
-To submit a bounty, please visit [Polkadot-JS Apps](https://polkadot.js.org/apps) and click on the
+To submit a bounty, please visit [Polkadot-JS Apps](https://portal.selendra.org) and click on the
 governance tab in the options bar on the top of the site. After, click on 'Bounties' and find the
 button '+ Add Bounty' on the upper-right side of the interface. Complete the bounty title, the
 requested allocation (including curator's fee) and confirm the call.

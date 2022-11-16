@@ -9,16 +9,15 @@ slug: ../learn-SEL
 
 ## What is SEL?
 
-DOT is the native token of the Selendra network in a similar way that BTC is the native token of
+`SEL` is the native token of the Selendra network in a similar way that BTC is the native token of
 Bitcoin or Ether is the native token of the Ethereum blockchain.
 
 ### The Planck Unit
 
-The smallest unit for the account balance on Substrate based blockchains (Polkadot, Kusama, etc.) is
+The smallest unit for the account balance on Substrate based blockchains (Selendra, etc.) is
 Planck (a reference to [Planck Length](https://en.wikipedia.org/wiki/Planck_length), the smallest
 possible distance in the physical Universe). You can compare SEL's Planck to BTC's Satoshi or ETH's
-Gwei. Polkadot's native token SEL equals to 10<sup>10</sup> Planck and Kusama's native token KSM
-equals to 10<sup>12</sup> Planck.
+Gwei. Selendra's native token SEL equals to 10<sup>10</sup> Planck.
 
 ### Selendra
 
@@ -32,14 +31,13 @@ equals to 10<sup>12</sup> Planck.
 
 :::
 
-
 :::
 
 SEL serves three key functions in Selendra:
 
 - to be used for governance of the network,
 - to be staked for the operation of the network,
-- to be bonded to connect a chain to Polkadot as a parachain.
+- to be bonded to connect a chain to Selendra as a parachain.
 - as default token to parachain slots
 
 SEL can also serve ancillary functions by being a transferrable token. For example, SEL stored in
@@ -64,7 +62,7 @@ holders of SEL to play active roles. Participants will put their SEL at risk (vi
 perform these functions. The staking of SEL acts as a disincentive for malicious participants who
 will be punished by the network by getting their SEL slashed. The SEL required to participate in the
 network will vary depending on the activity that is being performed, the duration the SEL will be
-staked for, and the total number of SEL staked. For more information about staking on Polkadot visit
+staked for, and the total number of SEL staked. For more information about staking on Selendra visit
 [the dedicated staking page](./learn-staking.md).
 
 ### SEL for Parachain Slot Accession
@@ -151,15 +149,14 @@ Watch the video below on how to get started on Selendra Testnet.
 
 [![Testing Selendra features on Test Network](https://www.youtube.com/channel/UCWO6SVOPiR6CFBrHRLD2DDA)
 
-| Unit            | Decimal Places | Conversion to Planck   | Conversion to TSEL  |
-| --------------- | -------------- | ---------------------- | ------------------ |
-| Planck          | 0              | 1 Planck               | 0.000000000001 TSEL |
-| Point           | 3              | 10<sup>3</sup> Planck  | 0.000000001000 TSEL |
+| Unit             | Decimal Places | Conversion to Planck   | Conversion to TSEL  |
+| ---------------- | -------------- | ---------------------- | ------------------- |
+| Planck           | 0              | 1 Planck               | 0.000000000001 TSEL |
+| Point            | 3              | 10<sup>3</sup> Planck  | 0.000000001000 TSEL |
 | MicroWND (uTSEL) | 6              | 10<sup>6</sup> Planck  | 0.000001000000 TSEL |
 | MilliWND (mTSEL) | 9              | 10<sup>9</sup> Planck  | 0.001000000000 TSEL |
-| SEL             | 12             | 10<sup>12</sup> Planck | 1.000000000000 TSEL |
+| SEL              | 12             | 10<sup>12</sup> Planck | 1.000000000000 TSEL |
 
 ## Selendra Mainnet SEL
 
 Selendra Mainnet SEL are not freely given away. You can obtain `SEL` either by airdrop or purchase it from DEX.
-

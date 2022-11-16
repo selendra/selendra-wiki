@@ -22,11 +22,10 @@ but can also be equal to it, which means they all have to agree.
 
 :::note Explainer on multisig accounts
 
-Learn more about using multisig accounts with the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) from our
+Learn more about using multisig accounts with the [Selendra-Portal UI](https://portal.selendra.org/#/accounts) from our
 [technical explainer video](https://www.youtube.com/watch?v=-cPiKMslZqI).
 
 :::
-
 
 :::info
 
@@ -71,7 +70,7 @@ Check out [this page](https://polkadot.js.org/docs/substrate/extrinsics#multisig
 :::
 
 In scenarios where only a single approval is needed, a convenience method `as_multi_threshold_1`
-should be used. This function takes only the other signatories and the raw call as arguments. Note that the Polkadot-JS UI does not have integration for this call because it is not possible to create multisig accounts with `threshold=1`. If you want to create a multisig with threshold 1, you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core), which is developed and supported by Parity Technologies. There is a detailed [multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
+should be used. This function takes only the other signatories and the raw call as arguments. Note that the Selendra-Portal UI does not have integration for this call because it is not possible to create multisig accounts with `threshold=1`. If you want to create a multisig with threshold 1, you can use [txwrapper-core](https://github.com/paritytech/txwrapper-core), which is developed and supported by Parity Technologies. There is a detailed [multisig example](https://github.com/paritytech/txwrapper-core/tree/main/packages/txwrapper-examples/multisig) that you can try out and change to see how it works.
 
 However, in anything but the simple one approval case, you will likely need more than one of the
 signatories to approve the call before finally executing it. When you create a new call or approve a
@@ -93,7 +92,7 @@ Where `depositBase` and `depositFactor` are chain constants (in {{ polkadot: SEL
 
 :::info Walk-through video tutorial
 
-You can also see [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) for more information about transacting with multisigs using the Accounts Tab, or [this other video](https://www.youtube.com/watch?v=T0vIuJcTJeQ) using the Extrinsic Tab in the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts).
+You can also see [this video tutorial](https://www.youtube.com/watch?v=-cPiKMslZqI) for more information about transacting with multisigs using the Accounts Tab, or [this other video](https://www.youtube.com/watch?v=T0vIuJcTJeQ) using the Extrinsic Tab in the [Selendra-Portal UI](https://portal.selendra.org/#/accounts).
 
 :::
 
@@ -118,7 +117,7 @@ being used to generate the multisig address.
 
 :::
 
-This has some implications when using the Extrinsics tab on the [Polkadot-JS UI](https://polkadot.js.org/apps/#/accounts) to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Polkadot-JS UI supports multisig accounts, as documented on the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see our video tutorials for more information about creating multisig accounts and transacting with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the [Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Polkadot-JS UI.
+This has some implications when using the Extrinsics tab on the [Selendra-Portal UI](https://portal.selendra.org/#/accounts) to perform multisig transactions. If the order of the _other signatories_ is wrong, the transaction will fail. This does not happen if the multisig is executed directly from the Accounts tab (recommended). The Selendra-Portal UI supports multisig accounts, as documented on the [Account Generation page](learn-account-generation.md#multi-signature-accounts). You can see our video tutorials for more information about creating multisig accounts and transacting with them using both the [Accounts Tab](https://www.youtube.com/watch?v=-cPiKMslZqI) and the [Extrinsic Tab](https://www.youtube.com/watch?v=T0vIuJcTJeQ) in the Selendra-Portal UI.
 
 ## Decoding Multisig Call Data
 
