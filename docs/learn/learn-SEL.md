@@ -143,11 +143,8 @@ network.
 
 ### Getting Tokens on the Selendra Testnet
 
-Selendra's testnet is called [TSEL](../maintain/maintain-networks.md#selendra-test-network) and
-you can obtain its native tokens (called TSEL!) by posting `!drip <TESTNET_ADDRESS>` in the
-Matrix chatroom [#testnet_faucet:matrix.org](https://matrix.to/#/#testnet_faucet:matrix.org). Your
-account will be credited with 1 WND by default. You can also specify to get more tokens by
-`!drip <TESTNET_ADDRESS> X`, where X is the number of tokens.
+Selendra's testnet token is called [TSEL](../maintain/maintain-networks.md#selendra-test-network) and
+you can obtain its native tokens (called TSEL!) by going to our [Selendra Test Network Faucet](https://faucet.selendra.org).
 
 You can also earn TSELs as rewards by [becoming a validator](learn-validator.md) on Selendra Testnet.
 Watch the video below on how to get started on Selendra Testnet.
