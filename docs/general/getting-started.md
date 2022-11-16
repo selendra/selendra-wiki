@@ -249,9 +249,9 @@ This is recommended for users with backgrounds of all levels, and the course is 
   into its blockchain technology. This paper dives into the components of Selendra but is
   understandable for both a non-technical and technical reader.
 - [Selendra for Beginners: A non-technical guide to decentralization, blockchains &
-  Selendra][book] - a book funded by the Polkadot Treasury
+  Selendra][book] - a book funded by the Selendra Treasury
 - [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
-  explain and demonstrate how to use Polkadot and its [User Interface][ui].
+  explain and demonstrate how to use Selendra and its [User Interface][ui].
 - Reading [What is Selendra? A Brief Introduction][article] on Medium. There are also other great
   articles to read on [Selendra's Medium][p medium].
 
@@ -288,4 +288,3 @@ This is recommended for users with backgrounds of all levels, and the course is 
 [council]: ../maintain/maintain-guides-how-to-join-council.md
 [council voting]: ../maintain/maintain-guides-how-to-vote-councillor.md
 [treasury]: ../learn/learn-treasury.md
-[book]: https://linktr.ee/polkadotbook
