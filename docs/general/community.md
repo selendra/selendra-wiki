@@ -39,7 +39,8 @@ contact and anyone doing so is likely trying to scam you.
 
 ### Chat
 
-- [Selendra Discord](https://selendra.li/discord) (RECOMMENDED)
+- [Selendra Discord](https://selendra.li/discord) 
+- [Selendra Telegram](https://t.me/selendrachain) (RECOMMENDED)
 
 ### Social media and forums
 
