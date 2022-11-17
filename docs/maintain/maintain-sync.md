@@ -10,12 +10,12 @@ slug: ../maintain-sync
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-If you're building dapps or products on a Substrate-based chain like Polkadot, Kusama or a custom
+If you're building dapps or products on a Substrate-based chain like Selendra or a custom
 Substrate implementation, you probably want the ability to run a node-as-a-back-end. After all, it's
 always better to rely on your own infrastructure than on a third-party-hosted one in this brave new
 decentralized world.
 
-This guide will show you how to connect to [Polkadot network](https://polkadot.network/), but the
+This guide will show you how to connect to [Selendra network](https://selendra.org/), but the
 same process applies to any other [Substrate](https://substrate.io)-based chain. First, let's
 clarify the term _full node_.
 
@@ -31,12 +31,10 @@ and so on. Once two thirds of the validators agree on a specific block being val
 An **archive node** keeps all the past blocks and their states. An archive node makes it convenient to query the past
 state of the chain at any point in time. Finding out what an account's balance at a certain block
 was, or which extrinsics resulted in a certain state change are fast operations when using an
-archive node. However, an archive node takes up a lot of disk space - around Kusama's 12 millionth
-block this was around 660 GB.
-
+archive node. 
 :::tip
 
-The [Paranodes](https://paranodes.io/DBSize) website lists the database sizes of Polkadot and Kusama
+The [Selendranodes](https://selendra.org/DBSize) website lists the database sizes of Selendra
 nodes in real-time.
 
 :::
@@ -87,14 +85,14 @@ blockchain network without relying on specific 3rd parties. Substrate Connect is
 This is not recommended if you're a validator. Please see the
 [secure validator setup](maintain-guides-secure-validator.md) if you are running validator.
 
-:::note The bash commands that are provided to run against **your node** use `Polkadot` as the
+:::note The bash commands that are provided to run against **your node** use `Selendra` as the
 default chain
 
-Use the `--chain` flag if you are following the setup instructions to setup a `Kusama` node. For
+Use the `--chain` flag if you are following the setup instructions to setup a node. For
 example:
 
 ```bash
-./target/release/polkadot --name "Your Node's Name" --chain kusama
+./target/release/selendra --name "Your Node's Name" --chain "chain you want to run"
 ```
 
 :::
@@ -123,20 +121,20 @@ example:
   ```bash
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
-- Once Rust is installed, run the following command to clone and build the polkadot code:
+- Once Rust is installed, run the following command to clone and build the selendra code:
   ```bash
-  git clone https://github.com/paritytech/polkadot polkadot
-  cd polkadot
+  git clone https://github.com/selendra/selendra
+  cd selendra
   ./scripts/init.sh
   cargo build --release
   ```
 - Start your node:
 
   ```bash
-  ./target/release/polkadot --name "Your Node's Name"
+  ./target/release/selendra --name "Your Node's Name"
   ```
 
-- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
+- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Selendra)
 
 </TabItem>
 <TabItem value="win">
@@ -145,31 +143,31 @@ example:
 - Install [Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (same webpage).
 
 - Determine the latest version of the
-  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
-- Download the correct Polkadot binary within Ubuntu by running the following command. Replace
+  [Selendra binary](https://github.com/selendra/selendra/releases).
+- Download the correct Selendra binary within Ubuntu by running the following command. Replace
   `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
 
   ```bash
-  curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot
+  curl -sL https://github.com/paritytech/selendra/releases/download/*VERSION*/selendra -o selendra
   ```
 
 - Then, run the following:
   ```bash
-  sudo chmod +x polkadot
+  sudo chmod +x selendra
   ```
 - Start your node:
 
   ```bash
-  ./target/release/polkadot --name "Your Node's Name"
+  ./selendra --name "Your Node's Name"
   ```
 
-- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
+- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Selendra)
 
 </TabItem>
 <TabItem value="linux">
 
 - Determine the latest version of the
-  [Polkadot binary](https://github.com/paritytech/polkadot/releases).
+  [Selendra binary](https://github.com/selendra/selendra/releases).
 
   :::info
 
@@ -180,21 +178,21 @@ example:
 
   :::
 
-- Download the correct Polkadot binary within Ubuntu by running the following command. Replace
-  `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.8.22`):
+- Download the correct Selendra binary within Ubuntu by running the following command. Replace
+  `*VERSION*` with the tag of the latest version from the last step (e.g. `v0.2.1`):
 
   ```bash
-  curl -sL https://github.com/paritytech/polkadot/releases/download/*VERSION*/polkadot -o polkadot
+  curl -sL https://github.com/selendra/selendra/releases/download/*VERSION*/selendra -o selendra
   ```
 
-- Run the following: `sudo chmod +x polkadot`
+- Run the following: `sudo chmod +x selendra`
 - Run the following:
 
   ```bash
-  ./target/release/polkadot --name "Your Node's Name"
+  ./selendra --name "Your Node's Name"
   ```
 
-- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Polkadot)
+- Find your node on [Telemetry](https://telemetry.polkadot.io/#list/Selendra)
 
 </TabItem>
 </Tabs>
@@ -213,12 +211,12 @@ cargo 1.41.0 (626f0f40e 2019-12-03)
 
 ## Clone and Build
 
-The [paritytech/polkadot](https://github.com/paritytech/polkadot) repo's master branch contains the
-latest Polkadot code.
+The [selendra/selendra](https://github.com/selendra/polkadot) repo's master branch contains the
+latest Selendra code.
 
 ```bash
-git clone https://github.com/paritytech/polkadot polkadot
-cd polkadot
+git clone https://github.com/selendra/selendra
+cd selendar
 ./scripts/init.sh
 cargo build --release
 ```
@@ -227,21 +225,21 @@ Alternatively, if you wish to use a specific release, you can check out a specif
 the example below):
 
 ```bash
-git clone https://github.com/paritytech/polkadot polkadot
-cd polkadot
-git checkout tags/v0.8.3
+git clone https://github.com/paritytech/selendra 
+cd selendra
+git checkout tags/v0.2.1
 ./scripts/init.sh
 cargo build --release
 ```
 
 ## Run
 
-The built binary will be in the `target/release` folder, called `polkadot`.
+The built binary will be in the `target/release` folder, called `selendra`.
 
-**Polkadot**:
+**Selendra**:
 
 ```bash
-./target/release/polkadot --name "Your Node's Name"
+./target/release/selendra --name "Your Node's Name"
 ```
 
 Use the `--help` flag to find out which flags you can use when running the node. For example, if
@@ -251,7 +249,7 @@ Use the `--help` flag to find out which flags you can use when running the node.
 The syncing process will take a while depending on your bandwidth, processing power, disk speed and
 RAM. On a \$10 DigitalOcean droplet, the process can complete in some 36 hours.
 
-Congratulations, you're now syncing with Polkadot. Keep in mind that the process is identical when
+Congratulations, you're now syncing with Selendra. Keep in mind that the process is identical when
 using any other Substrate chain.
 
 ## Running an Archive Node
@@ -260,10 +258,10 @@ When running as a simple sync node (above), only the state of the past 256 block
 validating, it defaults to [archive mode](#types-of-nodes). To keep the full state use the
 `--pruning` flag:
 
-**Polkadot**:
+**Selendra**:
 
 ```bash
-./target/release/polkadot --name "My node's name" --pruning archive
+./target/release/selendra --name "My node's name" --pruning archive
 ```
 
 It is possible to almost quadruple synchronization speed by using an additional flag:
@@ -274,11 +272,11 @@ after the node is in sync.
 
 Finally, you can use Docker to run your node in a container. Doing this is a bit more advanced so
 it's best left up to those that either already have familiarity with docker, or have completed the
-other set-up instructions in this guide. Be aware that when you run polkadot in docker the process
+other set-up instructions in this guide. Be aware that when you run selendra in docker the process
 only listen on localhost by default. If you would like to connect to your node's services (rpc,
 websockets, and prometheus) you need to ensure that you run you node with the `--rpc-external`,
 `--ws-external`, and `--prometheus-external` commands.
 
 ```zsh
-docker run -p 9944:9944 -p 9615:9615 parity/polkadot:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --ws-external --prometheus-external
+docker run -p 9944:9944 -p 9615:9615 selendrachain/selendra:v0.9.13 --name "calling_home_from_a_docker_container" --rpc-external --ws-external --prometheus-external
 ```

@@ -109,7 +109,7 @@ account that need to get resolved.
 [Recovery Pallet](https://github.com/paritytech/substrate/blob/master/frame/recovery/), so this is
 probably not the reason for your tokens having existing references. :selendra }}
 
-### Existing {{ selendra: Non-SEL :selendra }} Assets
+### Existing Non-SEL Assets
 
 Currently, {{ selendra: Selendra :selendra }} does not use the
 [Assets Pallet](https://github.com/paritytech/substrate/tree/master/frame/assets), so this is

@@ -2,111 +2,62 @@
 id: maintain-networks
 title: Networks
 sidebar_label: Networks
-description: Information about the different networks of the Polkadot ecosystem.
+description: Information about the different networks of the Selendra ecosystem.
 keywords: [networks, mainnet, testnet, canary, substrate]
 slug: ../maintain-networks
 ---
 
-Polkadot is built on top of Substrate, a modular framework for blockchains. One feature of Substrate
+Selendra is built on top of Substrate, a modular framework for blockchains. One feature of Substrate
 is to allow for connection to different networks using a single executable and configuring it with a
-start-up flag. Here are some of the networks associated with Polkadot or Substrate that you may want
+start-up flag. Here are some of the networks associated with Selendra or Substrate that you may want
 to connect to and join.
 
-## Polkadot networks
+## Selendra networks
 
-To connect to a Polkadot network please follow the [instructions](maintain-sync.md) for installing
-the Polkadot executable.
+To connect to a Selendra network please follow the [instructions](maintain-sync.md) for installing
+the Selndra executable.
 
-### Polkadot Mainnet
+### Selendra Mainnet
 
-Currently Polkadot is built from the tip of master and is the default option when starting a node.
+Currently Selendra is built from the tip of master and is the default option when starting a node.
 
-To start a Polkadot node, run the Polkadot binary:
-
-```bash
-polkadot
-```
-
-and you will connect and start syncing to Polkadot.
-
-Check your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#/Polkadot%20CC3) (you can set a custom name by specifying
-`--name "my custom name"`)
-
-### Kusama Canary Network
-
-Kusama is a canary network and holds real economic value.
-
-Run the Polkadot binary and specify `kusama` as the chain:
+To start a Selendra node, run the Selendra binary:
 
 ```bash
-polkadot --chain=kusama
+selendra # this will start running the default chain which is `mainnet`
 ```
 
-and you will connect and start syncing to Kusama.
+and you will connect and start syncing to Selendra.
 
 Check your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#/Kusama%20CC3) (you can set a custom name by specifying
+[Telemetry](https://telemetry.polkadot.io/#/Selendra%20CC3) (you can set a custom name by specifying
 `--name "my custom name"`)
 
-### Westend Test Network
+### Selendra Test Network
 
-Westend is the latest test network for Polkadot. The tokens on this network are called _Westies_ and
+Selendra Test Network is the latest test network for Selendra. The tokens on this network are called _TSEL_ and
 they purposefully hold no economic value.
 
-Run the Polkadot binary and specify `westend` as the chain:
+Run the Selendra binary and specify `selendra-testnet` as the chain:
 
 ```bash
-polkadot --chain=westend
+selendra --chain=selendra-testnet
 ```
 
-and you will connect and start syncing to Westend.
+and you will connect and start syncing to Selendra Test Network.
 
 Check that your node is connected by viewing it on
-[Telemetry](https://telemetry.polkadot.io/#list/Westend) (you can set a custom name by specifying
+[Telemetry](https://telemetry.polkadot.io/#list/Selendra-Testnet) (you can set a custom name by specifying
 `--name "my custom name"`).
 
-#### Westend Faucet
+#### Selendra Testnet Faucet
 
-Follow the instruction [here](../learn/learn-DOT.md#getting-westies) for instructions on acquiring
-Westies.
+Follow the instruction [here](../learn/learn-SEL.md#getting-westies) for instructions on acquiring
+`TSEL`.
 
 ### Differences
 
-Runtime differences (e.g. existential and multisignature deposit sizes) between the different
-networks can be found by doing a `diff` between the `src/lib.rs` of the repositories. For example,
-to compare the Polkadot and Westend runtimes:
-
-- `git clone https://github.com/paritytech/polkadot && cd polkadot/runtime`
-- `ls` - show the available runtimes
-- `diff polkadot/src/lib.rs westend/src/lib.rs`
-
-You can also paste the runtimes
-([Polkadot](https://github.com/paritytech/polkadot/blob/master/runtime/polkadot/src/lib.rs),
-[Westend](https://github.com/paritytech/polkadot/blob/master/runtime/westend/src/lib.rs)) into a
-web-based diff tool like [Diffchecker](https://www.diffchecker.com/) if you're not comfortable with
-the CLI.
-
-## Substrate Networks
-
-To connect to a Substrate public network, follow the [instructions][substrate install] for
-installing the Substrate executable first.
-
-### Flaming Fir
-
-Flaming Fir is the public Substrate test network. It contains some pallets that will not be included
-in the Polkadot runtime.
-
-Flaming Fir is built from the tip of master and is the default option when running the Substrate
-executable.
-
-Run Substrate without a flag or explicitly state `fir`:
-
-```bash
-substrate --chain fir
-```
-
-and you will connect and start syncing Flaming Fir.
+Selendra Mainnet and Selendra Testnet use the same runtime but Selendra Testnet is a different from Mainnet because in Testnet, there are new things being built and testing before release into mainnet.
 
 ## Telemetry Dashboard
 

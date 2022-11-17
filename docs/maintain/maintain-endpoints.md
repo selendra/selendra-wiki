@@ -8,12 +8,12 @@ slug: ../maintain-endpoints
 ---
 
 Ideally, one may run their own node when interacting with the
-[Polkadot network](https://polkadot.network/) via [Polkadot-JS Apps](https://portal.selendra.org/)
+[Selendra network](https://selendra.org/) via [Selendra-Portal](https://portal.selendra.org/)
 or other UIs and programmatic methods. Another option would be to connect to one of the several
 public endpoints provided by infrastructure and API service providers. For development convenience,
-[Parity Tech](https://www.parity.io/) maintains archive nodes for Polkadot, Kusama, and their test
+[Selendra](https://selendra.org/) maintains archive nodes for Selendra, and their test
 networks with public endpoints. These endpoints can be used with
-[Polkadot-JS API](https://polkadot.js.org/docs/api) to interact with their respective chains. The
+[Selndra-JS API](https://js.selendra.org/docs/api) to interact with their respective chains. The
 tables below list these endpoints.
 
 ### Network Endpoints
@@ -22,36 +22,34 @@ tables below list these endpoints.
 
 | Network  | URL                          |
 | -------- | ---------------------------- |
-| Polkadot | wss://rpc.selendra.org        |
-| Kusama   | wss://kusama-rpc.selendra.org |
+| Selendra | wss://rpc.selendra.org       |
 
 #### Test Networks
 
-| Network | URL                           |
-| ------- | ----------------------------- |
-| Westend | wss://westend-rpc.selendra.org |
-| Rococo  | wss://rococo-rpc.selendra.org  |
+| Network          | URL                            |
+| -------          | -----------------------------  |
+| Selendra Testnet | wss://rpc-testnet.selendra.org |
 
-#### Example usage with Polkadot-JS API
+#### Example usage with Selendra-JS API
 
-To connect to the Parity node, use the endpoint in your JavaScript apps like so:
+To connect to the Selendra node, use the endpoint in your JavaScript apps like so:
 
 ```javascript {5}
-// Using the Polkadot Mainnet Endpoint
-const { ApiPromise, WsProvider } = require('@polkadot/api');
+// Using the Selendra Mainnet Endpoint
+const { ApiPromise, WsProvider } = require('@selendra/api');
 async () => {
   // Construct a provider with the endpoint URL
   const provider = new WsProvider('wss://rpc.selendra.org/');
-  // Create an API instance for Polkadot
+  // Create an API instance for Selendra
   const api = await ApiPromise.create({ provider });
   // ...
 ```
 
 #### Substrate Connect
 
-[Substrate connect](https://substrate.io/developers/substrate-connect/) builds on Polkadot JS so
+[Substrate connect](https://substrate.io/developers/substrate-connect/) builds on Selendra JS so
 building an app is the same experience as with using a traditional RPC server node. It is a fast,
-secure, and decentralized way to interact with Polkadot, Kusama, and their parachains right in the
+secure, and decentralized way to interact with Selendra, and their parachains right in the
 browser.
 
 :::info
@@ -61,21 +59,10 @@ Substrate Connect is still under
 
 :::
 
-### Third Party Providers
-
-There are a number of third-party providers of RPC infrastructure to the Polkadot and Kusama
-communities, commonly providing access to multiple networks and parachains in a single service. They
-provide additional services such as higher rate limits, potentially more reliable and scalable
-service, and additional metrics.
-
-- [OnFinality](https://onfinality.io)
-- [Dwellir](https://dwellir.com)
-- [Pinknode](https://pinknode.io)
-- [Radium Block](https://radiumblock.com/)
 
 :::note
 
-The list of third party RPC endpoints above for Polkadot and Kusama is directly fetched from
-[Polkdot-JS UI](https://portal.selendra.org/#/explorer)
+The list of third party RPC endpoints above for Selendra is directly fetched from
+[Selendra-Portal](https://portal.selendra.org/#/explorer)
 
 :::

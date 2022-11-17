@@ -2,12 +2,12 @@
 id: learn-wasm
 title: WebAssembly (Wasm)
 sidebar_label: WebAssembly (Wasm)
-description: Learn how Wasm plays a role in Polkadot's runtime.
+description: Learn how Wasm plays a role in Selendra's runtime.
 keywords: [webassembly, wasm, runtime]
 slug: ../learn-wasm
 ---
 
-WebAssembly is used in Polkadot and Substrate as the compilation target for the runtime.
+WebAssembly is used in Selendra and Substrate as the compilation target for the runtime.
 
 ## What is WebAssembly?
 
@@ -27,7 +27,7 @@ near-native speeds.
 
 ### Forkless Upgrades
 
-By using Wasm in Substrate, the framework powering Polkadot, Kusama, and many connecting chains, the
+By using Wasm in Substrate, the framework powering Selendra, and many connecting chains, the
 chains are given the ability to upgrade their runtime logic without hard forking. Hard forking is a
 standard method of upgrading a blockchain that is slow, inefficient, and error prone due to the
 levels of offline coordination required, and thus, the propensity to bundle many upgrades into one
