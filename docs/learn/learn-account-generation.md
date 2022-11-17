@@ -2,8 +2,8 @@
 id: learn-account-generation
 title: Account Generation
 sidebar_label: Account Generation
-description: Steps on generating a Polkadot account.
-keywords: [account, account generation, polkadot account, polkadotjs]
+description: Steps on generating a Selendra account.
+keywords: [account, account generation, selendra account, selendrajs]
 slug: ../learn-account-generation
 ---
 
@@ -22,24 +22,17 @@ security trade-offs. Please review this page carefully before making your accoun
 understand the risks of the account generation method you choose and how to properly mitigate them
 in order to keep your funds safe.<br/><br/>
 
-:::info
-
-Visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181874-how-to-store-your-mnemonic-phrase-and-backup-file-safely)
-for more information about key security.
-
-:::
 
 ## Ways to generate an account
 
-The **most user-friendly** way to create a Polkadot or Kusama address is through the
-[Selendra-Portal UI](https://portal.selendra.org/#/accounts). Remember to back up the seed phrase used
+The **most user-friendly** way to create a Selendra address is through the
+[Selendra-Portal](https://portal.selendra.org/#/accounts). Remember to back up the seed phrase used
 to generate your account - the accounts are stored only in your browser, so purging the cache will
 wipe your accounts as well. You would then have to recreate them using the seed phrase given to you
 by the UI - this will also restore all your previously held balances.
 
 A **more convenient and recommended** method of keeping the accounts stored on your computer is
-using the [Polkadot browser extension](https://github.com/polkadot-js/extension). This extension
+using the [Selendra browser extension](https://github.com/selendra-js/extension). This extension
 remembers your accounts and allows you to clear your browser cache without fear. Still, don't forget
 to back up your seed phrase - if you lose access to this computer or the extension somehow crashes
 beyond repair, the phrase will come in handy.
@@ -50,56 +43,51 @@ keep your funds in cold storage when dealing with non-trivial amounts. For impro
 can securely stash away the seed phrase for your accounts and remove all traces of the accounts from
 your computer after creating them.
 
-Besides the extension and the default UI, Polkadot and Kusama addresses can also be created with the
+Besides the extension and the default UI, Selendra addresses can also be created with the
 [Subkey tool](https://github.com/paritytech/substrate/tree/master/bin/utils/subkey). Subkey is
 intended for users comfortable with using the command line and can seem intimidating but is quite
 approachable. Follow the instructions in the
 [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/). When used
 properly, Subkey is the **most secure** available method of creating an account.
 
-There is also the very secure [Parity Signer](https://www.parity.io/signer/). This keeps your keys
-on an air-gapped mobile phone. However, it does require obtaining an old Android or iOS-compatible
-phone that you are comfortable using only for Parity Signer.
 
 Alternatively, you might find other wallets on the [Wallet](../build/build-wallets.md) page, but
 bear in mind that some of these are **unaudited** and are not officially affiliated with Web3
-Foundation or the Polkadot project unless otherwise stated.
+Foundation or the Selendra project unless otherwise stated.
 
 :::info How-to guides to generate an account
 
 See our Support Articles for more information about how to create an account using the tools below.
 
-- [Polkadot-JS Browser Extension](#polkadot-js-browser-extension) **RECOMMENDED FOR MOST USERS**
+- [Selendra-JS Browser Extension](#selendra-js-browser-extension) **RECOMMENDED FOR MOST USERS**
 - [Subkey](#subkey) **ADVANCED and MOST SECURE**
-- [Selendra-Portal UI](#polkadot-js-apps)
-- [Parity Signer](#parity-signer)
+- [Selendra-Portal](#selendra-js-apps)
 - [Vanity Generator](#vanity-generator)
-- [Ledger Hardware Wallet](#ledger-hardware-wallet)
 
 :::
 
 :::note
 
-If you prefer video instructions for creating an account using Polkadot JS, we have an easy to
+If you prefer video instructions for creating an account using Selendra JS, we have an easy to
 follow guide for beginners [on YouTube](https://www.youtube.com/watch?v=sy7lvAqyzkY)
 
 :::
 
-## Polkadot-JS Browser Extension
+## Selendra-JS Browser Extension
 
-The Polkadot-JS Browser Extension (simply referred to as Polkadot Extension) provides a reasonable
+The Selendra-JS Browser Extension (simply referred to as Selendra Extension) provides a reasonable
 balance of security and usability. It provides a separate local mechanism to generate your address
-and interact with Polkadot.
+and interact with Selendra.
 
-This method involves installing the Polkadot Extension and using it as a “virtual vault," separate
+This method involves installing the Selendra Extension and using it as a “virtual vault," separate
 from your browser, to store your private keys. It also allows the signing of transactions and
 similar functionality.
 
 It is still running on the same computer you use to connect to the internet with and thus is less
 secure than using Parity Signer or other air-gapped approaches.
 
-:::info For the tutorial on how to create an account using Polkadot Extension, visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000098878-how-to-create-a-dot-account).
+:::info For the tutorial on how to create an account using Selendra Extension, visit
+[this support article](https://selendra.org/blogs/how_to_create_account_with_selendra-js_extension).
 
 :::
 
@@ -116,7 +104,7 @@ Let's say you created `ACCOUNT 1` protected by password `PSW 1`. To reset the pa
 `ACCOUNT 1` using the browser extension you must follow the following steps:
 
 - On the browser extension go to `ACCOUNT 1` and click "Forget account". This action will delete the
-  access to your account. Note that your tokens are still in your account on the polkadot blockchain
+  access to your account. Note that your tokens are still in your account on the selendra blockchain
   network.
 - On the browser extension click the "+" button in the topright corner and select the option "Import
   account from pre-existing seed". After entering the mnemonic phrase you can chose a new password
@@ -131,21 +119,10 @@ default.
 
 :::
 
-:::info Accounts on Cold wallets do not need passwords
 
-For hardware wallets such as [Ledger](https://www.ledger.com/), you may have to set a PIN for
-accessing the accounts on the device, but you do not need to set a password for every individual
-account. When you need to make transactions with your account, you are required to sign using your
-Ledger device. Also, Ledger wallets let you generate multiple accounts for multiple blockchain
-networks without having to set different passwords to access such accounts.
+### Set Address for Selendra Mainnet
 
-:::
-
-### Set Address for Polkadot Mainnet
-
-In Polkadot you can use the same address on multiple chains. To switch between chains you can follow
-the guidelines in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000103707-can-i-use-the-same-account-on-polkadot-kusama-and-parachains-).
+In Selendra you can use the same address on multiple chains. To switch between chains you can follow
 The [Accounts page](learn-accounts.md#address-conversion-tools) has a tool you can use to convert
 your address between the different chain formats.
 
@@ -159,7 +136,7 @@ recommend creating a new address for each chain you're using.
 
 You can copy your address by clicking on the account's icon while the desired chain format is
 active. E.g. selecting "Substrate" as the format will change your address, and clicking the colorful
-icon of your account will copy it in that format. While in Polkadot mode, that address format will
+icon of your account will copy it in that format. While in Selendra mode, that address format will
 be copied, and so on.
 
 ## Subkey
@@ -168,50 +145,43 @@ Subkey is recommended for technically advanced users who are comfortable with th
 compiling Rust code. Subkey allows you to generate keys on any device that can compile the code.
 Subkey may also be useful for automated account generation using an air-gapped device. It is not
 recommended for general users. For the tutorial on how to create an account using Subkey, visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000180519-how-to-create-an-account-in-subkey).
+[this support article](https://support.selendra.org/support/solutions/articles/how-to-create-an-account-in-subkey).
 
-## Selendra-Portal UI
+## Selendra-Portal
 
 :::caution
 
 If you use this method to create your account and clear your cookies in your browser, your account
 will be lost forever if you do not [back it up](learn-account-restore.md). Make sure you store your
-seed phrase in a safe place, or download the account's JSON file if using the Polkadot{.js} browser
+seed phrase in a safe place, or download the account's JSON file if using the Selendra{.js} browser
 extension. Learn more about account backup and restoration [here](learn-account-restore.md).
 
 :::
 
-Using the Polkadot-JS user interface without the plugin is **not recommended**. It is the least
+Using the Selendra-JS user interface without the plugin is **not recommended**. It is the least
 secure way of generating an account. It should only be used if all of the other methods are not
-feasible in your situation. For the tutorial on how to create an account using Polkadot-JS Apps,
+feasible in your situation. For the tutorial on how to create an account using Selendra-JS Apps,
 visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000180529).
+[this support article](https://support.selendra.org/support/solutions/articles/selendra-ui).
 
-### Reset password using the Selendra-Portal UI
+### Reset password using the Selendra-Portal
 
-To reset the password of an account created with Polkadot-JS Apps UI you just need to go in the
+To reset the password of an account created with Selendra-JS Apps UI you just need to go in the
 "Accounts" tab, click the icon with three vertical SELs on your account and select "Change this
 account's password".
 
 :::info
 
-If you create an account first using Polkadot-JS Apps UI, and then add it to the browser extension,
+If you create an account first using Selendra-JS Apps, and then add it to the browser extension,
 you need to follow the
 [guidelines for the browser extension](#reset-password-using-the-browser-extension) to change the
 password of such account.
 
 :::
 
-## Parity Signer
-
-Parity Signer is a secure way of storing your SEL on an air-gapped device. It is highly recommended
-that you turn off wifi, cellular network, Bluetooth, NFC, and any other communications methods after
-installing it. For the tutorial on how to create an account using Parity Signer,
-[this support article](https://support.polkadot.network/support/solutions/articles/65000180512-how-to-create-an-account-in-parity-signer).
-
 ## Vanity Generator
 
-The vanity generator is a tool on [Selendra-Portal UI](https://portal.selendra.org/#/accounts/vanity)
+The vanity generator is a tool on [Selendra-Portal](https://portal.selendra.org/#/accounts/vanity)
 that lets you generate addresses that contain a specific substring. For the tutorial on how to
 create an account using Vanity Generator, visit
-[this support article](https://support.polkadot.network/support/solutions/articles/65000171416).
+[this support article](https://support.selendra.org/support/solutions/articles/65000171416).
