@@ -8,17 +8,17 @@ slug: ../../maintain-bug-bounty
 ---
 
 If you discover a bug, we appreciate your cooperation in responsibly investigating and reporting it
-as per [instructions on Web3 Foundation website](https://web3.foundation/security-report/).
+as per [instructions on Selendra Security Report webiste](https://selendra.com/security-report).
 Disclosure to any third parties disqualifies bug bounty eligibility.
 
 :::info Bug bounty program scope
 
 The bug bounty program does _not_ cover bugs on code bases that are external to or, written on top
-of Polkadot, or that use Polkadot. To be eligible for the bug bounty program the bug has to be a
-part of the Polkadot codebase, this includes protocols that Polkadot uses such as AnV, XCM, GRANDPA,
+of Selendra, or that use Selendra. To be eligible for the bug bounty program the bug has to be a
+part of the Selendra codebase, this includes protocols that Selendra uses such as AnV, XCM, GRANDPA,
 etc.
 
-We call on our community and all bug bounty hunters to help identify bugs in Polkadot.
+We call on our community and all bug bounty hunters to help identify bugs in Selendra.
 
 :::
 
@@ -49,7 +49,7 @@ Examples:
 Responsible investigation and reporting include, but isn't limited to, the following:
 
 - Don't violate the privacy of other users, destroy data, etc.
-- Don't defraud or harm Polkadot network or its users during your research; you should make a good
+- Don't defraud or harm Selendra network or its users during your research; you should make a good
   faith effort not to interrupt or degrade our services.
 - Don't target the validators' physical security measures, or attempt to use social engineering,
   spam, distributed denial of service (DDoS) attacks, etc.

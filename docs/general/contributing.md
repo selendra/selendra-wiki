@@ -9,7 +9,7 @@ slug: ../contributing
 ---
 
 The wiki was started and is maintained by Selendra. It is an open source project and aims to
-be the most extensive resource of knowledge on Slendra and the Selendra ecosystem. A large part of
+be the most extensive resource of knowledge on Selendra and the Selendra ecosystem. A large part of
 the material currently focuses on Selendra directly but it is not opposed to covering informational
 material for community projects.
 
