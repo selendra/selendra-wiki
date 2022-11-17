@@ -1,9 +1,9 @@
 ---
 id: learn-accounts
-title: Polkadot Accounts
-sidebar_label: Polkadot Accounts
+title: Selendra Accounts
+sidebar_label: Selendra Accounts
 description: An explanation of accounts, indices, identity, and reaping.
-keywords: [account, polkadot account, polkadotjs, indices, identity, reaping]
+keywords: [account, selendra account, selendrajs, indices, identity, reaping]
 slug: ../learn-accounts
 ---
 
@@ -47,7 +47,7 @@ phrase.
 
 :::danger Not all wallets use the same algorithm to convert from mnemonic phrase to private key
 
-[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) and Polkadot-JS based
+[Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) and Selendra-JS based
 wallets use the BIP39 dictionary for mnemonic generation, but use the entropy byte array to generate
 the private key, while full BIP39 wallets (like Ledger) use 2048 rounds of PBKDF2 on the mnemonic.
 The same mnemonic may generate different private keys on other wallets due to the various
@@ -70,7 +70,7 @@ Secret seed (Private key): 0x056a6a4e203766ffbea3146967ef25e9daf677b14dc6f6ed891
 Public key (SS58): 5F3sa2TJAWMqDhXG6jhV4N8ko9SxwGy8TpaNS1repo5EYjQX
 ```
 
-Polkadot default address format is the `MultiAddress` type. This means that the same mnemonic phrase
+Selendra default address format is the `MultiAddress` type. This means that the same mnemonic phrase
 will generate public keys for different parachains. For more information see the
 [Address Format](./learn-account-advanced.md#address-format) section on the
 [Advanced Account](./learn-account-advanced.md) page.
@@ -90,34 +90,31 @@ To learn more about generating accounts on
 In {{ selendra: Selendra :selendra }} there are different types of
 balance depending on the account activity. Different balance types indicate whether your balance can
 be used for transfers, to pay fees, or must remain frozen and unused due to an on-chain requirement.
-Below we give an example of different balance types on Kusama
-{{ polkadot: (note that on Polkadot the situation will look the same). :polkadot }}
-
-![account_balance_types](../assets/account-balance-types.png)
+Below we give an example of different balance types on Selendra.
 
 - The **total** balance indicates the total number of tokens in the account. Note that this number
   does not necessarily correspond to the tokens you are allowed to transfer. In the example the
-  total number of tokens in 0.6274 KSM.
+  total number of tokens in 0.6274 SEL.
 The **transferrable** balance indicates the number of tokens that are free to be transferred. This
   is calculated by subtracting the number of _locked_ and _reserved_ tokens from the total number of
   tokens. Locked funds correspond to tokens used in staking, governance, and vested transfers (see
-  below). In the example, the transferrable balance is 0.0106 KSM.
+  below). In the example, the transferrable balance is 0.0106 SEL.
 - The **vested** balance indicates tokens that were sent to the account and that are released with a
   specific time schedule. The tokens are owned by the account but are _locked_ and become available
-  for transfer after a specific number of blocks. In the example, the vested balance is 0.25 KSM.
+  for transfer after a specific number of blocks. In the example, the vested balance is 0.25 SEL.
 - The **bonded** balance indicates the number of tokens that are _locked_ for on-chain participation
-  to staking. In the example the bonded balance is 0.4 KSM.
+  to staking. In the example the bonded balance is 0.4 SEL.
 - The **democracy** balance indicates the number of tokens that are _locked_ for on-chain
   participation to democracy (i.e. voting for referenda and council). In the example, the democracy
-  balance is 0.4 KSM.
+  balance is 0.4 SEL.
 - The **redeemable** balance indicates the number of tokens that are ready to be unlocked to become
   transferrable again. Those tokens already went through the unbonding period. In this case, the
-  redeemable balance is 0.1 KSM.
+  redeemable balance is 0.1 SEL.
 - The **locked** balance indicates the number of tokens that are frozen for on-chain participation
   to staking and democracy, or for vested transfers. **Locks do not stack**, which means that if you
   have different locks the total locked balance is not the addition of all single locks. Instead,
   **the biggest lock decides the total locked balance**. In the example, the locked balance is 0.55
-  KSM because the biggest lock is on democracy (0.55 KSM).
+  SEL because the biggest lock is on democracy (0.55 SEL).
 - The **reserved** balance indicates the number of tokens that are frozen for on-chain activity
   other than staking, governance, and vested transfers. Such activity can be setting an identity or
   a proxy. Reserved funds are held due to on-chain requirements and can usually be freed by taking
@@ -125,25 +122,25 @@ The **transferrable** balance indicates the number of tokens that are free to be
   is registered, but by clearing the identity, you can unreserve the funds and make them free again.
   The same applies to proxies. The idea is that those actions require some network memory usage that
   is not given for free. In the example we created a governance proxy and the reserved funds for
-  this are 0.0668 KSM.
+  this are 0.0668 SEL.
 
 ### Unlocking Locks
 
 :::info Locks do not stack!
 
-The biggest lock decides the total amount of locked funds. See
-[this walk-through video tutorial](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
+The biggest lock decides the total amount of locked funds. See 
+[Polkadot Explained Videos](https://youtu.be/LHgY7ds_bZ0) that will guide you in the process
 of unlocking funds in the example above.
 
 :::
 
-In the example, we mentioned that the locked balance is 0.55 KSM because the biggest lock is on
-democracy and is 0.55 KSM. As soon as the democracy lock is removed the next biggest lock is on
-staking 0.5 KSM (bonded 0.4 KSM + redeemable 0.1 KSM). This means that the locked balance will be
-0.5 KSM, and 0.05 KSM will be added to the transferrable balance. After redeeming the unbonded 0.1
-KSM, the locked balance will be 0.4 KSM, and an additional 0.1 KSM will be added to the
+In the example, we mentioned that the locked balance is 0.55 SEL because the biggest lock is on
+democracy and is 0.55 SEL. As soon as the democracy lock is removed the next biggest lock is on
+staking 0.5 SEL (bonded 0.4 SEL + redeemable 0.1 SEL). This means that the locked balance will be
+0.5 SEL, and 0.05 SEL will be added to the transferrable balance. After redeeming the unbonded 0.1
+SEL, the locked balance will be 0.4 SEL, and an additional 0.1 SEL will be added to the
 transferrable balance. Now the biggest lock is still the bonded one. This means that even if we
-remove the vested lock, the locked balance will still be 0.4 KSM and no tokens will be added to the
+remove the vested lock, the locked balance will still be 0.4 SEL and no tokens will be added to the
 transferrable balance. To free those bonded tokens we will need to unbond them and wait for the
 unbonding period to make them redeemable. If we remove the proxy the reserved funds will be
 automatically added to the transferrable balance.
@@ -152,7 +149,7 @@ automatically added to the transferrable balance.
 
 When you generate an account (address), you only generate a _key_ that lets you access it. The
 account does not exist yet on-chain. For that, it needs the existential deposit of
-{{ selendra: <RPC network="selendra" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.balances.existentialDeposit" defaultValue={33333333} filter="humanReadable"/> :kusama }}.
+{{ selendra: <RPC network="selendra" path="query.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :selendra }}.
 
 Having an account go below the existential deposit causes that account to be _reaped_. The account
 will be wiped from the blockchain's state to conserve space, along with any funds in that address.
@@ -176,14 +173,14 @@ but gets put back when it has the existential deposit.
 ## Account Identity
 
 The [Identities pallet](https://github.com/paritytech/substrate/tree/master/frame/identity) built
-into Polkadot allows users to attach on-chain metadata to their accounts. Independent registrars can
+into Selendra allows users to attach on-chain metadata to their accounts. Independent registrars can
 verify this metadata to provide trustworthiness. To learn more about how to set or release an
 identity, how to define sub-accounts, or how to become a registrar, please read
 [this guide](learn-identity.md).
 
 ## Proxy Accounts
 
-Polkadot comes with a generalized proxy account system that allows users to keep keys in cold
+Selendra comes with a generalized proxy account system that allows users to keep keys in cold
 storage while proxies act on their behalf with restricted (or unrestricted) functionality. See the
 [proxies](learn-proxies.md) page for more information.
 
@@ -195,6 +192,5 @@ multi-sig accounts). For a full explanation, please see the
 
 ## Resources
 
-- [Understanding Accounts and Keys in Polkadot](https://www.crowdcast.io/e/polkadot-keys) - An
-  explanation of what the different kinds of accounts and keys are used for in Polkadot, with Bill
-  Laboon and Chinmay Patel of BlockX Labs.
+- 
+
