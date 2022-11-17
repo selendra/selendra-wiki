@@ -2,8 +2,8 @@
 id: learn-account-restore
 title: Backing up and Restoring Accounts
 sidebar_label: Backing up and Restoring Accounts
-description: Steps on backing up and restoring a Polkadot account.
-keywords: [account, restore account, polkadot account, polkadotjs]
+description: Steps on backing up and restoring a Selendra account.
+keywords: [account, restore account, selendra account, selendrajs]
 slug: ../learn-account-restore
 ---
 
@@ -15,14 +15,12 @@ created your account, and have the seed phrase ([mnemonic phrase](learn-accounts
 JSON file (and password) stored securely, you will be able to restore your account.
 
 :::info Check the relevant support articles to learn more about restoring your account using the
-[_Polkadot Extension_](https://support.polkadot.network/support/solutions/articles/65000169952-how-to-restore-your-account-in-the-polkadot-extension),
-[_Selendra-Portal UI_](https://support.polkadot.network/support/solutions/articles/65000180110-how-to-restore-your-account-in-polkadot-js-ui),
-and
-[_Parity Signer_](https://support.polkadot.network/support/solutions/articles/65000167901-how-to-restore-an-account-in-parity-signer).
+[_Selendra Extension_](https://support.selendra.org/support/solutions/articles/how-to-restore-your-account-in-the-selendra-extension),
+[_Selendra-Portal](https://support.selendra.org/support/solutions/articles/how-to-restore-your-account-in-selendra-js-ui).
 
 :::
 
-## Transferring Polkadot-JS Apps Accounts/Addresses From One Computer to Another
+## Transferring Selendra-JS Apps Accounts/Addresses From One Computer to Another
 
 :::caution
 
@@ -35,7 +33,7 @@ directly in browser on the new one.
 
 This has been tested on Brave and Chrome, but not other browsers.
 
-1. Go to Polkadot-JS Apps
+1. Go to Selendra-JS Apps
 2. Go to JavaScript console on the browser (Available in Developer Tools)
 3. Type in the command:
 
@@ -47,7 +45,7 @@ JSON.stringify(localStorage)
 5. Check that the string you pasted both begins and ends with a tick mark ('). If not, add one to
    the beginning and end.
 6. Save and send that file with the copied string to the new computer.
-7. On new computer, go to Polkadot-JS Apps
+7. On new computer, go to Selendra-JS Apps
 8. Open the Javascript console on the browser (Available in Developer Tools)
 9. Set a variable raw equal to the string from the text file
 
@@ -68,5 +66,5 @@ for (var key in accounts) {
 }
 ```
 
-11. Refresh Polkadot-JS App browser and check Accounts and Addresses pages. All of your accounts and
+11. Refresh Selendra-JS App browser and check Accounts and Addresses pages. All of your accounts and
     addresses should now be available.
