@@ -2,7 +2,7 @@
 id: learn-staking
 title: Introduction to Staking
 sidebar_label: Introduction to Staking
-description: A high level introduction to Staking on Polkadot and NPoS model
+description: A high level introduction to Staking on Selendra and NPoS model
 keywords: [staking, stake, nominate, nominating, NPoS]
 slug: ../learn-staking
 ---
@@ -12,12 +12,7 @@ import RPC from "./../../components/RPC-Connection";
 :::tip New to Staking?
 
 Start your staking journey or explore more information about staking on
-[Polkadot's Home Page](https://polkadot.network/staking/). Discover the new
-[Staking Dashboard](https://staking.polkadot.network/#/overview) that makes staking much easier and
-check this
-[extensive article list](https://support.polkadot.network/support/solutions/articles/65000182104) to
-help you get started. {{ polkadot: You can now [stake natively with just 1 SEL and earn staking rewards](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :polkadot }}
-{{ kusama: All the examples presented on Polkadot apply to Kusama as well. :kusama }}
+[Selendra's Home Page](https://selendra.org/staking/). {{ selendra: You can now [stake natively with just 1 SEL and earn staking rewards](https://selendra.org/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). :selendra }}
 
 :::
 
@@ -71,22 +66,20 @@ PoS network rewards good behavior and punishes bad behavior.
 [Nominated Proof-of-Stake (NPoS)](learn-consensus.md/#nominated-proof-of-stake), a relatively novel
 and sophisticated mechanism to select the validators who are allowed to participate in its
 [consensus](learn-consensus.md) protocol. NPoS
-encourages {{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} holders to participate as
+encourages {{ selendra: SEL :selendra }} holders to participate as
 **nominators**.
 
 Any potential validators can indicate their intention to be a validator candidate. Their candidacies
 are made public to all nominators, and a nominator, in turn, submits a list of up to
-{{ selendra: <RPC network="selendra" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.staking.maxNominations" defaultValue={16}/> :selendra }}
 candidates that it supports, and the network will automatically distribute the stake among
 validators in an even manner so that the economic security is maximized. In the next era, a certain
-number of validators having the most {{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} backing
+number of validators having the most {{ selendra: SEL :selendra }} backing
 get elected and become active. For more information about the election algorithm go to
 [this](learn-phragmen.md) page on the wiki or
 [this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#)
 research article. As a nominator, a minimum of
-{{ selendra: <RPC network="selendra" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :selendra }}
 is required to submit an intention to nominate, which can be thought of as registering to be a
 nominator. Note that in NPoS the stake of both nominators and validators can be slashed. For an
 in-depth review of NPoS see
@@ -95,12 +88,11 @@ in-depth review of NPoS see
 :::caution Minimum Nomination to Receive Staking Rewards
 
 Although the minimum nomination intent is
-{{ selendra: <RPC network="selendra" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }},
-it does not guarantee staking rewards. The nominated amount has to be greater than
+{{ selendra: <RPC network="selendra" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :selendra }}, does not guarantee staking rewards. The nominated amount has to be greater than
 [minimum active nomination](learn-nominator.md#minimum-active-nomination-to-receive-staking-rewards),
 which is a dynamic value that can be much higher than
-{{ selendra: <RPC network="selendra" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :kusama }}.
-This dynamic value depends on the amount of {{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.minNominatorBond" defaultValue={100000000000} filter="humanReadable"/> :selendra }}.
+This dynamic value depends on the amount of {{ selendra: SEL :selendra }}
 being staked, in addition to the selected nominations.
 
 :::
@@ -123,29 +115,25 @@ allocated to one or more of your selected validators, and this happens every tim
 validator set changes. This validator set is updated every era on
 {{ selendra: Selendra :selendra }}.
 
-Unlike other staking systems, Polkadot automatically chooses which of your selected validators will
+Unlike other staking systems, Selendra automatically chooses which of your selected validators will
 be backed by your bonded tokens. Selecting a group of validators increases your chances of
 consistently backing at least one who is active. This results in your bonded tokens being allocated
 to validators more often, which means more network security and more rewards. This is in strong
 contrast to other staking systems that only allow you to back one validator; if that validator is
-not active, you as a staker will also not be. Polkadot's nomination model solves this.
+not active, you as a staker will also not be. Selendra's nomination model solves this.
 
 {{ selendra: Selendra :selendra }} uses tools ranging from election
 theory to game theory to discrete optimization, to develop an efficient validator selection process
 that offers fair representation and security, thus avoiding uneven power and influence among
 validators. The election algorithms used by
 {{ selendra: Selendra :selendra }} are based on the Proportional
-Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md). For more information
-about PJR methods visit
-[this](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=proportional%20justified%20representation#)
-research article.
-
+Justified Representation (PJR) methods like [Phragmen](learn-phragmen.md).
 ### Eras and Sessions
 
 The stake from nominators is used to increase the number of tokens held by such candidates,
 increasing their chance of being selected by the election algorithm for block production during a
 specific **era**. An era is a period of
-{{ polkadot: 24 hours :polkadot }}{{ kusama: 6 hours :kusama }} during which an **active set** of
+{{ selendra: 24 hours :selendra }} during which an **active set** of
 validators is producing blocks and performing other actions on the chain. This means that not all
 validators are in the active set and such set changes between eras. Each era is divided into 6
 epochs or **sessions** during which validators are assigned as block producers to specific time
@@ -185,7 +173,7 @@ lead to centralization.
 ### Tasks and Responsibilities of a Nominator
 
 **Validators.** Since validator slots are limited, most of those who wish to stake their
-{{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} and contribute to the economic security of
+{{ selendra: SEL :selendra }} and contribute to the economic security of
 the network will be nominators, thus here we focus on the role of nominators. However, it is worth
 mentioning that validators do most of the heavy lifting: they run the validator nodes and manage
 [session keys](https://research.web3.foundation/en/latest/polkadot/keys/index.html?highlight=session%20keys),
@@ -206,23 +194,18 @@ relatively hands-off compared to that of a validator, and even more with
 nominator [guide](learn-nominator.md) to understanding your responsibilities as a nominator.
 
 If you want to become a nominator, see
-[this](../maintain/maintain-guides-how-to-nominate-selendra.md) guide. If you are a beginner and
-would like to securely stake your tokens using the Selendra-Portal UI, refer to
-[this](https://support.polkadot.network/support/solutions/articles/65000168057-how-do-i-stake-nominate-on-polkadot-)
-support article.
-{{ kusama: The tutorial presented in the support article is demonstrated on Polkadot, but the procedure is the same for Kusama. :kusama }}
+[this](../maintain/maintain-guides-how-to-nominate-selendra.md) guide. 
+:::info Selendra Staking Dashboard
 
-:::info Polkadot Staking Dashboard
-
-The [Staking Dashboard](https://staking.polkadot.network/dashboard/#/overview) provides a more
+The [Staking Dashboard](https://staking.selendra.org/dashboard/#/overview) provides a more
 user-friendly alternative to staking. See the instructions in
-[this](https://support.polkadot.network/support/solutions/articles/65000182133-how-to-use-the-staking-dashboard-staking-your-dot)
+[this](https://support.selendra.org/support/solutions/articles/how-to-use-the-staking-dashboard-staking-your-sel)
 support article to learn how to stake with the dashboard.
 
 :::
 
 **Pools.** Pools are "built" on top of NPoS to provide a very low barrier to entry to staking,
-without sacrificing Polkadot's strict security model.
+without sacrificing Selendra's strict security model.
 
 ### Selection of Validators
 
@@ -250,7 +233,7 @@ To maximize rewards and minimize risk, one could select those validators that:
 
 - have era points above average (because they will get more rewards for being active),
 - have the total stake backing the validator below the average active validator stake (because they
-  will pay out more rewards per staked {{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }}),
+  will pay out more rewards per staked {{ selendra: SEL :selendra }},
 - have high own stake (because if slashed they have something to lose),
 - have low commission fees but not 0% (because it makes sense that for doing the heavy lifting,
   validators ask for a small commission),
@@ -326,26 +309,12 @@ to stolen private keys is different depending on the type of account derivation.
 derivation, all derived accounts are compromised. More information about account derivation can be
 found [here](../learn/learn-accounts.md/#derivation-paths).
 
-:::info
-
-For Ledger users staking directly on Ledger Live, currently, there is no option to use separate
-stash and controller accounts. That is if you stake on Ledger Live your stash account will be your
-controller too.
-
-Ledger devices are now supported in [Talisman](https://talisman.xyz/) extension. Users can import
-their Ledger accounts in the extension and use them as a stash and controller. You can find more
-information about Talisman and other third-party wallets that officially secured funding from the
-treasury [here](..//build/build-wallets.md/#treasury-funded-wallets).
-
 :::
 
 ### Claiming Staking Rewards
 
-{{ kusama: Note that Kusama runs approximately 4x as fast as Polkadot, except for block production times.
-Polkadot will also produce blocks at approximately six-second intervals. :kusama }}
-
-Rewards are calculated per era (approximately six hours on Kusama and twenty-four hours on
-Polkadot). These rewards are calculated based on era points, which have a probabilistic component.
+Rewards are calculated per era (approximately twenty-four hours on
+Selendra). These rewards are calculated based on era points, which have a probabilistic component.
 In other words, there may be slight differences in your rewards from era to era, and even amongst
 validators in the active set at the same time. These variations should cancel out over a long enough
 timeline. See the page on [Validator Payout Guide](../maintain/maintain-guides-validator-payout.md).
@@ -354,7 +323,7 @@ The distribution of staking rewards to the nominators is not automatic and needs
 someone. Typically the validators take care of this, but anyone can permissionlessly trigger rewards
 payout for all the nominators whose stake has backed a specific validator in the active set of that
 era. Staking rewards are kept available for 84 eras, which is approximately
-{{ polkadot: 84 days :polkadot }}{{ kusama: 21 days :kusama }}. For more information on why this is
+{{ selendra: 84 days :selendra }}. For more information on why this is
 so, see the page on [simple payouts](learn-simple-payouts.md).
 
 :::info Payouts
@@ -377,7 +346,7 @@ payout for that validator for that era.
 If nobody claims your staking rewards within 84 eras, then you will not be able to claim them and
 they will be lost. Additionally, if the validator unbonds all their own stake, any pending payouts
 will also be lost. Since unbonding takes
-{{ selendra: <RPC network="selendra" path="query.staking.bondingDuration" defaultValue={28}/> days :polkadot }}{{ kusama: <RPC network="kusama" path="query.staking.bondingDuration" defaultValue={7}/> days :kusama }},
+{{ selendra: <RPC network="selendra" path="query.staking.bondingDuration" defaultValue={28}/> days :selendra }},
 nominators should check if they have pending payouts at least this often.
 
 :::
@@ -388,7 +357,7 @@ completely unrelated account. It is also possible to top-up / withdraw some bond
 having to un-stake all staked tokens.
 
 If you wish to know if you received a payout, you will have to check via a block explorer. See
-[the relevant Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
+[the relevant Polkadot Support page](https://support.polkadot.network/support/solutions/articles/65000168954-how-can-i-see-my-staking-rewards-)
 for details. For specific details about validator payouts, please see
 [this guide](../maintain/maintain-guides-validator-payout.md).
 
@@ -423,30 +392,10 @@ are controlled by the [Phragmén algorithm](learn-phragmen.md).
 
 Once a validator gets slashed, it goes into the state as an "unapplied slash". You can check this
 via
-[Selendra-Portal UI](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/staking/slashes).
+[Selendra-Portal](https://portal.selendra.org/?rpc=wss%3A%2F%2Frpc.selendra.org#/staking/slashes).
 The UI shows it per validator and then all the affected nominators along with the amounts. While
 unapplied, a governance proposal can be made to reverse it during this period (7 days on Kusama, 28
-days on Polkadot). After the grace period, the slashes are applied.
-
-The following levels of offense are
-[defined](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html). However, these
-particular levels are not implemented or referred to in the code or in the system; they are meant as
-guidelines for different levels of severity for offenses. To understand how slash amounts are
-calculated, see the equations in the section below.
-
-- Level 1: isolated [unresponsiveness](./learn-staking-advanced.md/#unresponsiveness), i.e. being
-  offline for an entire session. Generally no slashing, only [chilling](#chilling).
-- Level 2: concurrent unresponsiveness or isolated
-  [equivocation](./learn-staking-advanced.md/#equivocation), slashes a very small amount of the
-  stake and chills.
-- Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to
-  any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting
-  in [GRANDPA](learn-consensus.md). Slashes a moderately small amount of the stake and chills.
-- Level 4: misconduct that poses serious security or monetary risk to the system, or mass collusion.
-  Slashes all or most of the stake behind the validator and chills.
-
-If you want to know more details about slashing, please look at our
-[research page](https://research.web3.foundation/en/latest/polkadot/slashing/amounts.html).
+days on Selendra). After the grace period, the slashes are applied.
 
 ### Chilling
 
@@ -464,8 +413,8 @@ When used as part of a punishment (initiated externally), being chilled carries 
 of being un-nominated. It also disables the validator for the remainder of the current era and
 removes the offending validator from the next election.
 
-Polkadot allows some validators to be disabled, but if the number of disabled validators gets too
-large, Polkadot will trigger a new validator election to get a full set. Disabled validators will
+Selendra allows some validators to be disabled, but if the number of disabled validators gets too
+large, Selendra will trigger a new validator election to get a full set. Disabled validators will
 need to resubmit their intention to validate and re-garner support from nominators.
 
 For more on chilling, see the "[How to Chill][]" page on this wiki.
@@ -489,27 +438,25 @@ return will be less, encouraging some users to withdraw.
 
 ### Cons of Staking
 
-- Tokens will be locked for about 28 days on Polkadot after unbonding, and seven days on Kusama.
+- Tokens will be locked for about 28 days on Selendra after unbonding, and seven days on Kusama.
 - Punishment in case of validator found to be misbehaving (see [slashing](#slashing)).
 - You want to use the tokens for a parachain slot.
 
-## How many Validators does Polkadot have?
+## How many Validators does Selendra have?
 
-Polkadot currently has
-{{ selendra: <RPC network="selendra" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
-{{ kusama: <RPC network="polkadot" path="query.staking.validatorCount" defaultValue={297}/> :kusama }}
+Selendra currently has
+{{ selendra: <RPC network="selendra" path="query.staking.validatorCount" defaultValue={297}/> :selendra }}
 validators. The top bound on the number of validators has not been determined yet, but should only
 be limited by the bandwidth strain of the network due to peer-to-peer message passing. The estimate
-of the number of validators that Polkadot will have at maturity is around 1000. Kusama, Polkadot's
+of the number of validators that Selendra will have at maturity is around 1000. Kusama, Selendra's
 canary network, currently has
-{{ polkadot: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.validatorCount" defaultValue={1000}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.validatorCount" defaultValue={1000}/> :selendra }}
 validator slots in the active set.
 
 ## Resources
 
-- [How Nominated Proof of Stake will work in Polkadot](https://medium.com/web3foundation/how-nominated-proof-of-stake-will-work-in-polkadot-377d70c6bd43) -
-  Blog post by Web3 Foundation researcher Alfonso Cevallos covering NPoS in Polkadot.
+- [How Nominated Proof of Stake will work in Selendra](https://medium.com/selendrachain/how-nominated-proof-of-stake-will-work-in-selendra) -
+  Blog post by Selendra Developer covering NPoS in Selendra.
 - [Validator setup](../maintain/maintain-guides-secure-validator.md)
 
 [epoch]: ../general/glossary.md#epoch

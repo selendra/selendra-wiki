@@ -1,8 +1,8 @@
 ---
 id: learn-consensus
-title: Polkadot Consensus
+title: Seelndra Consensus
 sidebar_label: Consensus
-description: An explanation of the consensus model used in Polkadot.
+description: An explanation of the consensus model used in Selendra.
 keywords: [consensus, proof of stake, nominated proof of stake, hybrid consensus, finality]
 slug: ../learn-consensus
 ---
@@ -51,7 +51,7 @@ economies of scale. These pools are often off-chain.
 A way to alleviate this is to implement pool formation on-chain and allow token holders to vote
 [with their stake] for validators to represent them.
 
-Polkadot uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
+Selendra uses NPoS (Nominated Proof-of-Stake) as its mechanism for selecting the validator set. It
 is designed with the roles of **validators** and **nominators**, to maximize chain security. Actors
 who are interested in maintaining the network can run a validator node.
 
@@ -85,17 +85,17 @@ participants after some unspecified time.
 
 ## Hybrid Consensus
 
-There are two protocols we use when we talk about the consensus protocol of Polkadot, GRANDPA and
-BABE (Blind Assignment for Blockchain Extension). We talk about both of these because Polkadot uses
+There are two protocols we use when we talk about the consensus protocol of Selendra, GRANDPA and
+BABE (Blind Assignment for Blockchain Extension). We talk about both of these because Selendra uses
 what is known as _hybrid consensus_. Hybrid consensus splits up the finality gadget from the block
 production mechanism.
 
 This is a way of getting the benefits of probabilistic finality (the ability to always produce new
 blocks) and provable finality (having a universal agreement on the canonical chain with no chance
-for reversion) in Polkadot. It also avoids the corresponding drawbacks of each mechanism (the chance
+for reversion) in Selendra. It also avoids the corresponding drawbacks of each mechanism (the chance
 of unknowingly following the wrong fork in probabilistic finality, and a chance for "stalling" - not
 being able to produce new blocks - in provable finality). By combining these two mechanisms,
-Polkadot allows for blocks to be rapidly produced, and the slower finality mechanism to run in a
+Selendra allows for blocks to be rapidly produced, and the slower finality mechanism to run in a
 separate process to finalize blocks without risking slower transaction processing or stalling.
 
 Hybrid consensus has been proposed in the past. Notably, it was proposed (now defunct) as a step in
@@ -108,9 +108,9 @@ BABE (Blind Assignment for Blockchain Extension) is the block production mechani
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
 [Ouroboros Praos](https://eprint.iacr.org/2017/573.pdf), with some key differences in chain
 selection rule and slot time adjustments. BABE assigns block production slots to validators
-according to stake and using the Polkadot [randomness cycle](learn-randomness.md).
+according to stake and using the Selendra [randomness cycle](learn-randomness.md).
 
-Validators in Polkadot will participate in a lottery in every slot that will tell them whether or
+Validators in Selendra will participate in a lottery in every slot that will tell them whether or
 not they are the block producer candidate for that slot. Slots are discrete units of time, nominally
 6 seconds in length. Because of this randomness mechanism, multiple validators could be candidates
 for the same slot. Other times, a slot could be empty, resulting in inconsistent block time.
@@ -131,9 +131,6 @@ validator selection algorithm in the background. The validators selected to prod
 this algorithm always produce blocks, but these _secondary_ blocks are ignored if the same slot also
 produces a primary block from a [VRF-selected](learn-randomness.md) validator. Thus, a slot can have
 either a _primary_ or a _secondary_ block, and no slots are ever skipped.
-
-For more details on BABE, please see the
-[BABE paper](https://research.web3.foundation/en/latest/polkadot/block-production/Babe.html).
 
 ### BADASS BABE: SASSAFRAS
 
@@ -171,7 +168,7 @@ is part of Substrate Frame.
 
 ## Fork Choice
 
-Bringing BABE and GRANDPA together, the fork choice of Polkadot becomes clear. BABE must always
+Bringing BABE and GRANDPA together, the fork choice of Selendra becomes clear. BABE must always
 build on the chain that has been finalized by GRANDPA. When there are forks after the finalized
 head, BABE provides probabilistic finality by building on the chain with the most primary blocks.
 

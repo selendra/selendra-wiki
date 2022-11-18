@@ -157,7 +157,7 @@ First, go to the [Selendra Portal's staking section](https://portal.selendra.org
  
 - **Stash Account** - Select your Stash account. In this example, we will bond 99 SEL, where the minimum bonding amount is 1. Make sure that your Stash account contains at least this much. You can, of course, stake more than this.
  
-- **Controller account** - Select the Controller account that you created. This account will also need a small amount of DOT in order to start and stop validating.
+- **Controller account** - Select the Controller account that you created. This account will also need a small amount of SEL in order to start and stop validating.
  
 - **Value bonded** - How much SEL from the Stash account you want to bond/stake. Note that you do not need to bond all of the SEL in that account. Also note that you can always bond `more` SEL later. However, `withdrawing` any bonded amount requires the duration of the unbonding period. On Selendra, the planned unbonding period is 28 days.
 

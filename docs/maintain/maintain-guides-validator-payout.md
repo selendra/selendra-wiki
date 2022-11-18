@@ -12,7 +12,7 @@ import RPC from "./../../components/RPC-Connection";
 ## Era Points
 
 For every era (a period of time approximately 6 hours in length in Kusama, and 24 hours in
-Polkadot), validators are paid proportionally to the amount of _era points_ they have collected. Era
+Selendra), validators are paid proportionally to the amount of _era points_ they have collected. Era
 points are reward points earned for payable actions like:
 
 - issuing validity statements for [parachain](../learn/learn-parachains.md) blocks.
@@ -36,11 +36,11 @@ Era points create a probabilistic component for staking rewards.
 If the _mean_ of staking rewards is the average rewards per era, then the _variance_ is the
 variability from the average staking rewards. The exact SEL value of each era point is not known in
 advance since it depends on the total number of points earned by all validators in a given era. This 
-is designed this way so that the total payout per era depends on Polkadot's 
+is designed this way so that the total payout per era depends on Selendra's 
 [inflation model](../learn/learn-staking-advanced.md#inflation), and not on the number of payable actions 
 (f.e., authoring a new block) executed. For more information, check [this stackexchange post](https://substrate.stackexchange.com/questions/5353/how-are-rewards-in-dot-calculated-from-the-era-points-earned-by-validators-in-po).
 
-With parachains now on Polkadot, a large percentage of era points will come from parachain
+With parachains now on Selendra, a large percentage of era points will come from parachain
 validation, as a subset of validators are selected to para-validate for all parachains each epoch,
 and those para-validators can generate more era points as a result. Para-validators are rewarded 20
 era points each for each parachain block that they validate.
@@ -97,7 +97,7 @@ Validators may also receive "tips" from senders as an incentive to include trans
 produced blocks. Validators will receive 100% of these tips directly.
 
 Validators will receive staking rewards in the form of the native token of that chain (KSM for
-Kusama and SEL for Polkadot).
+Kusama and SEL for Selendra).
 
 For simplicity, the examples below will assume all validators have the same amount of era points,
 and received no tips.
@@ -173,7 +173,7 @@ Although rewards are paid equally, slashes are relative to a validator's stake. 
 have enough SEL to run multiple validators, it is in your best interest to do so. A slash of 30%
 will, of course, be more SEL for a validator with 18 SEL staked than one with 9 SEL staked.
 
-Running multiple validators does not absolve you of the consequences of misbehavior. Polkadot
+Running multiple validators does not absolve you of the consequences of misbehavior. Selendra
 punishes attacks that appear coordinated more severely than individual attacks. You should not, for
 example, run multiple validators hosted on the same infrastructure. A proper multi-validator
 configuration would ensure that they do not fail simultaneously.
@@ -195,8 +195,7 @@ validator, then you will lose 1 SEL in each case.
 :::caution
 
 If a validator is oversubscribed in an era, staking rewards are distributed only to the the top
-{{ selendra: <RPC network="selendra" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.maxNominatorRewardedPerValidator" defaultValue={256}/> :selendra }}
 nominators and the rest of the nominators do not receive any rewards. This is not the case for
 slashing! Every active nominator of the validator committing slashable offence will be slashed.
 
@@ -213,7 +212,7 @@ validator itself, plus any stake bonded by nominators.
 :::info
 
 Validators set their preference as a percentage of the block reward, _not_ an absolute number of
-DOT. Polkadot's block reward is based on the _total_ amount at stake, with the reward peaking when
+SEL. Selendra's block reward is based on the _total_ amount at stake, with the reward peaking when
 the amount staked is at 50% of the total supply. The commission is set as the amount taken by the
 validator; that is, 0% commission means that the validator does not receive any proportion of the
 rewards besides that owed to it from self-stake, and 100% commission means that the validator

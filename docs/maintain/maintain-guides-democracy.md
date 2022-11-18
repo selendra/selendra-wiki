@@ -196,7 +196,7 @@ your transaction and wait for it to be included in a block.
 
 ## Unlocking Locked Tokens
 
-Like [vesting](../learn/learn-DOT.md#lazy-vesting), the tokens that are locked in democracy are
+Like [vesting](../learn/learn-SEL.md#lazy-vesting), the tokens that are locked in democracy are
 unlocked lazily. This means that you, the user, must explicitly call an unlock extrinsic to make
 your funds available again after the lock expires. Unbonding is another term you hear a lot in
 Polkadot, it means withdrawing your SEL that was used in staking. To know more about it, please see
@@ -243,7 +243,7 @@ If you return to the [Accounts page](https://portal.selendra.org/#/accounts), yo
 the democracy lock has been released.
 
 Note that this applies only to locked SEL that were used for voting on referenda. In order to unlock
-DOT locked by voting for members of the Polkadot Council, you need to go to the
+SEL locked by voting for members of the Polkadot Council, you need to go to the
 [Council](https://portal.selendra.org/#/council) page, click "Vote", and then click on "Unvote
 All".
 

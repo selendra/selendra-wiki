@@ -9,12 +9,12 @@ slug: ../learn-nomination-pools
 
 import RPC from "./../../components/RPC-Connection";
 
-:::info Nomination Pools are live on Polkadot!
+:::info Nomination Pools are live on Selendra!
 
 Nomination pools are a new feature for Selendra's staking system that allows users to pool their 
 DOT tokens together on-chain to nominate validators and receive rewards, significantly improving
 the system’s scalability. Now, anyone with as little as [1 SEL can receive rewards for staking 
-natively on Polkadot](https://polkadot.network/blog/nomination-pools-are-live-stake-natively-with-just-1-dot/). 
+natively on Selendra](https://selendra.org/blog/nomination-pools-are-live-stake-natively-with-just-1-sel/). 
 
 :::
 
@@ -28,13 +28,12 @@ If you have questions about nomination pools, please join our
 ![Nomination Pools](../assets/staking/NPoS-Pools.png)
 
 Nomination pools are one of the key features from the roadmap of staking improvements on
-{{ kusama: Kusama :kusama }}{{ polkadot: Polkadot :polkadot }}. They are designed to
+{{ selendra: Selendra :selendra }}. They are designed to
 permissionlessly allow members to pool their funds together and act as a single nominator account.
 
 Due to the current runtime constraints,
 {{ selendra: Selendra :selendra }} can only handle
-{{ selendra: <RPC network="selendra" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={12500}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.electionProviderMultiPhase.maxElectingVoters" defaultValue={22500}/> :selendra }}
 nominators comfortably in the [electing set](learn-nominator.md#staking-election-stages). As one of
 the objectives of the [NPoS algorithm](learn-phragmen.md) is to maximize the overall stake on the
 network, it can be inferred that the staking system on
@@ -88,7 +87,7 @@ Note that a member may only belong to one pool at a time.
 
 :::info
 
-The funds nominated to a pool will not be visible in the member's account balance on Polkadot JS
+The funds nominated to a pool will not be visible in the member's account balance on Selendra JS
 Apps UI. This is because the member funds are transferred from their account to the pool's account.
 This pool account is not accessible by anyone (including the pool root or depositor) and only the
 pool's internal logic can access the account.
@@ -104,7 +103,7 @@ as they are not enabled to make calls to the nomination pools pallet.
 :::
 
 Check the "How to join a pool" section in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+[this support article](https://support.selendra.org/support/solutions/articles/how-to-join-nomination-pools)
 for guidelines.
 
 ### Claim rewards
@@ -113,7 +112,7 @@ The member can claim their portion of any rewards that have accumulated since th
 claimed (or in the case that they have never claimed, any rewards that have accumulated since the
 era after they joined). Rewards are split pro rata among the actively bonded members. Check the "How
 to claim rewards" section in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+[this support article](https://support.selendra.org/support/solutions/articles/how-to-join-nomination-pools)
 for guidelines.
 
 ### Unbond and withdraw funds
@@ -121,16 +120,13 @@ for guidelines.
 At any point in time after joining the pool, a member can start the process of exiting by unbonding.
 `unbond` will unbond part or all of the member's funds. After unbond has been called and the
 unbonding duration has passed
-{{ polkadot: (<RPC network="polkadot" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
-{{ kusama: (<RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
+{{ selendra: (<RPC network="selendra" path="consts.staking.bondingDuration" defaultValue={28}/> :selendra }}
 eras which correspond to
-{{ selendra: <RPC network="selendra" path="consts.staking.bondingDuration" defaultValue={28}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.bondingDuration" defaultValue={28}/> :kusama }}
-days on {{ polkadot: Polkadot). :polkadot }} {{ kusama: Kusama). :kusama }} A member may withdraw
+days on {{ selendra: Selendra). :selendra }} A member may withdraw
 their funds with `withdrawUnbonded`. Withdrawing effectively ends a member's relationship with their
 pool, allowing them to join a different pool if desired. Check the "Withdraw unbonded funds" section
 in
-[this support article](https://support.polkadot.network/support/solutions/articles/65000181401-how-to-join-nomination-pools)
+[this support article](https://support.selendra.org/support/solutions/articles/how-to-join-nomination-pools)
 for guidelines.
 
 :::info Unbonding transaction automatically triggers withdrawal of rewards
@@ -147,29 +143,6 @@ withdrawn to the account. The rewards are then accrued based on the updated bond
 - In order for a member to switch pools all funds from the account must be unbonded. This process
   takes 28 eras.
 - A member can partially unbond the staked funds in the pool (at most 16 partial unbonds).
-
-:::info Kusama Pool Stats
-
-- There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembers" defaultValue={65536} /> :kusama }}
-  members (there are currently
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.counterForPoolMembers" defaultValue={149} /> :kusama }}
-  members).
-- There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPools" defaultValue={64} /> :kusama }}
-  pools (there are currently
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.lastPoolId" defaultValue={59} /> :kusama }}
-  pools).
-- There can be a maximum of
-  {{ polkadot: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :polkadot }}
-  {{ kusama: <RPC network="kusama" path="query.nominationPools.maxPoolMembersPerPool" defaultValue={16} /> :kusama }}
-  members per pool.
-
-:::info
 
 ## Pool Administration
 
@@ -195,71 +168,5 @@ withdrawn to the account. The rewards are then accrued based on the updated bond
 
 ## Pool Lifecycle
 
-### Creation
 
-The depositor calls the `create` extrinsic, setting the administrative roles and transferring some
-funds to the pool in order to add themselves as the first member. As stated above, the depositor
-must always be a member as long as the pool exists; they will be the last member to leave, ensuring
-they always have some skin in the game. Significant stake from the depositor is always a good
-indicator for the pool's credibility.
-
-{{ kusama: **The current minimum bond to create a pool is <RPC network="kusama" path="query.nominationPools.minCreateBond" defaultValue={1000000000000} filter="humanReadable" />.** :kusama }}
-
-The pool’s ‘nominator role’ selects validators with the nominate extrinsic. On Polkadot JS Apps UI,
-navigate to Network > Staking > Pools and click on Add Pool button.
-
-![Create Nomination Pools](../assets/staking/Nomination-Pools-1.png)
-
-The UI automatically assigns ID to the pool and allows for entering the name of the pools as well as
-the deposit to be bonded.
-
-![Create Nomination Pools - deposit](../assets/staking/Nomination-Pools-2.png)
-
-When creating a pool using Polkadot JS Apps UI, all the roles are mapped to the Depositor account by
-default. If any of these roles need to be assigned to a different account, create the pool using
-`create` extrinsic available on Developer > Extrinsics > nominationPools on Polkadot JS Apps UI.
-
-![Nomination Pool Roles](../assets/staking/Nomination-Pools-7.png)
-
-### Upkeep
-
-The `nominator` can update the pool’s validator selection. On Polkadot JS Apps UI, navigate to
-Network > Staking > Accounts page and click on Pooled button.If you have any pooled accounts with
-the role of `nominator`, you would notice the option to set nominees. Select the validators to
-nominate like you would normally using a nominator account.
-
-![Nominate validators](../assets/staking/Nomination-Pools-5.png)
-
-The `state-toggler` can update the pool’s state to blocked through `setState` extrinsic and then
-kick members by calling `unbond` and `withdrawUnbonded`. (The state can also be toggled back to
-open).
-
-### Destruction
-
-A pool can be pushed into the “destroying” state via one of:
-
-- The state-toggler sets the pool to “destroying”.
-- Any account can set the pool to destroying if over 90% of the pool's active bonded balance has
-  been slashed. Dismantling a destroying pool
-- When a pool is in ‘destroying’ state, `unbond` and `withdrawUnbonded` become permissionless, so
-  anyone can help all the members exit.
-- Once the depositor withdraws, no members belong to the pool, and all the pool’s resources are
-  wiped from state.
-
-## Slashing
-
-If a pool’s underlying nomination account is slashed by the staking system, then the slash is
-distributed evenly across the bonded pool and the unbonding pools from slash era+1 through the slash
-apply era. Thus, any member who either a) was unbonding or b) was actively bonded in the
-aforementioned range of eras will be affected by the slash. In other words, a member who may have
-been actively bonded during the offence is slashed pro rata based on its stake relative to the total
-slash amount.
-
-Unbonding pools need to be slashed to ensure all nominators who were in the bonded pool while it was
-backing a validator that committed an offence are punished. Without these measures a nominator could
-unbond right after a validator equivocated with no consequences.
-
-This strategy is unfair to members who joined after the slash, because they get slashed as well, but
-spares members who unbond. The latter is much more important for security: if a pool's validators
-are attacking the network, their members need to unbond fast! Avoiding additional slashes gives them
-an incentive to do that if validators get repeatedly slashed.
+### WORK IN PROGRESSS

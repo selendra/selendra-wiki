@@ -31,7 +31,7 @@ for their application to synchronize with the chain. This is possible with Subst
 ### Replacing [RPC node](build-node-interaction.md) reliance with light clients
 
 [Substrate connect](https://substrate.io/substrate-connect/) is a JavaScript library and browser
-extension that builds on the [PolkadotJS API](https://selendra.js.org/api/)) to enable developers to
+extension that builds on the [SelendraJS API](https://selendra.js.org/api/)) to enable developers to
 build application-specific light clients for Substrate chains. There is no installation required or
 optional extension with minimal or no maintenance. The node is run by the JavaScript engine.
 
@@ -55,7 +55,7 @@ require you to run a full copy of the entire blockchain.
 
 ### As a JavaScript library
 
-Substrate connect provides a PolkadotJS API connected to a bundled node. Through the use of the
+Substrate connect provides a SelendraJS API connected to a bundled node. Through the use of the
 library, a user can run an actual Substrate-compatible node.
 
 #### A node bundled with its user interface: ready-to-use light clients
@@ -67,7 +67,7 @@ blockchain network without relying on specific third parties.
 
 Application developers can now run a Substrate light client in any NodeJS environment
 ([@substrate/connect](https://www.npmjs.com/package/@substrate/connect)). Currently, Substrate
-connect supports Polkadot, Kusama, Westend, and Rococo; because light clients are part of the
+connect supports Selendra, and Selendra Testnet; because light clients are part of the
 overall Substrate framework, they are available for Substrate-based blockchains.
 
 ### As a browser extension
