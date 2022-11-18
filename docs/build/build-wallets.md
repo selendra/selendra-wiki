@@ -20,15 +20,15 @@ transactions. Below are some wallets that support Polkadot along with their deve
 ### Supported Wallets
 
 [Polkadot support](https://support.polkadot.network/) can provide assistance with issues related to
-Selendra-Portal UI, the Polkadot-JS extension, or Parity Signer. For other wallet software, you should
+Selendra-Portal UI, the Selendra-JS extension, or Parity Signer. For other wallet software, you should
 contact the developers of that wallet.
 
 | Wallet Name                                                         | Development State | Team Name | Description                                                                                                                                                        |
 | ------------------------------------------------------------------- | ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) or [Polkadot-JS Extension](https://github.com/polkadot-js/extension)               |
-| [Polkadot-JS Desktop](https://github.com/polkadot-js/apps/releases) | Live              | Parity    | Win, Mac, Linux                                                                                                                                                    |
-| [Selendra-Portal UI](https://portal.selendra.org/#/accounts)        | Live              | Parity    | Browser based wallet used with [Polkadot-JS Extension](https://github.com/polkadot-js/extension)                                                                   |
-| [Ledger](https://github.com/Zondax/ledger-polkadot)                 | Live              | Zondax    | Hardware wallet app used with [Selendra-Portal UI](https://portal.selendra.org/#/accounts) (and [Polkadot-JS Extension](https://github.com/polkadot-js/extension)) |
+| [Parity Signer](https://www.parity.io/signer/)                      | Live              | Parity    | iOS and Android app used with [Companion](https://parity.link/signer-companion) or [Selendra-JS Extension](https://github.com/Selendra-JS/extension)               |
+| [Selendra-JS Desktop](https://github.com/Selendra-JS/apps/releases) | Live              | Parity    | Win, Mac, Linux                                                                                                                                                    |
+| [Selendra-Portal UI](https://portal.selendra.org/#/accounts)        | Live              | Parity    | Browser based wallet used with [Selendra-JS Extension](https://github.com/Selendra-JS/extension)                                                                   |
+| [Ledger](https://github.com/Zondax/ledger-polkadot)                 | Live              | Zondax    | Hardware wallet app used with [Selendra-Portal UI](https://portal.selendra.org/#/accounts) (and [Selendra-JS Extension](https://github.com/Selendra-JS/extension)) |
 
 ### Treasury Funded Wallets
 

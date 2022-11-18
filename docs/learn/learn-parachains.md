@@ -11,9 +11,7 @@ slug: ../learn-parachains
 
 For information on how to participate in the crowdloan and parachain auction testing on Rococo,
 please see the
-{{ polkadot: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :polkadot }}{{ kusama: [Rococo Content](../build/build-parachains.md##testing-a-parachains:-rococo-testnet) :kusama }}
-on the parachain development guide.
-
+{{ Selendra: [Selendra Testnet Content](../build/build-parachains.md##testing-a-parachains:-selendra-testnet) :selendra }}
 :::
 
 A parachain is an application-specific data structure that is globally coherent and validatable by
@@ -31,12 +29,11 @@ parachains through the [XCM](learn-xcm.md) format.
 Parachains are maintained by a network maintainer known as a [collator](learn-collator.md). The role
 of the collator node is to maintain a full node of the parachain, retain all necessary information
 of the parachain, and produce new block candidates to pass to the Relay Chain validators for
-verification and inclusion in the shared state of {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }}. The incentivization of a collator node is an implementation detail of
+verification and inclusion in the shared state of {{ selendra: Selendra :selendra }}. The incentivization of a collator node is an implementation detail of
 the parachain. They are not required to be staked on the Relay Chain or own the native token unless
 stipulated by the parachain implementation.
 
-The Polkadot Host (PH) requires that the state transitions performed on parachains be specified as a
+The Seledra Host (SH) requires that the state transitions performed on parachains be specified as a
 [Wasm](learn-wasm.md) executable. Proofs of new state transitions that occur on a parachain must be
 validated against the registered state transition function (STF) that is stored on the Relay Chain
 by the validators before {{ selendra: Selendra :selendra }} acknowledges
@@ -63,7 +60,7 @@ Transaction fees in a native parachain token can also be an implementation choic
 the parachains decide on original validity of transactions. For example, a parachain may be
 implemented so that transactions must pay a minimum fee to collators to be valid. The Relay Chain
 will enforce this validity. Similarly, a parachain could not include that in their implementation,
-and Polkadot would still enforce its validity.
+and Selendra would still enforce its validity.
 
 Parachains are not required to have their own token. If they do, it is up to the parachain to make the
 economic case for their token, not {{ selendra: Selendra :selendra }}.
@@ -89,7 +86,7 @@ end of the transaction.
 
 An issue with crosschain latency means that composability property weakens among parachains compared
 to a single blockchain. **This implication is common to all sharded blockchain designs, including
-Polkadot, Eth2.0, and others.** The solution to this is the introduction of parachain hubs, which
+Selendra, Eth2.0, and others.** The solution to this is the introduction of parachain hubs, which
 maintain the stronger property of single block composability.
 
 ## Parachain Slot Acquisition
@@ -102,21 +99,17 @@ several ways to allocate them:
 - Auction granted parachains
 - Parathreads
 
-["Common Good" parachains](#common-good-parachains) are allocated by Polkadot's on-chain
-{{ polkadot: [governance](learn-governance.md) :polkadot }}
-{{ kusama: [governance](learn-governance.md) :kusama }} system, and are deemed as a "common good"
+["Common Good" parachains](#common-good-parachains) are allocated by Selendra's on-chain
+{{ selendra: [governance](learn-governance.md) :selendra }} system, and are deemed as a "common good"
 for the network, such as bridges to other networks or chains. They are usually considered
 system-level chains or public utility chains. These typically do not have an economic model and help
 remove transactions from the Relay Chain, allowing for more efficient parachain processing.
 
-{{ polkadot: [Auction granted parachains](learn-auction.md) :polkadot }}
-{{ kusama: [Auction granted parachains](learn-auction.md) :kusama }} are granted in a permissionless
+{{ selendra: [Auction granted parachains](learn-auction.md) :selendra }}
+are granted in a permissionless
 auction. Parachain teams can either bid with their own SEL tokens, or source them from the community
-using the {{ polkadot: [crowdloan functionality](learn-crowdloans.md) :polkadot }}
-{{ kusama: [crowdloan functionality](learn-crowdloans.md) :kusama }}.
-
-{{ polkadot: [Parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [Parathreads](learn-parathreads.md) :kusama }} have the same API as parachains, but are
+using the {{ selendra: [crowdloan functionality](learn-crowdloans.md) :selendra }}.
+{{ selendra: [Parathreads](learn-parathreads.md) :selendra }} have the same API as parachains, but are
 scheduled for execution on a pay-as-you-go basis with an auction for each block.
 
 ### Parachain Lease Expiration
@@ -132,12 +125,11 @@ automatically become parathreads.
 ecosystem as a whole. By allocating a subset of parachain slots to common good chains, the entire
 network can realize the benefit of valuable parachains that would otherwise be underfunded due to
 the free-rider problem. They are not allocated via the parachain auction process but by the on-chain
-{{ polkadot: [governance](learn-governance.md) :polkadot }}
-{{ kusama: [governance](learn-governance.md) :kusama }} system. Generally, a common good parachain's
+{{ selendra: [governance](learn-governance.md) :selendra }} system. Generally, a common good parachain's
 lease would not expire; it would only be removed via governance.
 
 See the
-[Polkadot blog article](https://polkadot.network/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
+[Selendra blog article](https://selendra.org/common-good-parachains-an-introduction-to-governance-allocated-parachain-slots/)
 and the [common good parachains](learn-common-good-chains.md) page for more information.
 
 ## Examples
@@ -158,19 +150,19 @@ Some examples of parachains:
 
 ### What is "parachain consensus"?
 
-"Parachain consensus" is special in that it will follow the {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} Relay Chain. Parachains cannot use other consensus algorithms that
+"Parachain consensus" is special in that it will follow the {{ selendra: Selendra :selendra }}
+Relay Chain. Parachains cannot use other consensus algorithms that
 provide their own finality. Only sovereign chains (that must bridge to the Relay Chain via a
 parachain) can control their own consensus. Parachains have control over how blocks are authored and
-by whom. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} guarantees valid state
+by whom. {{ selendra: Selendra :selendra }} guarantees valid state
 transitions. Executing a block finality outside the context of the relay chain is outside the scope
-of trust that {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} provides.
+of trust that {{ selendra: Selendra :selendra }} provides.
 
 #### How about parachains that are not Substrate-based?
 
 Substrate provides [FRAME Pallets](https://docs.substrate.io/main-docs/fundamentals/runtime-intro/)
 as part of its framework to seamlessly build a rustic-based blockchain. Part of FRAME are pallets
-that can be used for consensus. {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}
+that can be used for consensus. {{ selendra: Selendra :selendra }}
 being a Substrate-based chain relies on BABE as the block production scheme and GRANDPA as the
 finality gadget as part of its consensus mechanism. Collectively, this is a
 [Hybrid Consensus Model](learn-consensus.md#hybrid-consensus), where block production and block
@@ -182,21 +174,10 @@ Substrate-based.
 ### How will parachain slots be distributed?
 
 Parachain slots are acquirable through auction. For more information on the auction process, please 
-see the {{ polkadot: [parachain slot auctions](learn-auction.md) :polkadot }}
+see the {{ selendra: [parachain slot auctions](learn-auction.md) :selendra }}
 {{ kusama: [parachain slot auctions](learn-auction.md) :kusama }} article. Additionally, some parachain
-slots will be set aside to run {{ polkadot: [parathreads](learn-parathreads.md) :polkadot }}
-{{ kusama: [parathreads](learn-parathreads.md) :kusama }} &mdash; chains that bid on a per-block
+slots will be set aside to run {{ selendra: [parathreads](learn-parathreads.md) :selendra }} &mdash; chains that bid on a per-block
 basis to be included in the Relay Chain. (Parathreads are not implemented yet.)
-
-### Is 100 a hard limit on the number of Parachains that can be supported?
-
-No.{{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }} network went through a significant
-number of optimizations, and there are [several updates planned](https://polkadot.network/blog/polkadot-roadmap-roundup/) 
-in the near future. The exact number of parachains that the Relay Chain can support without any 
-degradation in performance is yet to be discovered. Also, with the 
-[blockspace over blockchains](https://www.rob.tech/polkadot-blockspace-over-blockchains/) paradigm which brings
-parathreads into the picture, there is no hard limit number on the number of blockchains that can be supported 
-by {{ polkadot: Polkadot :polkadot }} {{ kusama: Kusama :kusama }}.
 
 ### What happens to parachains when the number of validators drops below a certain threshold?
 
@@ -235,10 +216,4 @@ Please see the [Parachain Development page](../build/build-parachains.md) for mo
 
 ## Resources
 
-- [Polkadot: The Parachain](https://medium.com/polkadot-network/polkadot-the-parachain-3808040a769a) -
-  Blog post by Polkadot co-founder Rob Habermeier who introduced parachains in 2017 as "a simpler
-  form of blockchain, which attaches to the security provided by a Relay Chain rather than providing
-  its own. The Relay Chain provides security to attached parachains, but also provides a guarantee
-  of secure message-passing between them."
-- [The Path of a Parachain Block](https://polkadot.network/the-path-of-a-parachain-block/) - A
-  technical walkthrough of how parachains interact with the Relay Chain.
+-

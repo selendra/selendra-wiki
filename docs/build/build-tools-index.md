@@ -90,11 +90,11 @@ usage instructions are provided at [Selendra-JS API Documentation](https://selen
 
 ### CLI Tools
 
-- [@selendra/api-cli](https://github.com/polkadot-js/tools/tree/master/packages/api-cli) Command
+- [@selendra/api-cli](https://github.com/selendra-js/tools/tree/master/packages/api-cli) Command
   line interface for the selendra API. [Documentation](https://selendra.js.org/docs/api/start).
-- [@selendra/monitor-rpc](https://github.com/polkadot-js/tools/tree/master/packages/monitor-rpc) An
+- [@selendra/monitor-rpc](https://github.com/selendra-js/tools/tree/master/packages/monitor-rpc) An
   RPC monitor for Selendra. See the RPC tools below for additional information.
-- [@selendra/signer-cli](https://github.com/polkadot-js/tools/tree/master/packages/signer-cli) A
+- [@selendra/signer-cli](https://github.com/selendra-js/tools/tree/master/packages/signer-cli) A
   Tool to construct, sign, and broadcast transactions. Signing can be done offline.
 - [Subkey](https://docs.substrate.io/reference/command-line-tools/subkey/) - Command line utility
   for generating and inspecting key pairs.

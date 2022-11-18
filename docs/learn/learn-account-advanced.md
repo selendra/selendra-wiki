@@ -114,7 +114,7 @@ the derived accounts are fully secure. Unless you have a specific need for a sof
 recommended to generate the account using a hard derivation path.
 
 See the [Subkey documentation](https://docs.substrate.io/reference/command-line-tools/subkey/) for
-details and examples of derivation path formats. The Polkadot-JS Apps and Extension and Parity
+details and examples of derivation path formats. The Selendra-JS Apps and Extension and Parity
 Signer support custom derivation paths using the same syntax as Subkey.
 
 Some wallets will automatically add derivation paths to the end of the generated mnemonic phrase.
@@ -183,7 +183,7 @@ reach out to the project maintainers.
 |                         | Mnemonic Format | Derivation Path | Seed Derivation |      Signature Support      |
 | :---------------------- | :-------------: | :-------------: | :-------------: | :-------------------------: |
 | Polkadot{.js} Extension |    Standard     |  User-Defined   |      BIP32      |           sr25519           |
-| Polkadot-JS Apps        |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
+| Selendra-JS Apps        |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k  |
 | Ledger                  |      BIP39      |  BIP44&dagger;  |  BIP32&Dagger;  |        ed25519&sect;        |
 | Subkey                  |   Standard\*    |  User-Defined   |      BIP32      | sr25519, ed25519, secp256k1 |
 
@@ -317,7 +317,7 @@ sure that the index can never be reclaimed unless released by the holding accoun
 :::note Lookup Account Index on-chain
 
 When someone shares their account index, their actual account address on-chain can be looked up
-through Polkadot-JS Apps UI > Developer > Chain state > Storage and selecting state query on indices
+through Selendra-JS Apps UI > Developer > Chain state > Storage and selecting state query on indices
 pallet for the account corresponding to the index.
 
 :::
@@ -325,7 +325,7 @@ pallet for the account corresponding to the index.
 Here is an example snapshot that shows how to lookup the corresponding account address of the
 account index 1988 on
 [Westend network (Polkadot Test Network)](../maintain/maintain-networks.md#westend-test-network),
-using Polkadot-JS Apps UI. The output shows the account address, its deposit amount and a boolean
+using Selendra-JS Apps UI. The output shows the account address, its deposit amount and a boolean
 flag which indicates whether this is claimed permanently.
 
 ![query account index](../assets/accounts/query-index.png)

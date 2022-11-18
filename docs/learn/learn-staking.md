@@ -360,7 +360,7 @@ so, see the page on [simple payouts](learn-simple-payouts.md).
 :::info Payouts
 
 Payouts are unclaimed rewards waiting to be paid out to both validators and nominators. If you go to
-the Staking payouts page on [Polkadot-JS](https://portal.selendra.org/#/staking), you will see a
+the Staking payouts page on [Selendra-JS](https://portal.selendra.org/#/staking), you will see a
 list of all validators that you have nominated in the past 84 eras and for which you have not yet
 received a payout. The payout page is visible only to stakers.
 

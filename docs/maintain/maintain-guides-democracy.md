@@ -203,7 +203,7 @@ Polkadot, it means withdrawing your SEL that was used in staking. To know more a
 [here](maintain-guides-how-to-unbond.md).
 
 You can do this from the "Accounts" page in
-[Polkadot-JS Apps](https://portal.selendra.org/#/accounts), unless you use Ledger (see below).
+[Selendra-JS Apps](https://portal.selendra.org/#/accounts), unless you use Ledger (see below).
 First, check that your account has a "democracy" lock by opening the details on your balance. In the
 example below the account has 150 KSM locked in democracy.
 

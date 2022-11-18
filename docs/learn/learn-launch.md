@@ -7,7 +7,7 @@ keyword: [launch, phases, selendra 2.0]
 slug: ../learn-launch
 ---
 
-The Polkadot network has a phased roll-out plan, with important milestones toward decentralization
+The Selendra network has a phased roll-out plan, with important milestones toward decentralization
 marking each phase. Keep up-to-date with the Selendra's phased roll-out plan at by viewing the
 [roadmap](https://selendra.org/launch-roadmap/)
 

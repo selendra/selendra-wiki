@@ -162,7 +162,6 @@ functionalities on Selendra.
   [Existential Deposit](../build/build-protocol-info.md#existential-deposit) requirement.
 
 - **5 SEL**: the minimum contribution required to participate in
-  [crowdloans](../learn/learn-crowdloans.md) for
   [parachain slot auctions](../learn/learn-auction.md).
 
 - **10 SEL**: the minimum stake required to submit your intent to nominate validators. But, to earn

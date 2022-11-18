@@ -75,7 +75,7 @@ Selendra-JS comes down to either querying on-chain data or issuing an extrinsic.
 
 #### Querying on-chain data
 
-To populate the Apps UI, the web app queries the Polkadot-JS API. The API then queries a Polkadot
+To populate the Apps UI, the web app queries the Selendra-JS API. The API then queries a Polkadot
 node and uses JavaScript to return information that the UI will display on the screen. You can
 choose which node to connect to by changing it in the upper-left-hand corner of the screen.
 
@@ -92,7 +92,7 @@ need to click on the plus button to execute the query. The value displayed is in
 Extrinsics are pieces of information that come from outside the chain and are included in a block.
 Extrinsics can be one of three types: inherents, signed, and unsigned transactions.
 
-Most extrinsics displayed on Polkadot-JS Apps are signed transactions. Inherits are non-signed and
+Most extrinsics displayed on Selendra-JS Apps are signed transactions. Inherits are non-signed and
 non-gossiped pieces of information included in blocks by the block author, such as timestamps, which
 are “true” because a sufficient number of validators have agreed about validity.
 
@@ -108,13 +108,13 @@ For more user-friendly wallets, check out the supported and treasury-funded wall
 
 ## Resources
 
-### Beginner's Guide to Polkadot-JS
+### Beginner's Guide to Selendra-JS
 
-- [Introduction to Polkadot-JS](https://www.youtube.com/watch?v=4EQqwGFV1D8)
-- [Create an account using Polkadot-JS](https://www.youtube.com/watch?v=sy7lvAqyzkY)
+- [Introduction to Selendra-JS](https://www.youtube.com/watch?v=4EQqwGFV1D8)
+- [Create an account using Selendra-JS](https://www.youtube.com/watch?v=sy7lvAqyzkY)
 - [Network Explorer on Selendra-Portal UI](https://www.youtube.com/watch?v=g4b4IWR6OrE)
 
 ### Documentation
 
 - [Official polkadot{.js} docs](https://selendra.js.org/docs/)
-- [Substrate docs on Polkadot-JS](https://docs.substrate.io/reference/command-line-tools/polkadot-apps/)
+- [Substrate docs on Selendra-JS](https://docs.substrate.io/reference/command-line-tools/polkadot-apps/)
