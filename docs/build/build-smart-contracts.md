@@ -161,8 +161,8 @@ smart contract example? Ask us to add it to this page!**
 
 ## Smart Contract Environments are still Maturing
 
-It is still early for smart contracts on {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} and the development is only now stabilizing. We are actively producing
+It is still early for smart contracts on {{ selendra: Selendra :selendra }}
+and the development is only now stabilizing. We are actively producing
 content to help developers get up to speed and will maintain the Wiki with the latest resources. You
 should also keep up to date with the following links:
 

@@ -2,7 +2,7 @@
 id: learn-randomness
 title: Randomness
 sidebar_label: Randomness
-description: Learn about the approach to randomness in Polkadot's NPoS.
+description: Learn about the approach to randomness in Selendra's NPoS.
 keywords: [randomness, verifiable random function, VDF]
 slug: ../learn-randomness
 ---
@@ -24,7 +24,7 @@ blockchain randomness.
 
 There are two main approaches to blockchain randomness in production today: `RANDAO` and `VRF`.
 
-**Polkadot uses VRF.**
+**Selendra uses VRF.**
 
 ## VRF
 
@@ -33,16 +33,16 @@ random number along with a proof of authenticity that this random number was gen
 submitter. The proof can be verified by any challenger to ensure the random number generation is
 valid.
 
-The VRF used in Polkadot is roughly the same as the one used in Ouroboros Praos. Ouroboros
+The VRF used in Selendra is roughly the same as the one used in Ouroboros Praos. Ouroboros
 randomness is secure for block production and works well for [BABE](learn-consensus.md#BABE). Where
-they differ is that Polkadot's VRF does not depend on a central clock (the problem becomes - whose
+they differ is that Selendra's VRF does not depend on a central clock (the problem becomes - whose
 central clock?), rather, it depends on its own past results to determine present and future results,
 and it uses slot numbers as a clock emulator, estimating time.
 
 ### Here's how it works in detail:
 
 Slots are discrete units of time six seconds in length. Each slot can contain a block, but may not.
-Slots make up [epochs](../general/glossary.md##epoch) - on Polkadot, 2400 slots make one epoch,
+Slots make up [epochs](../general/glossary.md##epoch) - on Selendra, 2400 slots make one epoch,
 which makes epochs four hours long.
 
 In every slot, each validator "rolls a die". They execute a function (the VRF) that takes as input
@@ -59,7 +59,7 @@ The output is two values: a `RESULT` (the random value) and a `PROOF` (a proof t
 was generated correctly).
 
 The `RESULT` is then compared to a _threshold_ defined in the implementation of the protocol
-(specifically, in the Polkadot Host). If the value is less than the threshold, then the validator
+(specifically, in the Selendra Host). If the value is less than the threshold, then the validator
 who rolled this number is a viable block production candidate for that slot. The validator then
 attempts to create a block and submits this block into the network along with the previously
 obtained `PROOF` and `RESULT`. Under VRF, every validator rolls a number for themselves, checks it
@@ -67,7 +67,7 @@ against a threshold, and produces a block if the random roll is under that thres
 
 The astute reader will notice that due to the way this works, some slots may have no validators as
 block producer candidates because all validator candidates rolled too high and missed the threshold.
-We clarify how we resolve this issue and make sure that Polkadot block times remain near
+We clarify how we resolve this issue and make sure that Selendra block times remain near
 constant-time in the wiki page on [consensus](learn-consensus.md).
 
 ## RANDAO
@@ -93,10 +93,3 @@ VDFs will likely be implemented through ASIC devices that need to be run separat
 types of nodes. Although only one is enough to keep the system secure, and they will be open source
 and distributed at nearly no charge, running them is neither cheap nor incentivized, producing
 unnecessary friction for users of the blockchains opting for this method.
-
-## Resources
-
-- [Polkadot's research on blockchain randomness and sortition](https://w3f-research.readthedocs.io/en/latest/polkadot/block-production/Babe.html) -
-  contains reasoning for choices made along with proofs
-- [Discussion on Randomness used in Polkadot](https://github.com/paritytech/ink/issues/57) - W3F
-  researchers discuss the randomness in Polkadot and when it is usable and under which assumptions.

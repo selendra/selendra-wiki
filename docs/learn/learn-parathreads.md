@@ -12,7 +12,7 @@ Parathreads are an idea for parachains to temporarily participate (on a block by
 dedicated parachain slot. This is done through economically sharing the scarce resource of a
 _parachain slot_ among several competing resources (parathreads). Chains that otherwise would not be
 able to acquire a full parachain slot or do not find it economically sensible to do so, are enabled
-to participate in {{ polkadot: Polkadot's :polkadot }}{{ kusama: Kusama's :kusama }} shared security
+to participate in {{ selendra: Selendra's :selendra }} shared security
 &mdash; albeit with an associated fee per executed block. It also offers a graceful off-ramp to
 parachains that no longer require a dedicated parachain slot, but would like to continue using the
 Relay Chain.
@@ -51,10 +51,10 @@ an independent chain with secured bridge, a parachain, or a parathread. It can s
 last two states with relatively minimal effort since the difference is more of an economic
 distinction than a technological one.
 
-Parathreads have the exact same benefits for connecting to {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} that a full parachain has. Namely, it is able to send messages to other
+Parathreads have the exact same benefits for connecting to {{ selendra: Selendra :selendra }}
+that a full parachain has. Namely, it is able to send messages to other
 para-objects through [XCMP](learn-xcm.md###XCMP) and it is secured under the full economic security
-of {{ polkadot: Polkadot's :polkadot }} {{ kusama: Kusama's :kusama }} validator set.
+of {{ selendra: Selendra's :selendra }} validator set.
 
 The difference between parachains and parathreads is economic. Parachains must be registered through
 a normal means of {{ selendra: Selendra :selendra }}, i.e. governance
@@ -84,7 +84,7 @@ There are two sources of compensation for collators:
 
 1. Assuming a parathread has its own local token system, it pays the collators from the transaction
    fees in its local token. If the parathread does not implement a local token, or its local token
-   has no value (e.g. it is used only for governance), then it can use {{ polkadot: SEL :polkadot }}
+   has no value (e.g. it is used only for governance), then it can use {{ selendra: SEL :selendra }}
    {{ kusama: KSM :kusama }} to incentivize collators.
 2. Parathread protocol subsidy. A parathread can mint new tokens in order to provide additional
    incentives for the collator. Probably, the amount of local tokens to mint for the parathread
@@ -95,7 +95,7 @@ There are two sources of compensation for collators:
 
 Collators may be paid in local parathread currency. However, the Relay Chain transacts with the
 {{ selendra: Selendra :selendra }} native currency only. Collators must
-then submit block candidates with an associated bid in {{ polkadot: SEL :polkadot }}
+then submit block candidates with an associated bid in {{ selendra: SEL :selendra }}
 {{ kusama: KSM :kusama }}.
 
 ## Parachain Slot Swaps
@@ -112,7 +112,3 @@ produce new blocks when they need to.
 Parathreads help ease the sharp stop of the parachain slot term by allowing parachains that are
 still doing something useful to produce blocks, even if it is no longer economically viable to rent
 a parachain slot.
-
-## Resources
-
-- [Parathreads: Pay-as-you-go Parachains](https://medium.com/polkadot-network/parathreads-pay-as-you-go-parachains-7440d23dde06)

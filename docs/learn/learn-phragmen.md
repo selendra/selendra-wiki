@@ -2,7 +2,7 @@
 id: learn-phragmen
 title: NPoS Election Algorithms
 sidebar_label: NPoS Election Algorithms
-description: Learn about the election method used on Polkadot's Nominated Proof of Staking.
+description: Learn about the election method used on Selendra's Nominated Proof of Staking.
 keywords: [phragmen, sequential phragmén method, elections, algorithm, phragmms]
 slug: ../learn-phragmen
 ---
@@ -11,9 +11,9 @@ import RPC from "./../../components/RPC-Connection";
 
 ## NPoS Election Algorithms
 
-Since validators are paid almost equally in Polkadot in each era, it is important that the stake
+Since validators are paid almost equally in Selendra in each era, it is important that the stake
 behind each validator is uniformly spread out. An election algorithm for Nominated Proof of Staking
-(NPoS) on Polkadot will try to optimize three metrics when computing a solution graph of nominators
+(NPoS) on Selendra will try to optimize three metrics when computing a solution graph of nominators
 and validators:
 
 1. Maximize the total amount at stake.
@@ -24,7 +24,7 @@ and validators:
 
 [Sequential Phragmén](#understanding-phragmén), [Phragmms](#phragmms-fka-balphragmms) and
 [Star balancing](https://crates.parity.io/sp_npos_elections/balancing/fn.balance.html) are a few
-notable algorithms used for computing the NPoS solutions in Polkadot and Kusama.
+notable algorithms used for computing the NPoS solutions in Selendra.
 
 :::
 
@@ -53,7 +53,7 @@ also tries to equalize the weights between the validators after each election ro
 #### Off-Chain Phragmén
 
 Given the large set of nominators and validators, Phragmén's method is a difficult optimization
-problem. Polkadot uses off-chain workers to compute the result off-chain and submit a transaction to
+problem. Selendra uses off-chain workers to compute the result off-chain and submit a transaction to
 propose the set of winners. The reason for performing this computation off-chain is to keep a
 constant block time of six seconds and prevent long block times at the end of each era, when the
 validator election takes place. 
@@ -224,8 +224,8 @@ is `2`, etc.
 
 ### Rationale
 
-While this method works well if all voters have equal weight, this is not the case in Polkadot.
-Elections for both validators and candidates for the Polkadot Council are weighted by the number of
+While this method works well if all voters have equal weight, this is not the case in Selendra.
+Elections for both validators and candidates for the Selendra Council are weighted by the number of
 tokens held by the voters. This makes elections more similar to a corporate shareholder election
 than a traditional political election, where some members have more pull than others. Someone with a
 single token will have much less voting power than someone with 100. Although this may seem
@@ -558,14 +558,6 @@ To minimize block computation time, the staking process is run as an
 give time for this off-chain worker to run, staking commands (bond, nominate, etc.) are not allowed
 in the last quarter of each era.
 
-These optimizations will not be covered in-depth on this page. For more details, you can view the
-[Rust implementation of elections in Substrate](https://github.com/paritytech/substrate/blob/master/frame/elections-phragmen/src/lib.rs),
-the
-[Rust implementation of staking in Substrate](https://github.com/paritytech/substrate/blob/master/frame/staking/src/lib.rs),
-or the `seqPhragménwithpostprocessing` method in the
-[Python reference implementation](https://github.com/w3f/consensus/tree/master/NPoS). If you would
-like to dive even more deeply, you can review the
-[W3F Research Page on Sequential Phragmén Method](https://research.web3.foundation/en/latest/polkadot/NPoS/1.%20Overview.html?highlight=Phragm%C3%A9n#the-election-process).
 
 ### Rationale for Minimizing the Number of Validators Per Nominator
 
@@ -622,11 +614,9 @@ an optimal manner.
 
 There are several further restrictions put in place to limit the complexity of the election and
 payout. As already mentioned, any given nominator can only select up to
-{{ selendra: <RPC network="selendra" path="consts.staking.maxNominations" defaultValue={16}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.staking.maxNominations" defaultValue={24}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.staking.maxNominations" defaultValue={16}/> :selendra }}
 validators to nominate. Conversely, a single validator can have only
-{{ selendra: <RPC network="selendra" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="query.staking.maxNominatorsCount" defaultValue={20000}/> :kusama }}
+{{ selendra: <RPC network="selendra" path="query.staking.maxNominatorsCount" defaultValue={50000}/> :selendra }}
 nominators. A drawback to this is that it is possible, if the number of nominators is very high or
 the number of validators is very low, that all available validators may be "oversubscribed" and
 unable to accept more nominations. In this case, one may need a larger amount of stake to
@@ -635,7 +625,7 @@ participate in staking, since nominations are priority-ranked in terms of amount
 ### Phragmms (fka Balphragmms)
 
 `Phragmms`, formerly known as `Balphragmms`, is a new election rule inspired by Phragmén and
-developed in-house for Polkadot. In general, election rules on blockchains is an active topic of
+developed in-house for Selendra. In general, election rules on blockchains is an active topic of
 research. This is due to the conflicting requirements for election rules and blockchains: elections
 are computationally expensive, but blockchains are computationally limited. Thus, this work
 constitutes state of the art in terms of optimization.
@@ -643,11 +633,10 @@ constitutes state of the art in terms of optimization.
 Proportional representation is a very important property for a decentralized network to have in
 order to maintain a sufficient level of decentralization. While this is already provided by the
 currently implemented `seqPhragmen`, this new election rule provides the advantage of the added
-security guarantee described below. As far as we can tell, at the time of writing, Polkadot and
-Kusama are the only blockchain networks that implement an election rule that guarantees proportional
+security guarantee described below. As far as we can tell, at the time of writing, Selendra is the only blockchain networks that implement an election rule that guarantees proportional
 representation.
 
-The security of a distributed and decentralized system such as Polkadot is directly related to the
+The security of a distributed and decentralized system such as Selendra is directly related to the
 goal of avoiding _overrepresentation_ of any minority. This is a stark contrast to traditional
 approaches to proportional representation axioms, which typically only seek to avoid
 underrepresentation.
@@ -658,7 +647,7 @@ This new election rule aims to achieve a constant-factor approximation guarantee
 support objective_ and the closely related _proportional justified representation_ (PJR) property.
 
 The maximin support objective is based on maximizing the support of the least-supported elected
-candidate, or in the case of Polkadot and Kusama, maximizing the least amount of stake backing
+candidate, or in the case of Selendra, maximizing the least amount of stake backing
 amongst elected validators. This security-based objective translates to a security guarantee for
 NPoS and makes it difficult for an adversarial whale’s validator nodes to be elected. The `Phragmms`
 rule, and the guarantees it provides in terms of security and proportionality, have been formalized
@@ -673,7 +662,7 @@ strength deserve to have a number of representatives proportional to the group�
 _Sequential Phragmén_ (`seqPhragmen`) and `MMS` are two efficient election rules that both achieve
 PJR.
 
-Currently, Polkadot employs the `seqPhragmen` method for validator and council elections. Although
+Currently, Selendra employs the `seqPhragmen` method for validator and council elections. Although
 `seqPhramen` has a very fast runtime, it does not provide constant-factor approximation for the
 maximin support problem. This is due to `seqPhramen` only performing an _approximate_ rebalancing of
 the distribution of stake.
@@ -728,7 +717,7 @@ inserts them with higher support values.
 - Unlike `seqPhragmen`, in `Phragmms`, the edge weight vector _w_ is completely rebalanced after
   each iteration of the algorithm.
 
-The `Phragmms` election rule is currently being implemented on Polkadot. Once completed, it will
+The `Phragmms` election rule is currently being implemented on Selendra. Once completed, it will
 become one of the most sophisticated election rules implemented on a blockchain. For the first time,
 this election rule will provide both fair representation (PJR) and security (constant-factor
 approximation for the maximin support objection) to a blockchain network.

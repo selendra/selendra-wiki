@@ -1,8 +1,8 @@
 ---
 id: learn-keys
-title: Polkadot Keys
+title: Selendra Keys
 sidebar_label: Keys
-description: Learn about the different cryptographic keys used in Polkadot.
+description: Learn about the different cryptographic keys used in Selendra.
 keywords: [keys, account keys, session keys, ed25519, BLS, signatures]
 slug: ../learn-keys
 ---
@@ -36,7 +36,7 @@ option.
 The controller key is a semi-online key that will be in the direct control of a user, and used to
 submit manual extrinsics. For validators or nominators, this means that the controller key will be
 used to start or stop validating or nominating. Controller keys should hold some
-{{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} to pay for fees, but they should not be used
+{{ selendra: SEL :selendra }} to pay for fees, but they should not be used
 to hold huge amounts or life savings. Since they will be exposed to the internet with relative
 frequency, they should be treated carefully and occasionally replaced with new ones.
 
@@ -139,10 +139,10 @@ verifiable random function (VRF). It also includes various minor improvements su
 scheme STROBE that can theoretically process huge amounts of data with only one call across the Wasm
 boundary.
 
-The implementation of Schnorr signatures that is used in Polkadot and implements the Schnorrkel
+The implementation of Schnorr signatures that is used in Selendra and implements the Schnorrkel
 protocols over the Ristretto compression of the Curve25519 is known as **sr25519**.
 
-### Are BLS signatures used in Polkadot?
+### Are BLS signatures used in Selendra?
 
 Not yet, but they will be. BLS signatures allow more efficient signature aggregation. Because
 GRANDPA validators are usually signing the same thing (e.g. a block), it makes sense to aggregate
@@ -159,14 +159,14 @@ makes BLS a preferred scheme for voting in consensus algorithms and for threshol
 
 Even though Schnorr signatures allow for signature aggregation, BLS signatures are much more
 efficient in some fashions. For this reason it will be one of the session keys that will be used by
-validators on the Polkadot network and critical to the GRANDPA finality gadget.
+validators on the Selendra network and critical to the GRANDPA finality gadget.
 
 ## Resources
 
 - [Key discovery attack on BIP32-Ed25519](https://web.archive.org/web/20210513183118/https://forum.w3f.community/t/key-recovery-attack-on-bip32-ed25519/44) -
   Archive of forum post detailing a potential attack on BIP32-Ed25519. A motivation for transition
   to the sr25519 variant.
-- [Account signatures and keys in Polkadot](https://research.web3.foundation/en/latest/polkadot/keys/index.html) -
+- [Account signatures and keys in Selendra](https://research.web3.foundation/en/latest/polkadot/keys/index.html) -
   Research post by Web3 researcher Jeff Burdges.
 - [Are Schnorr signatures quantum computer resistant?](https://bitcoin.stackexchange.com/questions/57965/are-schnorr-signatures-quantum-computer-resistant/57977#57977)
 

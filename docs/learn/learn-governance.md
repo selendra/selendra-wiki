@@ -2,7 +2,7 @@
 id: learn-governance
 title: Governance
 sidebar_label: Governance
-description: Learn about Polkadot's thought-through governance model.
+description: Learn about Selendra's thought-through governance model.
 keywords: [governance, referenda, proposal, voting, endorse]
 slug: ../learn-governance
 ---
@@ -15,14 +15,6 @@ import VLTable from "./../../components/Voluntary-Locking";
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
 network.
-
-:::caution Upcoming governance changes
-
-The contents in this guide are subject to change as per the recent efforts to modify Polkadot
-Governance. See this [pull request](https://github.com/paritytech/substrate/pull/10195) for more
-details\*\*.
-
-:::
 
 To do this, the network brings together various novel mechanisms, including an amorphous
 state-transition function stored on-chain and defined in a platform-neutral intermediate language
@@ -66,7 +58,7 @@ approved, it would be scheduled for enactment. Referenda is considered _unbaked_
 outcome, i.e. being voted on.
 
 For the first two ways that a referendum is launched, this is a fixed time of
-{{ polkadot: 28 days :polkadot }}{{ kusama: 8 days :kusama }}. For the third type, it can be set as
+{{ selendra: 28 days :selendra }}. For the third type, it can be set as
 desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked". These will have a shorter enactment time.
 
@@ -80,8 +72,8 @@ to support it - this action is called _endorsing_. The proposal with the highest
 support will be selected to be a referendum in the next voting cycle.
 
 Note that this may be different from the absolute number of endorsements; for instance, three
-accounts bonding {{ polkadot: 20 SEL each would "outweigh" ten accounts bonding a
-single SEL each :polkadot }}{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each }}.
+accounts bonding {{ selendra: 20 SEL each would "outweigh" ten accounts bonding a
+single SEL each :selendra }}.
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
@@ -102,7 +94,7 @@ referendum in progress.
 
 #### Voting Timetable
 
-Every {{ polkadot: 28 days :polkadot }}{{ kusama: 7 days :kusama }}, a new referendum will come up
+Every {{ selendra: 28 days :selendra }}, a new referendum will come up
 for a vote, assuming there is at least one proposal in one of the queues. There is a queue for
 Council-approved proposals and a queue for publicly submitted proposals. The referendum to be voted
 upon alternates between the top proposal in the two queues.
@@ -126,26 +118,19 @@ vote, given your stake. At the same time, holding only a small amount of tokens 
 the holder cannot influence the referendum result, thanks to time-locking. You can read more about
 this at [Voluntary Locking](#voluntary-locking).
 
-:::note Referenda explainer video
-
-To learn more about voting on referenda, please check out our
-[technical explainer video](https://www.youtube.com/watch?v=BkbhhlsezGA&list=PLOyWqupZ-WGuAuS00rK-pebTMAOxW41W8&index=31&ab_channel=Polkadot).
-
-:::
-
 Example:
 
-Peter: Votes `No` with {{ polkadot: 10 SEL :polkadot }}{{ kusama: 1 KSM :kusama }} for a 128 week
-lock period => {{ polkadot: 10 x 6 = 60 Votes :polkadot }}{{ kusama: 1 x 6 = 6 Votes :kusama }}
+Peter: Votes `No` with {{ selendra: 10 SEL :selendra }} for a 128 week
+lock period => {{ selendra: 10 x 6 = 60 Votes :selendar }}
 
-Logan: Votes `Yes` with {{ polkadot: 20 SEL :polkadot }}{{ kusama: 2 KSM :kusama }} for a 4 week
-lock period => {{ polkadot: 20 x 1 = 20 Votes :polkadot }}{{ kusama: 2 x 1 = 2 Votes :kusama }}
+Logan: Votes `Yes` with {{ selendra: 20 SEL :selendra }} for a 4 week
+lock period => {{ selendra: 20 x 1 = 20 Votes :selendra }}
 
-Kevin: Votes `Yes` with {{ polkadot: 15 SEL :polkadot }}{{ kusama: 1.5 KSM :kusama }} for a 8 week
-lock period => {{ polkadot: 15 x 2 = 30 Votes :polkadot }}{{ kusama: 1.5 x 2 = 3 Votes :kusama }}
+Kevin: Votes `Yes` with {{ selendra: 15 SEL :selendra }} for a 8 week
+lock period => {{ selendra: 15 x 2 = 30 Votes :selendra }}
 
 Even though combined both Logan and Kevin vote with more
-{{ polkadot: SEL :polkadot }}{{ kusama: KSM :kusama }} than Peter, the lock period for both of them
+{{ selendra: SEL :selendra }} than Peter, the lock period for both of them
 is less than Peter, leading to their voting power counting as less.
 
 #### Tallying
@@ -200,28 +185,28 @@ _To know more about where these above formulas come from, please read the
 
 Example:
 
-Assume we only have {{ polkadot: 1_500 SEL :polkadot }}{{ kusama: 1_50 :kusama }} tokens in total
+Assume we only have {{ selendra: 1_500 SEL :selendra }} tokens in total
 and that this is a public proposal.
 
-- John: {{ polkadot: 500 SEL :polkadot }}{{ kusama: 50 KSM :kusama }}
-- Peter: {{ polkadot: 100 SEL :polkadot }}{{ kusama: 10 KSM :kusama }}
-- Lilly: {{ polkadot: 150 SEL :polkadot }}{{ kusama: 15 KSM :kusama }}
-- JJ: {{ polkadot: 150 SEL :polkadot }}{{ kusama: 15 KSM :kusama }}
-- Ken: {{ polkadot: 600 SEL :polkadot }}{{ kusama: 60 KSM :kusama }}
+- John: {{ selendra: 500 SEL :selendra }}
+- Peter: {{ selendra: 100 SEL :selendra }}
+- Lilly: {{ selendra: 150 SEL :selendra }}
+- JJ: {{ selendra: 150 SEL :selendra }}
+- Ken: {{ selendra: 600 SEL :selendra }}
 
 John: Votes `Yes` for a 4 week lock period =>
-{{ polkadot: 500 x 1 = 500 Votes :polkadot }}{{ kusama: 50 x 1 = 50 Votes :kusama }}
+{{ selendra: 500 x 1 = 500 Votes :selendra }}
 
 Peter: Votes `Yes` for a 4 week lock period =>
-{{ polkadot: 100 x 1 = 100 Votes :polkadot }}{{ kusama: 10 x 1 = 10 Votes :kusama }}
+{{ selendra: 100 x 1 = 100 Votes :selendra }}
 
 JJ: Votes `No` for a 16 week lock period =>
-{{ polkadot: 150 x 3 = 450 Votes :polkadot }}{{ kusama: 150 x 3 = 450 Votes :kusama }}
+{{ selendra: 150 x 3 = 450 Votes :selendra }}
 
-- approve = {{ polkadot: 600 :polkadot }}{{ kusama: 60 :kusama }}
-- against = {{ polkadot: 450 :polkadot }}{{ kusama: 45 :kusama }}
-- turnout = {{ polkadot: 750 :polkadot }}{{ kusama: 75 :kusama }}
-- electorate = {{ polkadot: 1500 :polkadot }}{{ kusama: 150 :kusama }}
+- approve = {{ selendra: 600 :selendra }}
+- against = {{ selendra: 450 :selendra }}
+- turnout = {{ selendra: 750 :selendra }}
+- electorate = {{ selendra: 1500 :selendra }}
 
 ![\Large \frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}}](https://latex.codecogs.com/svg.latex?\large&space;\frac{450}{\sqrt{750}}&space;<&space;\frac{600}{\sqrt{1500}})
 
@@ -249,16 +234,15 @@ votes = tokens * conviction_multiplier
 The conviction multiplier increases the vote multiplier by one every time the number of lock periods
 double.
 
-<VLTable network="polkadot"/>
+<VLTable network="selendra"/>
 
 The maximum number of "doublings" of the lock period is set to 6 (and thus 32 lock periods in
 total), and one lock period equals
-{{ selendra: <RPC network="selendra" path="consts.democracy.voteLockingPeriod" defaultValue={403200} filter="blocksToDays"/> :polkadot }}
-{{ kusama: <RPC network="kusama" path="consts.democracy.voteLockingPeriod" defaultValue={115200} filter="blocksToDays"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.democracy.voteLockingPeriod" defaultValue={403200} filter="blocksToDays"/> :selendra }}
 days. Only doublings are allowed; you cannot lock for, say, 24 periods and increase your conviction
 by 5.5. For additional information regarding the timeline of governance events, check out the
 governance section on the
-{{ polkadot: [Polkadot Parameters page](maintain-polkadot-parameters/#governance) :polkadot }}{{ kusama: [Kusama Parameters page](kusama-parameters/#governance) :kusama }}.
+{{ selendra: [Selendra Parameters page](maintain-selendra-parameters/#governance) :selendra }}.
 
 While a token is locked, you can still use it for voting and staking; you are only prohibited from
 transferring these tokens to another account.
@@ -304,7 +288,7 @@ To represent passive stakeholders, {{ selendra: Selendra :selendra }}
 introduces the idea of a "council". The council is an on-chain entity comprising several actors,
 each represented as an on-chain account. On
 {{ selendra: Selendra :selendra }}, the council currently consists of
-{{ polkadot: 13 members :polkadot }}{{ kusama: 19 members :kusama }}.
+{{ selendra: 10 members :selendra }}.
 
 Along with [controlling the treasury](learn-treasury.md), the council is called upon primarily for
 three tasks of governance: proposing sensible referenda, cancelling uncontroversially dangerous or
@@ -361,12 +345,12 @@ All stakeholders are free to signal their approval of any of the registered cand
 Council elections are handled by the same [Phragmén election](../docs/learn-phragmen) process that
 selects validators from the available pool based on nominations. However, token holders' votes for
 councillors are isolated from any of the nominations they may have on validators. Council terms last
-for one {{ kusama: day :kusama }}{{ polkadot: week :polkadot }}.
-
+for one {{ selendrae week :selendra }}.
+ 
 At the end of each term, [Phragmén election algorithm](../docs/learn-phragmen#algorithm) runs and
 the result will choose the new councillors based on the vote configurations of all voters. The
 election also chooses a set number of runners up which is currently
-({{ kusama: 12 :kusama }}{{ polkadot: 20 :polkadot }} that will remain in the queue with their votes
+{{ selendra: 20 :selendra }} that will remain in the queue with their votes
 intact.
 
 As opposed to a "first-past-the-post" electoral system, where voters can only vote for a single
@@ -422,11 +406,8 @@ prime.
 
 ## Technical Committee
 
-The Technical Committee(TC) was introduced in the
-[Kusama rollout and governance post](https://polkadot.network/kusama-rollout-and-governance/) as one
-of the three chambers of Kusama governance (along with the Council and the Referendum chamber). The
 TC is composed of the teams that have successfully implemented or specified either a
-{{ selendra: Selendra :selendra }} runtime or Polkadot Host. Teams are
+{{ selendra: Selendra :selendra }} runtime or Selendra Host. Teams are
 added or removed from the TC via a simple majority vote of the [Council](#council).
 
 The purpose of the TC is to safeguard against malicious referenda, implement bug fixes, reverse
@@ -441,27 +422,7 @@ same time. Voting on one does not prevent a user from voting on the other.
 
 ## Frequently Asked Questions
 
-### How can I appeal to the council to enact a change on my behalf?
-
-In some circumstances, you may want to appeal to the on-chain council to enact a change on your
-behalf. One example of this circumstance is the case of lost or locked funds when the funds were
-lost due to a human interface error (such as inputting an address for another network). Another
-example is if you participated in the 2017 Polkadot ICO with a multi-sig address which now does not
-let you sign a message easily. When these circumstances can be proven beyond a reasonable doubt to
-be an error, the council _may_ consider a governance motion to correct it.
-
-The first step to appeal to the council is to get in contact with the councillors. There is no
-singular place where you are guaranteed to grab every councillor's ear with your message. However,
-there are a handful of good places to start where you can get the attention of some of them. The
-{{ polkadot: [Polkadot Direction][] :polkadot }}{{ kusama: [Kusama Direction][] :kusama }} matrix
-room is one such place. After creating an account and joining this room, you can post a
-well-thought-through message here that lays down your case and provides justification for why you
-think the council should consider enacting a change to the protocol on your behalf.
-
-At some point you will likely need a place for a longer-form discussion. For this, making a post on
-[Polkassembly][] is the recommended place to do so. When you write a post on Polkassembly make sure
-you present all the evidence for your circumstances and state clearly what kind of change you would
-suggest to the councillors to enact.
+### WIP
 
 :::info
 
@@ -472,13 +433,10 @@ case for why the change should be made.
 
 ## Resources
 
-- [Initial Governance Description](https://github.com/paritytech/polkadot/wiki/Governance)
+- [Initial Governance Description](https://github.com/paritytech/selendra/wiki/Governance)
 - [Democracy Pallet](https://github.com/paritytech/substrate/tree/master/frame/democracy/src)
 - [Governance Demo](https://www.youtube.com/watch?v=VsZuDJMmVPY&feature=youtu.be&t=24734) - Dr.
   Gavin Wood presents the initial governance structure for Polkadot. (Video)
 - [Governance on Polkadot](https://www.crowdcast.io/e/governance-on-polkadot--) - A webinar
   explaining how governance works in Polkadot and Kusama.
 
-[polkadot direction]: https://matrix.to/#/#polkadot-direction:matrix.parity.io
-[kusama direction]: https://matrix.to/#/#kusama:matrix.parity.io
-[polkassembly]: https://polkadot.polkassembly.io/

@@ -7,9 +7,8 @@ keywords: [wallets, account, signer, supported wallets, balance, token]
 slug: ../build-wallets
 ---
 
-The integration of a [wallet](../general/glossary.md#wallet) with {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} allows for simple and easy access to private keys and signing
-transactions. Below are some wallets that support Polkadot along with their development statuses.
+The integration of a [wallet](../general/glossary.md#wallet) with {{ selendra: Selendra :selendra }} allows for simple and easy access to private keys and signing
+transactions. Below are some wallets that support Selendra along with their development statuses.
 
 :::tip Non-Custodial Wallets
 

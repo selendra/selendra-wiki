@@ -8,7 +8,7 @@ slug: ../learn-xcm
 ---
 
 Cross-Consensus Message Format(XCM) aims to be a language to communicate ideas between consensus
-systems. One of Polkadot's promises is that of interoperability, and XCM is the vehicle through
+systems. One of Selendra's promises is that of interoperability, and XCM is the vehicle through
 which it will deliver this promise. Simply, it is a standard that allows protocol developers to
 define the data and origins which their chains can send and receive from. Out of the box, it comes
 with a VM that allows for customization of execution as well as the following properties:
@@ -25,7 +25,7 @@ with a VM that allows for customization of execution as well as the following pr
 
 :::note
 
-XCM is a work-in-progress. XCM v2 is deployed on Polkadot and v3 is currently in development. Learn
+XCM is a work-in-progress. XCM v2 is deployed on Selendra and v3 is currently in development. Learn
 more about XCM v3 and its new features in the [resources](#resources) section.
 
 :::
@@ -179,7 +179,7 @@ then an interior location within that outer consensus.
 ## Cross-Consensus Protocols (XCMP, VMP, HRMP)
 
 With the XCM format established, common patterns for protocols of these messages are needed.
-Polkadot implements two message passing protocols for acting on XCM messages between its constituent
+Selendra implements two message passing protocols for acting on XCM messages between its constituent
 parachains.
 
 ### XCMP (Cross-Chain Message Passing)
@@ -207,7 +207,7 @@ ensure fidelity. It is the task of the Relay Chain validators to move transactio
 queue of one parachain into the input queue of the destination parachain. However, only the
 associated metadata is stored as a hash in the Relay Chain storage.
 
-The input and output queue are sometimes referred to in the Polkadot codebase and associated
+The input and output queue are sometimes referred to in the Selendra codebase and associated
 documentation as `ingress` and `egress` messages, respectively.
 
 ### VMP (Vertical Message Passing)
@@ -307,31 +307,7 @@ Check out our animated video below that explores how XCMP works.
       src="https://storage.googleapis.com/w3f-tech-ed-contents/XCMP.mp4"> Sorry, your browser
 doesn't support embedded videos. </video>
 
+
 ## Resources
 
-- [Shawn Tabrizi: XCM - The Backbone Of A Multichain Future | Polkadot Decoded 2022](https://www.youtube.com/watch?v=cS8GvPGMLS0) -
-  High level overview which should answer “What is XCM?
-
-- [XCM: The Cross-Consensus Message Format](https://medium.com/polkadot-network/xcm-the-cross-consensus-message-format-3b77b1373392) -
-  Detailed blog post by Dr. Gavin Wood about the XCM Format.
-
-- [XCM Format specification](https://github.com/paritytech/xcm-format) - The best starting point for
-  understanding the XCM API at a technical level.
-
-- [Gavin Wood, Polkadot founder: XCM v3 | Polkadot Decoded 2022](https://www.youtube.com/watch?v=K2c6xrCoQOU&t=1196s) -
-  High level overview of XCM and specifically the new features available in XCM v3.
-
-- [XCMP Scheme](https://research.web3.foundation/en/latest/polkadot/XCMP.html) - Full technical
-  description of cross-chain communication on the Web3 Foundation research wiki.
-
-- [Messaging Overview](https://paritytech.github.io/polkadot/book/types/messages.html) - An overview
-  of the messaging schemes from the Polkadot Parachain Host Implementor's guide.
-
-- [Sub0 Online: Getting Started with XCM - Your First Cross Chain Messages](https://www.youtube.com/watch?v=5cgq5jOZx9g) -
-  Code focused workshop on how XCM v1 works, and the core concepts of XCM.
-
-- [XCM: Cross-Consensus Messaging Audit](https://blog.quarkslab.com/resources/2022-02-27-xcmv2-audit/21-12-908-REP.pdf) -
-  Technical audit report by Quarkslab prepared for Parity.
-
-- [XCM pallet code](https://github.com/paritytech/polkadot/blob/master/xcm/pallet-xcm/src/lib.rs) -
-  The pallet that contains XCM logic from the Polkadot code repository
+### WIP

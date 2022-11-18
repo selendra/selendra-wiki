@@ -15,8 +15,8 @@ For a [parachain](learn-parachains.md) to be added to
 parachain slots. A parachain slot is a scarce resource on
 {{ selendra: Selendra :selendra }} as only a limited number are
 available. As parachains ramp up, there may only be a few slots unlocked every few months. The goal
-is to eventually have 100 parachain slots available on {{ polkadot: Polkadot :polkadot }}
-{{ kusama: Kusama :kusama }} (these will be split between parachains and the
+is to eventually have 100 parachain slots available on {{ selendra: Selendra :selendra }}
+(these will be split between parachains and the
 [parathread pool](learn-parathreads.md)). If a parachain wants to have guaranteed block inclusion at
 every Relay Chain block, it must acquire a parachain slot.
 
