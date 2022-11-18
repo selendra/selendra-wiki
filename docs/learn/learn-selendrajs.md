@@ -116,5 +116,5 @@ For more user-friendly wallets, check out the supported and treasury-funded wall
 
 ### Documentation
 
-- [Official polkadot{.js} docs](https://polkadot.js.org/docs/)
+- [Official polkadot{.js} docs](https://selendra.js.org/docs/)
 - [Substrate docs on Polkadot-JS](https://docs.substrate.io/reference/command-line-tools/polkadot-apps/)

@@ -107,7 +107,7 @@ integrating with Crust by following their
 
 The PolkadotJS API offers storage methods that are part of the default Substrate runtime. They are
 exposed via `api.query.<module>.<method>`. See the
-[official docs](https://polkadot.js.org/docs/substrate/storage/) for more details.
+[official docs](https://selendra.js.org/docs/substrate/storage/) for more details.
 
 ### Substrate Files
 
