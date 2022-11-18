@@ -133,7 +133,6 @@ module.exports = {
             'learn/learn-comparisons',
             'learn/learn-comparisons-ethereum-2',
             'learn/learn-comparisons-cosmos',
-            'learn/learn-comparisons-avalanche'
           ],
         },
         "learn/learn-launch",
@@ -190,7 +189,7 @@ module.exports = {
       label: "Maintain",
       items: [
         "maintain/maintain-index",
-        "maintain/maintain-polkadot-parameters",
+        "maintain/maintain-selendra-parameters",
         "maintain/maintain-endpoints",
         {
           type: "category",
@@ -220,7 +219,6 @@ module.exports = {
             "maintain/maintain-guides-secure-validator",
             "maintain/maintain-guides-how-to-use-selendra-validator-setup",
             "maintain/maintain-guides-how-to-setup-a-validator-with-reverse-proxy",
-            "maintain/maintain-guides-how-to-upgrade",
             "maintain/maintain-guides-how-to-monitor-your-node",
             "maintain/maintain-guides-how-to-chill",
             "maintain/maintain-guides-how-to-stop-validating",

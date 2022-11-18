@@ -1,10 +1,10 @@
 ---
-id: maintain-polkadot-parameters
-title: Polkadot Parameters
+id: maintain-selendra-parameters
+title: Selendra Parameters
 sidebar_label: Parameters
-description: A description about fundamental Polkadot parameters.
+description: A description about fundamental Selendra parameters.
 keywords: [parameters, actions, attributes, behaviors]
-slug: ../maintain-polkadot-parameters
+slug: ../maintain-selendra-parameters
 ---
 
 import RPC from "./../../components/RPC-Connection";
@@ -16,16 +16,12 @@ at the [chain state](https://portal.selendra.org/#/chainstate/constants) and/or
 
 ### Periods of common actions and attributes
 
-_NOTE: Polkadot generally runs at &frac14;th the speed of Kusama, except in the time slot duration
-itself. See [Kusama Parameters](https://guide.kusama.network/docs/kusama-parameters/) for more
-details on how Polkadot's parameters differ from Kusama's._
-
 - Slot: 6 seconds \*(generally one block per slot, although see note below)
 - Epoch: 4 hours (2_400 slots x 6 seconds)
 - Session: 4 hours (Session and Epoch lengths are the same)
 - Era: 24 hours (6 sessions per Era, 2_400 slots x 6 epochs x 6 seconds)
 
-| Polkadot | Time      | Slots\* |
+| Selendra | Time      | Slots\* |
 | -------- | --------- | ------- |
 | Slot     | 6 seconds | 1       |
 | Epoch    | 4 hours   | 2_400   |
@@ -39,14 +35,11 @@ a block in the chain. Thus, the times given are *estimates*. See
 ### Accounts, Identity and Crowdloans
 
 - The [Existential Deposit](../learn/learn-accounts.md#existential-deposit-and-reaping) is
-  {{ selendra: <RPC network="selendra" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="polkadot" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :kusama }}
+  {{ selendra: <RPC network="selendra" path="consts.balances.existentialDeposit" defaultValue={10000000000} filter="humanReadable"/> :selendra }}
 - The deposit required to set an Identity is
-  {{ selendra: <RPC network="selendra" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="polkadot" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :kusama }}
+  {{ selendra: <RPC network="selendra" path="consts.identity.basicDeposit" defaultValue={202580000000} filter="humanReadable"/> :selendra }}
 - The minimum contribution required to participate in a crowdloan is
-  {{ selendra: <RPC network="selendra" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :polkadot }}
-  {{ kusama: <RPC network="polkadot" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :kusama }}
+  {{ selendra: <RPC network="selendra" path="consts.crowdloan.minContribution" defaultValue={50000000000} filter="humanReadable"/> :selendra }}
 
 ### Governance
 
@@ -61,7 +54,7 @@ a block in the chain. Thus, the times given are *estimates*. See
 | Term duration | 7 days | 100_800 | The length of a council member's term until the next election round. |
 | Voting period | 7 days | 100_800 | The council's voting period for motions.                             |
 
-The Polkadot Council consists of up to 13 members and up to 20 runners up.
+The Selendra Council consists of up to 13 members and up to 20 runners up.
 
 | Technical committee     | Time    | Slots   | Description                                                                                    |
 | ----------------------- | ------- | ------- | ---------------------------------------------------------------------------------------------- |
@@ -71,10 +64,9 @@ The Polkadot Council consists of up to 13 members and up to 20 runners up.
 ### Staking, Validating, and Nominating
 
 The maximum number of validators that can be nominated by a nominator is
-{{ selendra: <RPC network="selendra" path="consts.staking.maxNominations" defaultValue={16}/>. :polkadot }}
-{{ kusama: <RPC network="polkadot" path="consts.staking.maxNominations" defaultValue={16}/>. :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.staking.maxNominations" defaultValue={16}/>. :selendra }}
 
-| Polkadot             | Time    | Slots   | Description                                                                                                                                                                                         |
+| Selendra             | Time    | Slots   | Description                                                                                                                                                                                         |
 | -------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Term duration        | 1 Day   | 14_400  | The time for which a validator is in the set after being elected. Note, this duration can be shortened in the case that a validator misbehaves.                                                     |
 | Nomination period    | 1 Day   | 14_400  | How often a new validator set is elected according to Phragmén's method.                                                                                                                            |
@@ -104,7 +96,7 @@ Burn percentage is currently `1.00%`.
 
 ### Precision
 
-DOT have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or ten billion)
+SEL have 10 decimals of precision. In other words, 10 \*\* 10 (10_000_000_000 or ten billion)
 Plancks make up a SEL.
 
 The denomination of SEL was changed from 12 decimals of precision at block #1*248_328 in an event
