@@ -15,6 +15,7 @@
         'git submodule sync',
         'git submodule update',
         'git submodule status',
+        'yarn selendra:build',
     );
 
     // exec commands
