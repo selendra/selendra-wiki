@@ -1,24 +1,24 @@
 ---
 id: maintain-guides-how-to-use-selendra-validator-setup
-title: How to use Polkadot Validator Setup
-sidebar_label: How to use Polkadot Validator Setup
+title: How to use Selendra Validator Setup
+sidebar_label: How to use Selendra Validator Setup
 description: Steps on Web3 Foundation's supported validator setup.
 keywords: [validator setup, validator, configuration]
 slug: ../maintain-guides-how-to-use-selendra-validator-setup
 ---
 
-# Polkadot Validator Setup
+# Selendra Validator Setup
 
-The following guide will walk you through using Web3 Foundation's [polkadot validator setup][] to
+The following guide will walk you through using Web3 Foundation's [selendra validator setup][] to
 offer a potential setup for your validator that aims to prevent some types of potential attacks at
-the TCP layer and layers below. This will work for Polkadot and Kusama out of the box, and, if
+the TCP layer and layers below. This will work for Selendra out of the box, and, if
 you're using another Substrate-based chain, it should work with some tweaks.
 
 :::tip This setup should not be assumed to include the best security practices
 
 It is up to you to add additional security hardening.
 
-Also, the current version of polkadot validator setup doesn't allow for the creation and
+Also, the current version of selendra validator setup doesn't allow for the creation and
 configuration of sentry nodes.
 
 There are two ways that the setup can be configured:
@@ -92,13 +92,13 @@ sudo apt-get install python -y
 
 ### Step One: Clone the repository
 
-The first step is to clone the `polkadot-validator-setup` guide locally.
+The first step is to clone the `selendra-validator-setup` guide locally.
 
 ```zsh
-$ git clone https://github.com/w3f/polkadot-validator-setup.git
+$ git clone https://github.com/selendra/selendra-validator-setup.git
 ```
 
-Now you can `cd` into the `polkadot-validator-setup` directory and start to change the
+Now you can `cd` into the `selendra-validator-setup` directory and start to change the
 configurations to match your custom deployment. However, before we start tweaking those, let's start
 by creating two new SSH keys that we (or rather, the Ansible playbooks) will use to access the
 machines.
@@ -129,7 +129,7 @@ recommended.
 
 After you have installed all the required software and made your ssh keys, you can start to
 configure your infrastructure deployment by following the instructions. Start by cloning the
-`polkadot-validator-setup` repository locally, and installing the package dependencies. Then
+`selendra-validator-setup` repository locally, and installing the package dependencies. Then
 customize the configuration how you want it.
 
 First run yarn to install the NodeJS dependencies:
@@ -176,8 +176,8 @@ use them:
 In the `additionalFlags` option, configure any of the additional flags you want to run for your
 validator. If you want to run with a specific name, this is where you would enter it.
 
-Under the `polkadotBinary.url` field you can provide the release that is hosted in the [W3F
-repository][w3f polkadot] or use an alternate one that you build and publish yourself.
+Under the `selendraBinary.url` field you can provide the release that is hosted in the [W3F
+repository][selendra] or use an alternate one that you build and publish yourself.
 
 By enabling the `nodeExporter`, Ansible will install and configure the [node_exporter][], which will
 expose hardware-level metrics of your node in a format compatible with Prometheus.
@@ -251,7 +251,7 @@ rotateKeys output".
 :::
 
 ```
-TASK [polkadot-validator-session-info : retrieve session info] *****************
+TASK [selendra-validator-session-info : retrieve session info] *****************
 
 ok: [34.80.70.172]
 
@@ -271,7 +271,7 @@ Done in 131.85s.
 Also you can use `sshUser` to access one of the created instances that shows above.
 
 ```
-TASK [polkadot-validator : show rotateKeys output] *****************************
+TASK [selendra-validator : show rotateKeys output] *****************************
 
 ok: [34.80.70.172] => {
     "rotate_keys": {
@@ -298,10 +298,10 @@ ok: [34.80.70.172] => {
 ```
 
 The result "0xf126b68841f5…..95f54249" is your session key. Set this to your controller account in
-[Polkadot-JS Apps](https://portal.selendra.org/#/staking/actions).
+Selendra Portal](https://portal.selendra.org/#/staking/actions).
 
 After accessing one of the machines through SSH, you can keep track of the node’s status by running
-`journalctl --follow -u polkadot`, which will show the latest synced block information.
+`journalctl --follow -u selendra`, which will show the latest synced block information.
 
 Every time you change something in `main.json`, you can simply run `./scripts/deploy.sh` to update
 it.
@@ -309,13 +309,13 @@ it.
 Congratulations! You have successfully deployed a secure validator. Free feel to open an issue if
 you have any suggestions.
 
-[polkadot validator setup]: https://github.com/w3f/polkadot-validator-setup
-[issue]: https://github.com/w3f/polkadot-validator-setup/issues
+[selendra validator setup]: https://github.com/selendra/selendra-validator-setup
+[issue]: https://github.com/selendra/selendra-validator-setup/issues
 [ssh]: https://en.wikipedia.org/wiki/Secure_Shell
 [nvm]: https://github.com/nvm-sh/nvm
-[w3f polkadot]: https://github.com/w3f/polkadot/releases
+[selendra release]: https://github.com/selendra/selendra/releases
 [node_exporter]: https://github.com/prometheus/node_exporter
 [gcp machine types]: https://cloud.google.com/compute/docs/machine-types
 [gcp regions]: https://cloud.google.com/compute/docs/regions-zones/
 [substrate telemetry source]: https://github.com/paritytech/substrate-telemetry
-[readme]: https://github.com/w3f/polkadot-validator-setup#prerequisites
+[readme]: https://github.com/selendra/selendra-validator-setup#prerequisites

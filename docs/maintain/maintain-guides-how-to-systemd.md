@@ -13,20 +13,20 @@ will automatically restart on server reboots or crashes (and helps to avoid gett
 Before following this guide you should have already set up your validator by following the
 [How to validate](../learn/learn-validator.md) article.
 
-First create a new unit file called `polkadot-validator.service` in `/etc/systemd/system/`.
+First create a new unit file called `selendra-validator.service` in `/etc/systemd/system/`.
 
 ```bash
-touch /etc/systemd/system/polkadot-validator.service
+touch /etc/systemd/system/selendra-validator.service
 ```
 
 In this unit file you will write the commands that you want to run on server boot / restart.
 
 ```
 [Unit]
-Description=Polkadot Validator
+Description=Selendra Validator
 
 [Service]
-ExecStart=PATH_TO_POLKADOT_BIN --validator --name SHOW_ON_TELEMETRY
+ExecStart=PATH_TO_SELENDRA_BIN --validator --name SHOW_ON_TELEMETRY
 Restart=always
 RestartSec=120
 
@@ -48,23 +48,23 @@ nodes will not accept them.
 To enable this to autostart on bootup run:
 
 ```bash
-systemctl enable polkadot-validator.service
+systemctl enable selendra-validator.service
 ```
 
 Start it manually with:
 
 ```bash
-systemctl start polkadot-validator.service
+systemctl start selendra-validator.service
 ```
 
 You can check that it's working with:
 
 ```bash
-systemctl status polkadot-validator.service
+systemctl status selendra-validator.service
 ```
 
 You can tail the logs with `journalctl` like so:
 
 ```bash
-journalctl -f -u polkadot-validator
+journalctl -f -u selendra-validator
 ```
