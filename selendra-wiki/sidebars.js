@@ -198,6 +198,7 @@ module.exports = {
             "maintain/maintain-sync",
             "maintain/maintain-networks",
             "maintain/maintain-wss",
+            "maintain/maintain-load-balance",
             "maintain/maintain-errors",
           ],
         },

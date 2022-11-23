@@ -19,6 +19,7 @@ guides to set up a node and run the network.
   Selendra, Indranet, Kumandra).
 - [Set up WSS using Nginx](maintain-wss.md) - Set up a Secure WebSockets server for your node's
   WebSockets connection.
+- [Set up a RPC load-balancing](maintain-load-balance) - Setup a RPC endpoint load-balance.
 
 ## Collator
 
