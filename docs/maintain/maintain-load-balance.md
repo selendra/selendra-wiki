@@ -29,12 +29,12 @@ First thing, you will need to do is ssh into your load-balancer machine and inst
 
 On Ubuntu:
 ```bash
-sudo apt update && sudo apt install nginx certbot python3-certbot-nginx
+apt update && apt install nginx certbot python3-certbot-nginx
 ```
 
 On Arch Linux:
 ```bash
-sudo pacman -Syu nginx certbot certbot-nginx
+pacman -Syu nginx certbot certbot-nginx
 ```
 
 :::note
@@ -43,7 +43,7 @@ I will assume you have a little bit knowledge of nginx and how to setup.
 
 After that, create the config file name according to your domain, in my case it is `rpc.selendra.org.conf`
 ```bash
-sudo touch /etc/nginx/sites-available/rpc.selendra.org.conf
+touch /etc/nginx/sites-available/rpc.selendra.org.conf
 ```
 
 Copy the following config below into the file, you just created on `/etc/nginx/sites-available/rpc.selendra.org.conf`:
