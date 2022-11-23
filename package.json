@@ -4,6 +4,7 @@
     "selendra:test": "jest --env=jsdom",
     "selendra:start": "docusaurus start selendra-wiki",
     "selendra:build": "cross-env BUILDING=true docusaurus build selendra-wiki; node selendra-wiki/postprocess",
+    "selendra:serve": "serve selendra-wiki/build",
     "selendra:publish-gh-pages": "cross-env PUBLISHING=true docusaurus deploy selendra-wiki",
     "selendra:pdf": "yarn pdf --initialDocURLs \"http://localhost:3000/docs/getting-started\" --outputPDFFilename=\"selendra-wiki/static/selendra-wiki.pdf\" --coverTitle=\"selendra WIKI\"",
     "copy:translations": "cp -R selendra-wiki/translated_docs selendra-guide ",
