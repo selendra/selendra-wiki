@@ -52,8 +52,8 @@ module.exports = {
           editUrl: ({ docPath }) =>
             `https://github.com/selendra/selendra-wiki/edit/master/docs/${docPath}`,
           path: "../docs",
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "docs",
           remarkPlugins: [injectPlugin({ isSelendra: true })],
