@@ -7,11 +7,11 @@ keywords: [parachains, application-specific, sharding]
 slug: ../learn-parachains
 ---
 
-:::info Testing on Rococo
+:::info Testing on Selendra Testnet
 
-For information on how to participate in the crowdloan and parachain auction testing on Rococo,
+For information on how to participate parachain slot testing on Selendra Testnet,
 please see the
-{{ Selendra: [Selendra Testnet Content](../build/build-parachains.md##testing-a-parachains:-selendra-testnet) :selendra }}
+{{ selendra: [Selendra Testnet Content](../build/build-parachains.md##testing-a-parachains:-selendra-testnet) :selendra }}
 :::
 
 A parachain is an application-specific data structure that is globally coherent and validatable by

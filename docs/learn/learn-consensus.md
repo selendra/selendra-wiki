@@ -26,9 +26,7 @@ for agreeing on a block author and part of the fuller [Nakamoto consensus](#naka
 also encompasses a chain selection algorithm (longest chain rule in Bitcoin). Similarly, PoS is a
 set of rules for selecting the validator set and does not specify a chain selection rule or how a
 chain might reach finality. PoS algorithms have traditionally been paired with an algorithm for
-coming to Byzantine agreement between nodes. For example, [Tendermint](learn-comparisons-cosmos.md)
-is a practical Byzantine fault tolerant algorithm that uses PoS as its validator set selection
-method.
+coming to Byzantine agreement between nodes.
 
 ## Why not Proof of Work?
 
@@ -196,10 +194,6 @@ computational resources to create a chain that did not contain a specific block.
 situation, the longest chain rule employed in Bitcoin and other proof of work chains would move to
 this new chain as the canonical one.
 
-## PBFT / Tendermint
-
-Please see the [relevant section](learn-comparisons-cosmos.md#consensus) in the Cosmos comparison
-article.
 
 ## Casper FFG
 

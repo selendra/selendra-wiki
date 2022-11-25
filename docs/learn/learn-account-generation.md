@@ -51,10 +51,6 @@ approachable. Follow the instructions in the
 properly, Subkey is the **most secure** available method of creating an account.
 
 
-Alternatively, you might find other wallets on the [Wallet](../build/build-wallets.md) page, but
-bear in mind that some of these are **unaudited** and are not officially affiliated with Web3
-Foundation or the Selendra project unless otherwise stated.
-
 :::info How-to guides to generate an account
 
 See our Support Articles for more information about how to create an account using the tools below.

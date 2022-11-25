@@ -58,12 +58,6 @@ propose the set of winners. The reason for performing this computation off-chain
 constant block time of six seconds and prevent long block times at the end of each era, when the
 validator election takes place. 
 
-:::info Staking Miners
-
-The process of computing the optimal solution for NPoS election can be delegated to 
-[Staking Miners](learn-staking-miner).
-
-:::
 
 ### Council Elections
 

@@ -237,8 +237,6 @@ While XCMP proper is still in development, HRMP is a working replacement.
 
 :::
 
-A tutorial on how to open an HRMP channel on a parachain can be found
-[here](../build/build-hrmp-channels.md).
 
 #### XCMP Design
 

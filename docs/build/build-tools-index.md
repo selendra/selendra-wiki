@@ -11,10 +11,6 @@ Here, we provide a list of tools available for your development needs. They are 
 If you're actively maintaining a tool that might be useful to other Selendra or Substrate
 developers, feel free to [add it in](../general/contributing.md).
 
-## Wallets
-
-Please see the [Wallets](build-wallets.md) page.
-
 ## Block Explorers
 
 - [Selendra-JS Portal Explorer](https://portal.selendra.org/#/explorer) - Selendra dashboard block
@@ -26,7 +22,7 @@ Please see the [Wallets](build-wallets.md) page.
 
 ## Network Monitoring & Reporting
 
-- [Selendra Telemetry Service](https://telemetry.selendra.org/) - Network information including what
+- [Selendra Telemetry Service](https://telemetry.polkadot.io/#list/0xfe6cd5f021c70fe24e768c4c6352cd8f7c4453feea126ebeaf0ba9d316a1eeb0) - Network information including what
   nodes are running the chain, what software versions they are running, sync status, and location.
 
 ## Clients

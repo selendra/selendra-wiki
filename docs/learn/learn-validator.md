@@ -24,7 +24,7 @@ blocks for all parachains connected to the Relay Chain. Para-validators work in 
 parachain blocks.
 
 The selected para-validators are one of
-{{ selendra: <RPC network="selendra" path="query.staking.validatorCount" defaultValue={297}/> :polkadot }}
+{{ selendra: <RPC network="selendra" path="query.staking.validatorCount" defaultValue={297}/> :selendra }}
 validators randomly selected (per epoch) to participate in the validation, creating a validator pool
 of 200 para-validators.
 
@@ -41,7 +41,7 @@ Validators perform two functions:
 ## Guides
 
 - [How to Validate on Polkadot](../maintain/maintain-guides-how-to-validate-selendra.md) - Guide on
-  how to set up a validator on the Polkadot live network.
+  how to set up a validator on the Selendra live network.
 - [Validator Payout Overview](../maintain/maintain-guides-validator-payout.md) - A short overview on
   how the validator payout mechanism works.
 - [How to run your validator as a systemd process](../maintain/maintain-guides-how-to-systemd.md) -
@@ -50,14 +50,14 @@ Validators perform two functions:
 - [How to Upgrade your Validator](../maintain/maintain-guides-how-to-upgrade.md) - Guide for
   securely upgrading your validator when you want to switch to a different machine or begin running
   the latest version of client code.
-- [How to Use Validator Setup](../maintain/maintain-guidesmaintain-polkadot-parameters.md-how-to-use-selendra-validator-setup.md) -
-  Guide on how to use Polkadot / Kusama validator setup.
+- [How to Use Validator Setup](../maintain/maintain-guidesmaintain-selendra-parameters.md-how-to-use-selendra-validator-setup.md) -
+  Guide on how to use Selendra validator setup.
 
 ## Monitoring Tools
 
 - [PANIC for Selendra](https://github.com/SimplyVC/panic_polkadot) - A monitoring and alerting
   solution for Selendra node
-- [Selendra Telemetry Service](https://telemetry.selendra.org/#list/Selendra%20CC3) - Network
+- [Selendra Telemetry Service](https://telemetry.polkadot.io/#list/0xfe6cd5f021c70fe24e768c4c6352cd8f7c4453feea126ebeaf0ba9d316a1eeb0#list/Selendra%20CC3) - Network
   information, including what nodes are running on a given chain, what software versions they are
   running, and sync status.
 

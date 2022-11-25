@@ -46,7 +46,7 @@ module.exports = {
               type: "category",
               label: "Tokens and Assets",
               items: [
-                "learn/learn-assets",
+                "learn/learn-stable-assets",
                 "learn/learn-SEL",
                 "learn/learn-nft",
                 "learn/learn-teleport",
@@ -94,7 +94,6 @@ module.exports = {
             'learn/learn-randomness',
             'learn/learn-simple-payouts',
             "learn/learn-staking-advanced",
-            'learn/learn-staking-miner',
             'learn/learn-wasm',
           ],
         },
@@ -122,15 +121,6 @@ module.exports = {
             "learn/learn-bridges",
           ],
         },
-        {
-          type: "category",
-          label: "Selendra Comparisons",
-          items: [
-            'learn/learn-comparisons',
-            'learn/learn-comparisons-ethereum-2',
-            'learn/learn-comparisons-cosmos',
-          ],
-        },
         "learn/learn-launch",
         "learn/learn-video-tutorials",
       ],
@@ -150,10 +140,8 @@ module.exports = {
             "build/build-smart-contracts",
             "build/build-oracle",
             "build/build-data",
-            "build/build-wallets",
             "build/build-substrate",
             "build/build-ss58-registry",
-            "build/build-hrmp-channels",
           ],
         },
         {

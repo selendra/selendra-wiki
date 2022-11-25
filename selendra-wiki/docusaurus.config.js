@@ -50,7 +50,7 @@ module.exports = {
       {
         docs: {
           editUrl: ({ docPath }) =>
-            `https://github.com/selendra/selendra-wiki/edit/master/docs/${docPath}`,
+            `https://github.com/selendra/selendra-wiki/edit/main/docs/${docPath}`,
           path: "../docs",
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
