@@ -1,7 +1,13 @@
-@font-face {
+/* @font-face {
   font-family: "Unbounded";
   src: url("../fonts/Unbounded-Variable.woff2") format("woff2-variations");
   font-weight: 100 900;
+} */
+
+@font-face {
+  font-family: "Hack";
+  src: url("../fonts/Hack.ttf");
+  font-weight: 500 900;
 }
 
 :root {
