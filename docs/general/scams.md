@@ -64,9 +64,8 @@ accounts will be announced by our team. We will never offer to sell you SEL at a
 "rewards", or message you privately to help with a problem you posted publicly. Our social media can
 be found below:
 
-- [Twitter](https://twitter.com/Polkadot)
-- [Reddit](https://www.reddit.com/r/polkadot)
-- [Discord](https://dot.li/discord)
+- [Twitter](https://twitter.com/SelendraNetwork)
+- [Reddit](https://www.reddit.com/r/selendrachain)
 - [Selendra YouTube](https://www.youtube.com/channel/UCWO6SVOPiR6CFBrHRLD2DDA)
 - [Selendra Medium](https://medium.com/selendra)
 - [Our Community Page](../general/community.md) also lists more social media accounts that Selendra have.

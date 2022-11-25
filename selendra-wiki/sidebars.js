@@ -12,7 +12,6 @@ module.exports = {
         "general/glossary",
         "general/sns",
         "general/scams",
-        "general/doc-country-validators",
         "general/faq",
         {
           type: "category",
@@ -20,9 +19,6 @@ module.exports = {
           items: [
             "general/grants",
             "maintain/maintain-bug-bounty",
-            "general/builders-program",
-            "general/doc-country-validators",
-            "general/doc-country-contributors",
           ],
         },
       ],

@@ -125,7 +125,7 @@ function HomeFooter() {
           id="homepage.homeFooter.improveWiki.title"
           description="Title of Improve Wiki Footer Section in Home page"
         >
-          Help improve this wiki
+          Join and help improve the wiki
         </Translate>
       </h3>
       <p className="">
@@ -146,20 +146,6 @@ function HomeFooter() {
               description="Contribute Button Label of Improve Wiki Footer Section in Home page"
             >
               Contribute
-            </Translate>
-          </button>
-        </a>
-        <a
-          href="https://crowdin.com/project/selendra-wiki"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <button className="btn btn-lg btn-primary btn-bg-primary">
-            <Translate
-              id="homepage.homeFooter.improveWiki.helpTranslateButton"
-              description="Help Translate Button Label of Improve Wiki Footer Section in Home page"
-            >
-              Help Translate
             </Translate>
           </button>
         </a>

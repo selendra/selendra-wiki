@@ -218,9 +218,3 @@ The two main differences between GRANDPA and Casper FFG are:
 - [Rust implementation](https://github.com/paritytech/finality-grandpa) - The reference
   implementation and the accompanying
   [Substrate pallet](https://github.com/paritytech/substrate/blob/master/frame/grandpa/src/lib.rs).
-- [Block Production and Finalization in Polkadot](https://www.crowdcast.io/e/polkadot-block-production) -
-  An explanation of how BABE and GRANDPA work together to produce and finalize blocks on Kusama,
-  with Bill Laboon.
-- [Block Production and Finalization in Polkadot: Understanding the BABE and GRANDPA Protocols](https://www.youtube.com/watch?v=1CuTSluL7v4&t=4s) -
-  An academic talk by Bill Laboon, given at MIT Cryptoeconomic Systems 2020, describing Polkadot's
-  hybrid consensus model in-depth.

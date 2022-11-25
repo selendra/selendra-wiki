@@ -7,7 +7,7 @@ const isPublishing = process.env.PUBLISHING === "true";
 
 module.exports = {
   title: "Selendra Wiki",
-  tagline: "The hub for those interested in learning, building, or running a node on Selendra.",
+  tagline: "The docs for those interested in learning, building, or running a node on Selendra.",
   titleDelimiter: "·",
   url: "https://wiki.selendra.org",
   baseUrl: "/",
@@ -149,21 +149,6 @@ module.exports = {
         {
           type: "search",
           position: "right",
-        },
-        {
-          to: "docs/contributing",
-          label: "Contribute",
-          position: "right",
-        },
-        {
-          type: "localeDropdown",
-          position: "right",
-          dropdownItemsAfter: [
-            {
-              to: "https://crowdin.com/project/selendra-wiki",
-              label: "Help us translate",
-            },
-          ],
         },
       ],
     },

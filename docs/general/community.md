@@ -44,10 +44,9 @@ contact and anyone doing so is likely trying to scam you.
 
 ### Social media and forums
 
-- [Selendra Twitter](https://twitter.com/Selendra)
-- [KOOMPI Twitter](https://twitter.com/koompi)
+- [Selendra Twitter](https://twitter.com/SelendraNetwork)
 
-- [Selendra Reddit](https://www.reddit.com/r/selendra)
+- [Selendra Reddit](https://www.reddit.com/r/selendrachain)
 
 - [Selendra YouTube](https://www.youtube.com/channel/UCWO6SVOPiR6CFBrHRLD2DDA)
 

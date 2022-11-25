@@ -52,11 +52,6 @@ on the results of an election algorithm known as [Phragmén's method](../learn/l
 Phragmén's method tries to accomplish two goals: 1) select `n` members from a larger set based on
 stake-weighted votes and 2) equalize the stake backing each validator as much as possible.
 
-You will likely want to campaign your validator to the community in order to get more backing. You
-are looking for _nominators_ that will put up their tokens to increase the stake for your validator.
-For validators who cannot acquire the minimum stake from the community, Parity and Web3 Foundation
-also run a joint program called [Thousand Validators](country-validators.md) that will nominate
-validators if they apply and fit the requirements.
 
 ### How are validators rewarded?
 
@@ -75,33 +70,6 @@ There are a few ways to estimate the minimum stake.
 - [Offline Election](https://github.com/paritytech/substrate-debug-kit/tree/master/offline-election)
   can provide exact results of running an election on the current set of validators using the same
   Rust code that is ran in Selendra.
-
-### Why will Selendra aim for the countries to running as validator?
-
-Selendra's goal to have not 100 or 1000 validators but many countries, maintaining together with
-high confidence of good performance in a live environment. Furthermore, validators
-in Selendra are not the only stakers, and if we consider the number of stakers that can be possible
-on Selendra the number can scale up to hundreds of thousands. Since validators are performing
-critical consensus work to maintain the security of the chain including all of its shards, a more
-modest number of validators is estimated to start. Upon later improvements, such as implementing
-signature aggregation for finalization messages, the number of validators could reasonably scale up.
-However, increasing validators above one thousand remains a goal for later iterations of Selendra.
-
-It is also worth mentioning that one thousand validators is more than the number of validators of
-similar PoS chains with comparable levels of economic security as Selendra. The closest contenders
-are operating with around 150 validators, while Selendra is already securely running with
-{{ selendra: <RPC network="selendra" path="query.staking.validatorCount" defaultValue={297}/> :selendra }}
-validators.
-
-Additionally, other projects sometimes have a different definition of _validator_ that approximates
-more closely to remote signing keys without the full operation of a validating node. On Selendra,
-each validator is running their own validating node and performing full verification of the Relay
-Chain, voting on finality, producing blocks in their decided slots, and verifying parachain state
-transitions. Other projects may consider validators and "validating nodes" as separate entities.
-
-Finally, individuals may participate in the block production process indirectly by
-[nominating](../learn/learn-nominator.md) validators. In this way, individuals who are not running a
-node can still share in staking rewards.
 
 ## Relay Chain
 

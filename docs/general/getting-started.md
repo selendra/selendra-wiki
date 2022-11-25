@@ -175,9 +175,7 @@ functionalities on Selendra.
 SEL has utility in [Selendra's democracy](../maintain/maintain-guides-democracy.md). Bonding SEL is
 a requirement to create proposals, to endorse them and to vote on them when they become referendums.
 Bonding 100 SEL or 5% of requested funding is a requirement to make a
-[treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). SEL can also enable
-you to participate in programs like the
-[Country Validators Program](../general/country-validators.md#selendra).
+[treasury proposal](../learn/learn-treasury.md#creating-a-treasury-proposal). 
 
 ## Why Selendra?
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>

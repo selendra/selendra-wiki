@@ -7,7 +7,6 @@ import Button from "react-bootstrap/Button";
 import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-// import Logo from "@site/static/img/Polkadot_Logo_Horizontal_White.svg";
 
 function FooterNavColumn({ headline, children }) {
   return (
@@ -31,8 +30,8 @@ function FooterSocialColumn() {
 
   const Social = () => (
     <ul className="list-social-links mb-4 mt-5 mt-lg-0">
-      <SocialItem href="https://twitter.com/Selendra" className="socicon-twitter" />
-      <SocialItem href="https://www.reddit.com/r/selendra" className="socicon-reddit" />
+      <SocialItem href="https://twitter.com/SelendraNetwork" className="socicon-twitter" />
+      <SocialItem href="https://www.reddit.com/r/selendrachain" className="socicon-reddit" />
       <SocialItem href="https://github.com/selendra/selendra" className="socicon-github" />
       <SocialItem
         href="https://www.youtube.com/channel/UCWO6SVOPiR6CFBrHRLD2DDA"
@@ -42,31 +41,11 @@ function FooterSocialColumn() {
     </ul>
   );
 
-  const Newsletter = () => (
-    <>
-      <p className="d-block text-white">
-        <Translate id="footer.subscribeMessage" description="Subscribe message in Footer">
-          Subscribe to the newsletter to hear about Selendra updates and events.
-        </Translate>
-      </p>
-      <Button>
-        <a
-          href="https://info.selendra.org/subscribe"
-          target="_blank"
-          style={{ color: "white" }}
-        >
-          <Translate id="footer.subscribeButton" description="Label of Subscribe button in Footer">
-            Subscribe
-          </Translate>
-        </a>
-      </Button>
-    </>
-  );
+  
 
   return (
     <Col md={12} lg={3} className="px-lg-0">
       <Social />
-      <Newsletter />
     </Col>
   );
 }
@@ -138,13 +117,6 @@ export default function Footer() {
               })}
               href="https://selendra.com/staking/"
             />
-              content={translate({
-                message: "Careers",
-                id: "footer.body.general.careers",
-                description: "Careers link in General column in Footer",
-              })}
-              href="https://selendra.com/jobs"
-            />
             <FooterLink
               content={translate({
                 message: "FAQ",
@@ -171,43 +143,11 @@ export default function Footer() {
           >
             <FooterLink
               content={translate({
-                message: "Technology",
-                id: "footer.body.technology.technology",
-                description: "Technology link in Technology column in Footer",
-              })}
-              href="https://selendra.com/technology"
-            />
-            <FooterLink
-              content={translate({
-                message: "XCM",
-                id: "footer.body.technology.xcm",
-                description: "XCM link in Technology column in Footer",
-              })}
-              href="https://selendra.com/cross-chain-communication"
-            />
-            <FooterLink
-              content={translate({
-                message: "Parachains",
-                id: "footer.body.technology.parachains",
-                description: "Parachains link in Technology column in Footer",
-              })}
-              href="https://selendra.com/parachains"
-            />
-            <FooterLink
-              content={translate({
-                message: "Token",
-                id: "footer.body.technology.token",
-                description: "Token link in Technology column in Footer",
-              })}
-              href="https://selendra.com/sel-token"
-            />
-            <FooterLink
-              content={translate({
                 message: "Telemetry",
                 id: "footer.body.technology.telemetry",
                 description: "Telemetry link in Technology column in Footer",
               })}
-              href="https://telemetry.selendra.io/"
+              href="https://telemetry.polkadot.io/#list/0xfe6cd5f021c70fe24e768c4c6352cd8f7c4453feea126ebeaf0ba9d316a1eeb0"
             />
             <FooterLink
               content={translate({
@@ -243,56 +183,11 @@ export default function Footer() {
           >
             <FooterLink
               content={translate({
-                message: "Community",
-                id: "footer.body.community.community",
-                description: "Community link in Community column in Footer",
-              })}
-              href="https://selendra.org/community"
-            />
-            <FooterLink
-              content={translate({
-                message: "Academy",
-                id: "footer.body.community.academy",
-                description: "Academy link in Community column in Footer",
-              })}
-              href="https://selendra.com/academy"
-            />
-            <FooterLink
-              content={translate({
-                message: "Auctions",
-                id: "footer.body.community.auctions",
-                description: "Auctions link in Community column in Footer",
-              })}
-              href="https://selendra.com/auctions"
-            />
-            <FooterLink
-              content={translate({
                 message: "Treasury",
                 id: "footer.body.community.treasury",
                 description: "Treasury link in Community column in Footer",
               })}
               href="https://selendra.com/treasury/"
-            />
-            <FooterLink
-              content={translate({
-                message: "Documentation",
-                id: "footer.body.community.documentation",
-                description: "Documentation link in Community column in Footer",
-              })}
-              href="http://wiki.selendra.org/en/latest/"
-            />
-            <FooterLink content="Blog" href="https://selendra.com/blog" />
-            <FooterLink
-              content={translate({
-                message: "Brand Assets",
-                id: "footer.body.community.brandAssets",
-                description: "Brand Assets link in Community column in Footer",
-              })}
-              href="https://selendra.com/brand-assets"
-            />
-            <FooterLink
-              content="Element Chat"
-              href="https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation?via=matrix.parity.io&via=matrix.org&via=web3.foundation"
             />
             <FooterLink content="Medium" href="https://medium.com/selendra" />
           </FooterNavColumn>
@@ -301,34 +196,11 @@ export default function Footer() {
         <Row className="footer-legal align-items-end mt-5 pt-4">
           {footer && (
             <Col lg={2} className="mb-2 mb-lg-0">
-              <a
-                className="navbar-brand"
-                href="https://selendra.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <bold>Selendra Network</bold>
-              </a>
+              
             </Col>
           )}
           <Col lg={10}>
             <ul className="list-unstyled d-flex flex-wrap list-pipe-separator">
-              <FooterLegalLink
-                content={translate({
-                  message: "Disclaimer",
-                  id: "footer.footerLegal.disclaimer",
-                  description: "Disclaimer Button Label in Footer Legal",
-                })}
-                href="https://selendra.com/disclaimer"
-              />
-              <FooterLegalLink
-                content={translate({
-                  message: "Privacy",
-                  id: "footer.footerLegal.privacy",
-                  description: "Privacy Button Label in Footer Legal",
-                })}
-                href="https://selendra.com/privacy"
-              />
             </ul>
           </Col>
         </Row>
