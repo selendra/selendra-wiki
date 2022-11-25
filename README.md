@@ -40,5 +40,12 @@ npm install -g serve
 yarn selendra:serve
 ```
 
+### Developer Mode Only
+After every commits to the repository, need to build before push into git.
+```bash
+./script/updatebuild.sh
+
+```
+
 ### License
 The repository is a folked projects from Polkadot Wiki and is under license [GPL](https://github.com/selendra/selendra-wiki/blob/master/LICENSE)
