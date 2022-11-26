@@ -45,7 +45,7 @@ reserved tokens. Once you remove your vote, your tokens will be liquid again.
 :::warning
 
 It is your responsibility not to put your entire balance into the reserved value when you make a
-vote for councillors. It's best to keep _at least_ enough SEL/KSM to pay for transaction fees.
+vote for councillors. It's best to keep _at least_ enough SEL to pay for transaction fees.
 
 :::
 
@@ -69,8 +69,6 @@ Go to the "Governance" > "Council" tab on the
 [Selendra-JS Portal Dashboard](https://portal.selendra.org).
 
 Under the "Council overview" tab, click on "Vote".
-
-![](../assets/council/polkadotjs_removeVoter.png)
 
 Issue the "Unvote all" option.
 

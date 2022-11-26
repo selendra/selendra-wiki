@@ -28,7 +28,7 @@ Cardamom will use SEL as its native currency. Users can transfer SEL from the Re
 Cardamom and use it natively. The Relay Chain will also accept SEL transfers from Cardamom back to
 the Relay Chain to use for staking, governance, or any other activity taking place there.
 
-Using Cardamom for SEL/KSM balance transfers will be much more efficient than the Relay Chain and
+Using Cardamom for SEL balance transfers will be much more efficient than the Relay Chain and
 is highly recommended. Until domain specific parachains are built, the Relay Chain will still need
 to be used for staking and governance.
 

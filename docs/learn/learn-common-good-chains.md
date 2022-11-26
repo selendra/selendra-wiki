@@ -48,7 +48,7 @@ Public utility chains will always be fully aligned with their Relay Chain stakeh
 means that they will adopt the Relay Chain's native token (i.e. SEL) as their native token
 and respect any messages incoming from the Relay Chain and system level parachains at face value.
 
-Some examples of potential public utility chains are bridges, SEL/KSM-denominated smart contract
+Some examples of potential public utility chains are bridges, SEL-denominated smart contract
 platforms, and [generic asset chains](#Cardamom).
 
 Public utility parachains would typically grant privileged business logic to Selendra's governance.
