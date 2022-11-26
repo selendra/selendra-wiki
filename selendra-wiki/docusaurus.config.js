@@ -158,12 +158,13 @@ module.exports = {
         src: "img/Selendra_Logo_Horizontal.svg",
       },
     },
-    algolia: {
-      appId: "BEUYRRAUZN",
-      apiKey: "e472cf1f938eb8c46dd952ff22332538",
-      indexName: "selendra",
-      contextualSearch: true,
-    },
+    // algolia: {
+    //   appId: "BEUYRRAUZN",
+    //   apiKey: "e472cf1f938eb8c46dd952ff22332538",
+    //   indexName: "selendra",
+    //   contextualSearch: true,
+    // },
+    // Implement Search TODO?
     docsSideNavCollapsible: true,
     /* Banner / Announcement bar */
     // announcementBar: {

@@ -245,12 +245,6 @@ This is recommended for users with backgrounds of all levels, and the course is 
 - [Selendra's light paper][light-paper] is a visual, easy to read, and less technical introduction
   into its blockchain technology. This paper dives into the components of Selendra but is
   understandable for both a non-technical and technical reader.
-- [Selendra for Beginners: A non-technical guide to decentralization, blockchains &
-  Selendra][book] - a book funded by the Selendra Treasury
-- [Watching the Technical Explainer Videos][teched videos]: These are great introductory videos that
-  explain and demonstrate how to use Selendra and its [User Interface][ui].
-- Reading [What is Selendra? A Brief Introduction][article] on Medium. There are also other great
-  articles to read on [Selendra's Medium][p medium].
 
 ## Resources
 
@@ -261,11 +255,7 @@ This is recommended for users with backgrounds of all levels, and the course is 
 - [Subscan.io](https://subscan.io) - Explorer for Substrate based chains.
 - [Community / Ecosystem](community.md) - List of community rooms and channels to talk to others
   about Selendra.
-- [Sample Applications](#) - Sample applications that are built on or currently being built for
-  Selendra.
 - [Contributing Guide](contributing.md) - Rules for contributing to the wiki.
-- [Selendra Knowledge Base](https://support.selendra.org/) - Troubleshooting resources for
-  specific errors and problems.
 
 [mooc]: https://mooc.web3.foundation/course/blockchain-fundamentals/
 [white-paper]: https://selendra.org/papers/SelendraPaper.pdf

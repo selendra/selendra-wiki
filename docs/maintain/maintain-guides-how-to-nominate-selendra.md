@@ -118,94 +118,11 @@ rewards allocated to you. In order to claim them (i.e., add them to your account
 claim them. See the [Claiming Rewards](../learn/learn-staking.md#claiming-rewards) section of the
 Staking wiki page for more details.
 
-### Step 3: Monitoring Bags list
-
->> WIP
-
-### Step 4: Stop nominating
+### Step 3: Stop nominating
 
 At some point, you might decide to stop nominating one or more validators. You can always change who
 you're nominating, but you cannot withdraw your tokens unless you unbond them. Detailed instructions
 are available [here](maintain-guides-how-to-unbond.md).
-
-## Using Command-Line Interface (CLI)
-
-Apart from using Selendra-JS Apps to participate in staking, you can do all these things in CLI
-instead. The CLI approach allows you to interact with the Selendra network without going to the
-Selendra-JS Apps dashboard.
-
-### Step 1: Install @selendra/api-cli
-
-We assume you have installed [NodeJS with npm](https://nodejs.org). Run the following command to
-install the `@selendra/api-cli` globally:
-
-```bash
-npm install -g @selendra/api-cli
-```
-
-### Step 2. Bond your SEL
-
-Executing the following command:
-
-```bash
-selendra-js-api --seed "MNEMONIC_PHRASE" tx.staking.bond CONTROLLER_ADDRESS NUMBER_OF_TOKENS REWARD_DESTINATION --ws WEBSOCKET_ENDPOINT
-```
-
-`CONTROLLER_ADDRESS`: An address you would like to bond to the stash account. Stash and Controller
-can be the same address but it is not recommended since it defeats the security of the two-account
-staking model.
-
-`NUMBER_OF_TOKENS`: The number of SEL you would like to stake to the network.
-
-:::note Decimal places
-
-SEL has ten decimal places and is always represented as an integer with zeroes at the end. So 1 SEL
-= 10_000_000_000 Plancks.
-
-:::
-
-`REWARD_DESTINATION`:
-
-- `Staked` - Pay into the stash account, increasing the amount at stake accordingly.
-- `Stash` - Pay into the stash account, not increasing the amount at stake.
-- `Account` - Pay into a custom account, like so:
-  `Account DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX`.
-- `Controller` - Pay into the controller account.
-
-Example:
-
-```bash
-selendra-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.bond DMTHrNcmA8QbqRS4rBq8LXn8ipyczFoNMb1X4cY2WD9tdBX 1000000000000 Staked --ws wss://rpc.selendra.org
-```
-
-Result:
-
-```bash
-...
-...
-    "status": {
-      "InBlock": "0x0ed1ec0ba69564e8f98958d69f826adef895b5617366a32a3aa384290e98514e"
-    }
-```
-
-You can check the transaction status by using the value of the `InBlock` in
-[Selendra block explorer](https://explorer.selendra.org/). Also, you can verify the bonding state under the
-[Staking](https://portal.selendra.org/#/staking/actions) page on the Selendra-Portal Dashboard.
-
-### Step 3. Nominate a validator
-
-To nominate a validator, you can execute the following command:
-
-```bash
-selendra-js-api --seed "MNEMONIC_PHRASE" tx.staking.nominate '["VALIDATOR_ADDRESS"]' --ws WS_ENDPOINT
-```
-
-```bash
-selendra-js-api --seed "xxxx xxxxx xxxx xxxxx" tx.staking.nominate '["CmD9vaMYoiKe7HiFnfkftwvhKbxN9bhyjcDrfFRGbifJEG8","E457XaKbj2yTB2URy8N4UuzmyuFRkcdxYs67UvSgVr7HyFb"]' --ws wss://rpc.selendra.org
-```
-
-After a few seconds, you should see the hash of the transaction and if you would like to verify the
-nomination status, you can check that on the Selendra-Portal UI as well.
 
 [validators]: maintain-guides-how-to-validate-selendra.md
 [keys]: ../learn/learn-keys.md###"controller"-and-"stash"-keys
