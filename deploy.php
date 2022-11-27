@@ -8,8 +8,6 @@
 
     // array of commands
     $commands = array(
-        'echo $PWD',
-        'whoami',
         'git pull',
     );
 

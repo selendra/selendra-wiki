@@ -10,7 +10,7 @@ slug: ../maintain-guides-how-to-vote-councillor
 import RPC from "./../../components/RPC-Connection";
 
 The council is an elected body of on-chain accounts that are intended to represent the passive
-stakeholders of Polkadot and/or Kusama. The council has two major tasks in governance: proposing
+stakeholders of Selendra. The council has two major tasks in governance: proposing
 referenda and vetoing dangerous or malicious referenda. For more information on the council, see the
 [governance page](../learn/learn-governance.md#council). This guide will walk you through voting for
 councillors in the elections.
@@ -18,10 +18,9 @@ councillors in the elections.
 ## Voting for Councillors
 
 Voting for councillors requires you to reserve
-{{ selendra: <RPC network="selendra" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter = "humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.votingBondBase" defaultValue={66879997200} filter = "humanReadable"/> :kusama }}
+{{ selendra: <RPC network="selendra" path="consts.phragmenElection.votingBondBase" defaultValue={200640000000} filter = "humanReadable"/> :selendra }}
 as a base amount and an amount of
-{{ selendra: <RPC network="selendra" path="consts.phragmenElection.votingBondFactor" defaultValue={320000000} filter = "humanReadable"/> :polkadot }}{{ kusama: <RPC network="kusama" path="consts.phragmenElection.votingBondFactor" defaultValue={106665600} filter = "humanReadable"/> :kusama }}
-per vote. You can then bond whatever amount you wish to put behind your vote. See the
+{{ selendra: <RPC network="selendra" path="consts.phragmenElection.votingBondFactor" defaultValue={320000000} filter = "humanReadable"/> :selendra }} per vote. You can then bond whatever amount you wish to put behind your vote. See the
 [democracy guide](maintain-guides-democracy.md) for more information.
 
 :::info Voting and staking locks can overlap
