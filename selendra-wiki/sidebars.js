@@ -5,7 +5,6 @@ module.exports = {
       label: "General",
       items: [
         "general/getting-started",
-        "general/grants",
         "general/community",
         "general/contributing",
         "general/contributors",
@@ -13,14 +12,6 @@ module.exports = {
         "general/sns",
         "general/scams",
         "general/faq",
-        {
-          type: "category",
-          label: "Programmes",
-          items: [
-            "general/grants",
-            "maintain/maintain-bug-bounty",
-          ],
-        },
       ],
     },
     {
